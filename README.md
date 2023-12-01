@@ -1,4 +1,4 @@
-# JAK TECH_HUB
+# JAK TECH HUB
 --------------
 
 Jak tech hub on face value is the the website of Jak Technologies, but in reality, it's the hub that will manange the soul of Jak technologies business activities and it's human resources.
@@ -70,4 +70,4 @@ This is where we invoke the DevOps in us
 
 *NOTE*
 ---- 
-``` We will rewrite this *README* to describe the project and how to use later. For now, this is just let us know a bit of what we want to achieve```
+``` We will rewrite this README to describe the project and how to use later. For now, this is just let us know a bit of what we want to achieve```
