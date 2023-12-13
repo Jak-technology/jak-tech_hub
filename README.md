@@ -5,7 +5,7 @@ Jak tech hub on face value is the the website of Jak Technologies, but in realit
 
 ### Features of the Jak Tech hub
 --------------------------------
-Jack tech hub will have the following features and more...
+Jak tech hub will have the following features and more...
 
 ###### User Authentication and Authorization:
 - Implement a secure user authentication system.
