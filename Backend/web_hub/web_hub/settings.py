@@ -31,6 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'users.apps.UsersConfig',
+    'project_creation.apps.ProjectCreationConfig',
+    'emoji_picker',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
