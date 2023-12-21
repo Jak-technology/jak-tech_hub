@@ -86,3 +86,51 @@ class JobTitleListView(generics.ListAPIView):
     queryset = JobTitle.objects.all()
     serializer_class = JobTitleSerializer
     permission_classes = [permissions.IsAuthenticated]
+
+
+class SkillsCreateView(generics.CreateAPIView):
+    queryset = Skills.objects.all()
+    serializer_class = SkillsSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+
+class SpecializationCreateView(generics.CreateAPIView):
+    queryset = Specialization.objects.all()
+    serializer_class = SpecializationSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+
+class JobTitleCreateView(generics.CreateAPIView):
+    queryset = JobTitle.objects.all()
+    serializer_class = JobTitleSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+
+class SkillsDeleteView(generics.DestroyAPIView):
+    queryset = Skills.objects.all()
+    serializer_class = SkillsSerializer
+
+    def delete(self, request, *args, **kwargs):
+        instance = self.get_object()
+        instance.delete()
+        return Response({"message": "Skill deleted successfully."}, status=status.HTTP_204_NO_CONTENT)
+
+
+class SpecializationDeleteView(generics.DestroyAPIView):
+    queryset = Specialization.objects.all()
+    serializer_class = SpecializationSerializer
+
+    def delete(self, request, *args, **kwargs):
+        instance = self.get_object()
+        instance.delete()
+        return Response({"message": "Specialization deleted successfully."}, status=status.HTTP_204_NO_CONTENT)
+
+
+class JobTitleDeleteView(generics.DestroyAPIView):
+    queryset = JobTitle.objects.all()
+    serializer_class = JobTitleSerializer
+
+    def delete(self, request, *args, **kwargs):
+        instance = self.get_object()
+        instance.delete()
+        return Response({"message": "Job title deleted successfully."}, status=status.HTTP_204_NO_CONTENT)
