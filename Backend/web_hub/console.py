@@ -41,10 +41,6 @@ class WebHub(cmd.Cmd):
 
     prompt = '$ >>> '
 
-    def preloop(self):
-        intro = "Welcome to Jak_Tech WebHub Command-Line Tool.\n Type 'help' for a list of available commands.\n Type '<help> <command>' to see specific command help"
-        print(intro)
-
 
     def get_model_class(self, app_name, class_name):
         try:
@@ -54,10 +50,56 @@ class WebHub(cmd.Cmd):
             return None
 
 
+    def preloop(self):
+        intro = "Welcome to Jak_Tech WebHub Command-Line Tool.\n Type 'help' for a list of available commands.\n Type '<help> <command>' to see specific command help"
+        print(intro)
+
+
+    def do_create(self, arg):
+        # Work well only for classes with single fields for now
+        """
+            Creates a new instance of a class and saves it in the database
+            Usage: create <app_name> <class_name> <field_value_1> <field_value_2> ...
+        """
+        args = arg.split()
+
+        if len(args) < 3:
+            print("** invalid number of arguments **")
+            return
+
+        app_name = args[0]
+        class_name = args[1]
+        field_values = args[2:]
+
+        model_class = self.get_model_class(app_name, class_name)
+
+        if model_class is None:
+            print(f"** invalid class name: ({class_name}) **")
+        else:
+            try:
+                # Check if an instance with the specified ID already exists
+                existing_instance = model_class.objects.filter(pk=field_values[0]).exists()
+
+                if existing_instance:
+                    print(f"Instance with ID {field_values[0]} already exists. Choose a different ID.")
+                else:
+                    instance = model_class(pk=field_values[0])
+
+                    for i, value in enumerate(field_values):
+                        field_name = model_class._meta.fields[i].name
+                        setattr(instance, field_name, value)
+
+                    instance.save()
+                    print(f"Instance created successfully with values: {field_values}")
+            except Exception as e:
+                print(f"Error creating instance: {str(e)}")
+
+
+
     def do_show(self, arg):
         """
-        Prints the string representation of an instance based on the app name, class name and id
-        Usage: show <app_name> <class_name> <object_id>
+            Prints the string representation of an instance based on the app name, class name and id
+            Usage: show <app_name> <class_name> <object_id>
         """
         args = arg.split()
 
