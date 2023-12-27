@@ -36,7 +36,7 @@ class WebHub(cmd.Cmd):
                  "Skills",
                  "Specialization",
                  "JobTitle",
-                 
+                
                 ]
 
     prompt = '$ >>> '
@@ -163,6 +163,39 @@ class WebHub(cmd.Cmd):
                     print(f"Instance {object_id} deleted successfully.")
                 except ObjectDoesNotExist:
                     print("** no instance found **")
+
+
+    def do_all(self, arg):
+        """ 
+            Prints all string representation of all instances based on the class name
+            Usage: all <app_name> <class_name>
+        """
+        args = arg.split()
+
+        if len(args) == 0:
+            print("** app name missing **")
+        elif args[0] not in self.__apps:
+            print("** app doesn't exist **")
+        elif len(args) == 1:
+            print("** class name missing **")
+        elif args[1] not in self.__classes:
+            print("** class doesn't exist **")
+        else:
+            app_name = args[0]
+            class_name = args[1]
+
+            model_class = self.get_model_class(app_name, class_name)
+
+            try:
+                instance = model_class.objects.all()
+                print()
+                for lists in instance:
+                    print(lists)
+                    print()
+                print(f"There are a total of ({model_class.objects.all().count()}) enteries")
+                print()
+            except ObjectDoesNotExist:
+                print("** no instance found **")
 
 
     def do_quit(self, arg):
