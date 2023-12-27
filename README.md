@@ -7,6 +7,32 @@ Jak tech hub on face value is the the website of Jak Technologies, but in realit
 --------------------------------
 Jak tech hub will have the following features and more...
 
+
+### The Console
+---------------
+
+We have integrated a command-line tool as a means of interacting with our applications models via the commandline using specific commands.
+This is serves a quick way tomake simple changes like create, view, delete, etc
+
+
+- To run the command-line tool, type ```python console.py``` on your terminal, ensure you're in the same directory as the manage.py file
+
+### Available Commands
+----------------------
+
+**Below are the different commands you can run on the tool and their details**
+
+|**Command**    |       **Description**                                |
+|---------------|-------------------------------------------------------|
+|**quit or EOF**| Exits the program                                    |
+|**help**       | Provides description of how to use a command         |
+|**create**     | Creates a new instance of the ```Class``` and saves it in the database ```Usage: create <app_name> <class_name> <field_value_1> <field_value_2> ...``` e.g. *create users Skills 13 Data-Science* The instance ID follows after class|
+|**show**       | Prints the string representation of an instance based on the class name and ```id``` ```Usage: show <app_name> <class_name> <object_id>``` e.g. *show blog BlogPost 1*|
+|**destroy**    | Deletes an instance based on the class name and id ```Usage: destroy <app_name> <class_name> <object_id>``` e.g. *destroy users Specialization 1*|
+|**all**        | Prints all string representation of all instances based on the class name & retrieves the number of instances of that class. ```Usage: all <app_name> <class_name>``` e.g. *all project_creation ProjectComment*|
+|**update** (Yet to be implemented)     | Updates an instance based on the class name and ```id``` by adding or updating attribute (saves the changes into a JSON file).|
+
+
 ###### User Authentication and Authorization:
 - Implement a secure user authentication system.
 - Include roles and permissions for different user types (admin, regular user, etc.). All of us the pioneers can be admin/superusers while future employees will be regular users.
