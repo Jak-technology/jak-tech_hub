@@ -26,10 +26,10 @@ This is serves a quick way tomake simple changes like create, view, delete, etc
 |---------------|-------------------------------------------------------|
 |**quit or EOF**| Exits the program                                    |
 |**help**       | Provides description of how to use a command         |
-|**create**     | Creates a new instance of the ```Class``` and saves it in the database|
-|**show**       | Prints the string representation of an instance based on the class name and ```id```|
-|**destroy**    | Deletes an instance based on the class name and id |
-|**all**        | Prints all string representation of all instances based on the class name & retrieves the number of instances of that class.|
+|**create**     | Creates a new instance of the ```Class``` and saves it in the database ```Usage: create <app_name> <class_name> <field_value_1> <field_value_2> ...``` e.g. *create users Skills 13 Data-Science* The instance ID follows after class|
+|**show**       | Prints the string representation of an instance based on the class name and ```id``` ```Usage: show <app_name> <class_name> <object_id>``` e.g. *show blog BlogPost 1*|
+|**destroy**    | Deletes an instance based on the class name and id ```Usage: destroy <app_name> <class_name> <object_id>``` e.g. *destroy users Specialization 1*|
+|**all**        | Prints all string representation of all instances based on the class name & retrieves the number of instances of that class. ```Usage: all <app_name> <class_name>``` e.g. *all project_creation ProjectComment*|
 |**update** (Yet to be implemented)     | Updates an instance based on the class name and ```id``` by adding or updating attribute (saves the changes into a JSON file).|
 
 
