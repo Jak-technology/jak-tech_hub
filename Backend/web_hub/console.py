@@ -14,13 +14,12 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "web_hub.settings")
 if not apps.ready:
     django.setup()
 
-# Move import after setup
+
 import cmd
 from django.core.exceptions import ObjectDoesNotExist
 from blog.models import BlogPost, BlogPostComment
 from project_creation.models import Project, ProjectComment
 from users.models import UserProfile, Skills, Specialization, JobTitle
-
 
 
 
@@ -57,7 +56,7 @@ class WebHub(cmd.Cmd):
 
     def do_show(self, arg):
         """
-        Prints the string representation of an instance based on the class name and id
+        Prints the string representation of an instance based on the app name, class name and id
         Usage: show <app_name> <class_name> <object_id>
         """
         args = arg.split()
@@ -65,11 +64,11 @@ class WebHub(cmd.Cmd):
         if len(args) == 0:
             print("** app name missing **")
         elif args[0] not in self.__apps:
-            print("** invalid app name **")
+            print("** app doesn't exist **")
         elif len(args) == 1:
             print("** class name missing **")
         elif args[1] not in self.__classes:
-            print("** invalid class name **")
+            print("** class doesn't exist **")
         elif len(args) != 3:
             print("** instance id missing **")
         else:
@@ -89,6 +88,40 @@ class WebHub(cmd.Cmd):
                     print("** no instance found **")
 
         
+    def do_destroy(self, arg):
+        """
+            Deletes an instance based on the app name, class name and id
+            Usage: destroy <app_name> <class_name> <object_id>
+        """
+        args = arg.split()
+
+        if len(args) == 0:
+            print("** app name missing **")
+        elif args[0] not in self.__apps:
+            print("** app doesn't exist **")
+        elif len(args) == 1:
+            print("** class name missing **")
+        elif args[1] not in self.__classes:
+            print("** class doesn't exist **")
+        elif len(args) != 3:
+            print("** instance id missing **")
+        else:
+            app_name = args[0]
+            class_name = args[1]
+            object_id = args[2]
+
+            model_class = self.get_model_class(app_name, class_name)
+
+            if model_class is None:
+                print(f"** invalid class name: ({class_name}) **")
+            else:
+                try:
+                    instance = model_class.objects.get(pk=object_id)
+                    instance.delete()
+                    print(f"Instance {object_id} deleted successfully.")
+                except ObjectDoesNotExist:
+                    print("** no instance found **")
+
 
     def do_quit(self, arg):
         """ Quits the command interpreter """
