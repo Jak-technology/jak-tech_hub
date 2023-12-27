@@ -11,13 +11,14 @@ Jack tech hub will have the following features and more...
 ### The Console
 ---------------
 
-### Available Commands
-----------------------
-
 We have integrated a command-line tool as a means of interacting with our applications models via the commandline using specific commands. 
 This is serves a quick way tomake simple changes like create, view, delete, etc
 
+
 - To run the command-line tool, type ```python console.py``` on your terminal, ensure you're in the same directory as the manage.py file
+
+### Available Commands
+----------------------
 
 **Below are the different commands you can run on the tool and their details**
 
@@ -29,7 +30,7 @@ This is serves a quick way tomake simple changes like create, view, delete, etc
 |**show**       | Prints the string representation of an instance based on the class name and ```id```|
 |**destroy**    | Deletes an instance based on the class name and id |
 |**all**        | Prints all string representation of all instances based on the class name & retrieves the number of instances of that class.|
-|**update**(Yet to be implemented)     | Updates an instance based on the class name and ```id``` by adding or updating attribute (saves the changes into a JSON file).|
+|**update** (Yet to be implemented)     | Updates an instance based on the class name and ```id``` by adding or updating attribute (saves the changes into a JSON file).|
 
 
 
