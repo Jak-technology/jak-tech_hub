@@ -30,7 +30,7 @@ class UserProfile(models.Model):
     
     def __str__(self):
         """ String for representing the Model object. """
-        return f'{self.user.first_name} Profile'
+        return f'{self.user.username} - {self.user.first_name} - {self.job_title.all().first()}'
 
     def get_absolute_url(self):
         """ Returns the URL to access a user profile """
