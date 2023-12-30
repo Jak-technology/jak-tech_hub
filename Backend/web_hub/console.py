@@ -36,7 +36,6 @@ class WebHub(cmd.Cmd):
                  "Skills",
                  "Specialization",
                  "JobTitle",
-                
                 ]
 
     prompt = '$ >>> '
@@ -93,7 +92,6 @@ class WebHub(cmd.Cmd):
                     print(f"Instance created successfully with values: {field_values}")
             except Exception as e:
                 print(f"Error creating instance: {str(e)}")
-
 
 
     def do_show(self, arg):
@@ -160,7 +158,7 @@ class WebHub(cmd.Cmd):
                 try:
                     instance = model_class.objects.get(pk=object_id)
                     instance.delete()
-                    print(f"Instance {object_id} deleted successfully.")
+                    print(f"{instance} deleted successfully.")
                 except ObjectDoesNotExist:
                     print("** no instance found **")
 
@@ -198,21 +196,85 @@ class WebHub(cmd.Cmd):
                 print("** no instance found **")
 
 
+    def default(self, arg):
+        """ The command interpreter can retrieve all instances of a class
+                Usage: <app name>.<class name>.all()
+            It can retrieve the number of instances of a class
+                Usage: <app name>.<class name>.count()
+            It can retrieve an instance based on its ID
+                Usage: <app name>.<class name>.show(<id>)
+            It can create an instance 
+                Usage: <app name>.<class name>.create()
+            It can destroy an instance based on its ID
+                Usage: <app name>.<class name>.destroy(<id>)
+            It can update an instance based on its ID #Not implemented yet
+                Usage: <app name>.<class name>.update(<id>, <attr name>, <attr value>)
+            It can update an instance based on its ID with a dictionary #Not implemented yet
+                Usage: <app name>.<class name>.update(<id>, <dictionary representation>)
+        """
+        args = arg.split('.')
+
+        if len(args) >= 3 and args[-1] == 'all()':
+            app_name = args[0]
+            class_name = args[1]
+            self.do_all(f"{app_name} {class_name}")
+        
+        elif len(args) >= 3 and args[-1] == 'count()':
+            app_name = args[0]
+            class_name = args[1]
+            obj = self.get_model_class(app_name, class_name)
+            print(obj.objects.all().count())
+
+        elif len(args) >= 3 and args[-1].startswith('show'):
+            app_name = args[0]
+            class_name = args[1]
+            obj_id_split = args[-1].split('(')[1]
+            obj_id = obj_id_split.split(')')[0]
+            self.do_show(f"{app_name} {class_name} {obj_id}")
+        
+        elif len(args) >= 3:
+            app_name = args[0]
+            class_name = args[1]
+            if args[-1].startswith('create'):
+                # Extract field name and value from the command
+                create_args = args[-1].split('(')[1].split(')')[0].split()
+                print(create_args)
+                if len(create_args) == 2:
+                    field_name = create_args[0]
+                    field_value = create_args[1]
+                    # Call do_create with the appropriate arguments
+                    self.do_create(f"{app_name} {class_name} {field_name} {field_value}")
+
+        elif len(args) >= 3 and args[-1].startswith('destroy'):
+            app_name = args[0]
+            class_name = args[1]
+            obj_id_split = args[-1].split('(')[1]
+            obj_id = obj_id_split.split(')')[0]
+            self.do_destroy(f"{app_name} {class_name} {obj_id}")
+        else:
+            print("** Invalid command format **")
+                
+
     def do_quit(self, arg):
         """ Quits the command interpreter """
         return True
 
+
     def emptyline(self):
         """ Method called with empty line is entered """
         return
+
     
     def do_EOF(self, arg):
         """ Exits command interpreter when it receives (Ctrl + D or Command + D) """
         print()
         return True
 
+
     def postloop(self):
         print('Exiting... Goodbye!')
+
+
 
 if __name__ == "__main__":
     WebHub().cmdloop()
