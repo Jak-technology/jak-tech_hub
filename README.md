@@ -38,16 +38,22 @@ We also implemented the default method in the console to allow developers user a
 
 To retrieve all instances of a class
 ```Usage: <app name>.<class name>.all()```
+
 To retrieve the number of instances of a class
 ```Usage: <app name>.<class name>.count()```
+
 To retrieve an instance based on its ID
 ```Usage: <app name>.<class name>.show(<id>)```
+
 To create an instance 
 ```Usage: <app name>.<class name>.create(<field_id> <field_value>)```
+
 To destroy an instance based on its ID
 ```Usage: <app name>.<class name>.destroy(<id>)```
+
 To update an instance based on its ID #Not implemented yet
 ```Usage: <app name>.<class name>.update(<id>, <attr name>, <attr value>)```
+
 To update an instance based on its ID with a dictionary #Not implemented yet
 ```Usage: <app name>.<class name>.update(<id>, <dictionary representation>)```
 
