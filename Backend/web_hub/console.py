@@ -235,15 +235,15 @@ class WebHub(cmd.Cmd):
         elif len(args) >= 3:
             app_name = args[0]
             class_name = args[1]
-        if args[-1].startswith('create'):
-            # Extract field name and value from the command
-            create_args = args[-1].split('(')[1].split(')')[0].split()
-            print(create_args)
-            if len(create_args) == 2:
-                field_name = create_args[0]
-                field_value = create_args[1]
-                # Call do_create with the appropriate arguments
-                self.do_create(f"{app_name} {class_name} {field_name} {field_value}")
+            if args[-1].startswith('create'):
+                # Extract field name and value from the command
+                create_args = args[-1].split('(')[1].split(')')[0].split()
+                print(create_args)
+                if len(create_args) == 2:
+                    field_name = create_args[0]
+                    field_value = create_args[1]
+                    # Call do_create with the appropriate arguments
+                    self.do_create(f"{app_name} {class_name} {field_name} {field_value}")
 
         elif len(args) >= 3 and args[-1].startswith('destroy'):
             app_name = args[0]
