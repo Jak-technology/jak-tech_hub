@@ -66,6 +66,7 @@ We also implemented the default method in the console to allow developers user a
 
 
 
+
 ###### User Authentication and Authorization:
 - Implement a secure user authentication system.
 - Include roles and permissions for different user types (admin, regular user, etc.). All of us the pioneers can be admin/superusers while future employees will be regular users.
