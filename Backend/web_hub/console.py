@@ -204,7 +204,7 @@ class WebHub(cmd.Cmd):
             It can retrieve an instance based on its ID
                 Usage: <app name>.<class name>.show(<id>)
             It can create an instance 
-                Usage: <app name>.<class name>.create()
+                Usage: <app name>.<class name>.create(<field_id> <field_value>)
             It can destroy an instance based on its ID
                 Usage: <app name>.<class name>.destroy(<id>)
             It can update an instance based on its ID #Not implemented yet
@@ -240,10 +240,10 @@ class WebHub(cmd.Cmd):
                 create_args = args[-1].split('(')[1].split(')')[0].split()
                 print(create_args)
                 if len(create_args) == 2:
-                    field_name = create_args[0]
+                    field_id = create_args[0]
                     field_value = create_args[1]
                     # Call do_create with the appropriate arguments
-                    self.do_create(f"{app_name} {class_name} {field_name} {field_value}")
+                    self.do_create(f"{app_name} {class_name} {field_id} {field_value}")
 
         elif len(args) >= 3 and args[-1].startswith('destroy'):
             app_name = args[0]
