@@ -32,6 +32,25 @@ This is serves a quick way tomake simple changes like create, view, delete, etc
 |**all**        | Prints all string representation of all instances based on the class name & retrieves the number of instances of that class. ```Usage: all <app_name> <class_name>``` e.g. *all project_creation ProjectComment*|
 |**update** (Yet to be implemented)     | Updates an instance based on the class name and ```id``` by adding or updating attribute (saves the changes into a JSON file).|
 
+### Alternative commands for the console
+---------------------------------------
+We also implemented the default method in the console to allow developers user alternative commands for almost all exiting commands. Here are the list of alternative commands:
+
+To retrieve all instances of a class
+```Usage: <app name>.<class name>.all()```
+To retrieve the number of instances of a class
+```Usage: <app name>.<class name>.count()```
+To retrieve an instance based on its ID
+```Usage: <app name>.<class name>.show(<id>)```
+To create an instance 
+```Usage: <app name>.<class name>.create(<field_id> <field_value>)```
+To destroy an instance based on its ID
+```Usage: <app name>.<class name>.destroy(<id>)```
+To update an instance based on its ID #Not implemented yet
+```Usage: <app name>.<class name>.update(<id>, <attr name>, <attr value>)```
+To update an instance based on its ID with a dictionary #Not implemented yet
+```Usage: <app name>.<class name>.update(<id>, <dictionary representation>)```
+
 
 
 ###### User Authentication and Authorization:
