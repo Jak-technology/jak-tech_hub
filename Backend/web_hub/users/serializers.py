@@ -3,6 +3,12 @@ from django.contrib.auth.models import User
 from .models import UserProfile, Skills, Specialization, JobTitle
 
 
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['username', 'first_name', 'last_name', 'email']
+
+
 class UserRegistrationSerializer(serializers.ModelSerializer):
     """ User Serializer class """
     class Meta:
@@ -30,6 +36,10 @@ class JobTitleSerializer(serializers.ModelSerializer):
 
 
 class UserProfileSerializer(serializers.ModelSerializer):
+    user = UserSerializer(read_only=True)
+    gender = serializers.CharField(required=False, allow_blank=True, max_length=10)
+    date_of_birth = serializers.DateField()
+    phone_number = serializers.CharField(max_length=15)
     skills = SkillsSerializer(many=True)
     specialization = SpecializationSerializer(many=True)
     job_title = JobTitleSerializer(many=True)
