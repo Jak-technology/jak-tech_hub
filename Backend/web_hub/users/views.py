@@ -26,11 +26,11 @@ class UserRegistrationView(generics.CreateAPIView):
         
         # Validates the serializer data
         serializer.is_valid(raise_exception=True) 
-        
+           
         # Calls the 'perform_create' method to create a new 
         # object using the serializer data.
         self.perform_create(serializer)
-
+        
         # Retrieves success headers using 'get_success_headers'
         headers = self.get_success_headers(serializer.data)
 
@@ -133,4 +133,4 @@ class JobTitleDeleteView(generics.DestroyAPIView):
     def delete(self, request, *args, **kwargs):
         instance = self.get_object()
         instance.delete()
-        return Response({"message": "Job title deleted successfully."}, status=status.HTTP_204_NO_CONTENT)
+        return Response({"message": f"{instance} deleted successfully."}, status=status.HTTP_204_NO_CONTENT)
