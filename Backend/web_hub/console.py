@@ -197,8 +197,7 @@ class WebHub(cmd.Cmd):
 
 
     def default(self, arg):
-        """ 
-            The command interpreter can retrieve all instances of a class
+        """ The command interpreter can retrieve all instances of a class
                 Usage: <app name>.<class name>.all()
             It can retrieve the number of instances of a class
                 Usage: <app name>.<class name>.count()
@@ -239,7 +238,7 @@ class WebHub(cmd.Cmd):
             if args[-1].startswith('create'):
                 # Extract field name and value from the command
                 create_args = args[-1].split('(')[1].split(')')[0].split()
-                
+                print(create_args)
                 if len(create_args) == 2:
                     field_id = create_args[0]
                     field_value = create_args[1]
