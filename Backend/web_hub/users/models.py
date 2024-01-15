@@ -42,7 +42,7 @@ class Skills(models.Model):
 
     def __str__(self):
         """ String for representing the Model object. """
-        return self.name
+        return f"{self.name}"
 
     def get_absolute_url(self):
         """ Returns the URL to access a particular skill """
@@ -54,7 +54,7 @@ class Specialization(models.Model):
 
     def __str__(self):
         """ String for representing the Model object. """
-        return self.name
+        return f"{self.name}"
 
     def get_absolute_url(self):
         """ Returns the URL to access a particular specialization """
@@ -66,7 +66,7 @@ class JobTitle(models.Model):
 
     def __str__(self):
         """ String for representing the Model object. """
-        return self.title
+        return f"{self.title}"
 
     def get_absolute_url(self):
         """ Returns the URL to access a particular job title """
