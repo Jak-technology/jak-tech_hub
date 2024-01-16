@@ -1,0 +1,84 @@
+/* Andy Bell's CSS Resets */
+
+/* Stop animations when page is resizing */
+.resize-animation-stopper * {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  /* https://piccalil.li/blog/a-modern-css-reset */
+  
+  /* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+  
+  /* Remove default margin */
+  * {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+  
+    --clr-neutral-700: #4a4d50;
+  
+    --clr-white: #fff;
+    --clr-black: #000;
+    --transition: all 350ms ease-in-out;
+    --container-md: 100%;
+    --container-lg: 100%;
+    --container-xl: 100%;
+  }
+  
+  /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+  ul[role="list"],
+  ol[role="list"] {
+    list-style: none;
+  }
+  
+  /* Set core root defaults */
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+  
+  html,
+  body {
+    height: 100%;
+  }
+  
+  /* Set core body defaults */
+  body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+  }
+  
+  /* A elements that don't have a class get default styles */
+  a:not([class]) {
+    text-decoration-skip-ink: auto;
+  }
+  
+  /* Make images easier to work with */
+  img,
+  picture,
+  svg {
+    max-width: 100%;
+    display: block;
+  }
+  
+  .container {
+    width: var(--container-md);
+    margin: 0 auto;
+  }
+  
+  @media (min-width: 780px) {
+    .container {
+      width: var(--container-lg);
+    }
+  }
+  
+  @media (min-width: 1400px) {
+    .container {
+      width: var(--container-xl);
+    }
+  }

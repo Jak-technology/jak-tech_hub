@@ -1,0 +1,117 @@
+body {
+    font-family: "Inter", sans-serif;
+    font-family: "Work Sans", sans-serif;
+    background-color: #f8f8f8;
+    padding-bottom: 18rem;
+}
+
+
+
+.section7 {
+    display: flex;
+    /* padding: 38.382px 47.5px 39.964px 48.5px; */
+    padding-inline: 0.8rem;
+    padding-block: 2.5rem;
+    align-items: center;
+    
+    background: white;
+    margin: 0 auto;
+    gap: 1.4rem;
+    flex-direction: column;
+  }
+  .seven-i img {
+    width: 100%;
+    border-radius: 30px;
+  }
+  .seven-ii {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .seven-head {
+    color: #202124;
+    font-family: Inter;
+    font-size: 2rem;
+    font-weight: 700;
+    /* margin-bottom: 40px; */
+  }
+    .seven-head span {
+        color: red;
+        font-family: Inter;
+        font-size: 3.5rem;
+        font-weight: 700;
+        /* margin-bottom: 40px; */
+    }
+  .seven-bio {
+    color: #1e1e1e;
+    font-family: Work Sans;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 40px;
+  }
+
+
+.section8 {
+    display: flex;
+    /* padding: 38.382px 47.5px 39.964px 48.5px; */
+    padding-inline: 0.8rem;
+    padding-block: 2.5rem;
+    align-items: center;
+    
+    background: lightgray;
+    margin: 0 auto;
+    gap: 1.4rem;
+    flex-direction: column;
+  }
+  .eight-i img {
+    width: 100%;
+    border-radius: 30px;
+  }
+  .eight-ii {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .eight-head {
+    color: #202124;
+    font-family: Inter;
+    font-size: 2rem;
+    font-weight: 700;
+    /* margin-bottom: 40px; */
+  }
+    .eight-head span {
+        color: red;
+        font-family: Inter;
+        font-size: 3.5rem;
+        font-weight: 700;
+        /* margin-bottom: 40px; */
+    }
+  .eight-bio {
+    color: #1e1e1e;
+    font-family: Work Sans;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 40px;
+  }
+
+  footer {
+    background-color: black;
+    color: #fff;
+    padding: 3px;
+    text-align: center;
+  }
+  
+  .footer-head {
+    font-size: 2em;
+    margin-bottom: 10px;
+    
+  }
+  
+
+  .footer-copy {
+    font-size: 0.8em;
+  }
