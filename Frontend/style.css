@@ -2,27 +2,62 @@
 /* Reviews section */
 
 .back {
-    background: linear-gradient(to bottom right, #4dc4ff 10%, #0099e6 30%, #006699 90%);
+    background: linear-gradient(to bottom right, #82c5e7 10%, #2c9bd7 30%, #237ca8 90%);
+    
 }
 
 .rev {
-    color: #fff;
-    font-size: 1.875rem;
-    padding-top: 1.25rem;
-    display: flex;
-    justify-content: center;
+  font-family: "Inter";
+  letter-spacing: 2px;
+  font-size: 4rem;
+  color: #fff;
+  padding-top: 1.25rem;
+  display: flex;
+  justify-content: center;
+  
+  
+  
 }
 
 .revbod {
-    color: #fff;
+    color: #6ec5f7;
     font-size: 1.125rem;
     margin-left: 2.5rem;
     margin-right: 2.5rem;
     opacity: 1;
+    display: flex;
+    text-align: start;
+    justify-content: space-around;
 }
 
-.revq {
+.colon {
+    color: #6ec5f7;
+    font-size: 4rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    opacity: 1;
+    display: flex;
+    text-align: center;
+    justify-content: left;
+}
+
+.rev-1 {
     padding-top: 1.25rem;
+    margin-bottom: 150px;
+    margin-top: 100px;
+    font-size: 1.5rem;
+}
+.rev-2 {
+  padding-top: 1.25rem;
+  margin-bottom: 100px;
+  margin-top: 100px;
+  font-size: 1.5rem;
+}
+.rev-3 {
+  padding-top: 1.25rem;
+  margin-bottom: 100px;
+  margin-top: 100px;
+  font-size: 1.5rem;
 }
 
 .revn,
@@ -30,7 +65,8 @@
     font-weight: 600;
     padding-top: 0.5rem;
     display: flex;
-    justify-content: center;
+    justify-content: left;
+    margin-top: 40px;
 }
 
 .revnj {
@@ -39,26 +75,35 @@
 
 /* Responsive styles */
 @media screen and (max-width: 768px) {
-    .revbod {
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
+  .revbod, .colon {
+      margin-left: 1rem;
+      margin-right: 1rem;
+  }
 }
 
 @media screen and (max-width: 480px) {
-    .rev {
-        font-size: 1.5rem;
-    }
+  .rev {
+      font-size: 2rem;
+  }
 
-    .revbod {
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
+  .revbod, .colon {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+  }
 
-    .revn,
-    .revnj {
-        font-size: 1rem;
-    }
+  .revn, .revnj {
+      font-size: 1rem;
+  }
+
+  .rev-1, .rev-2, .rev-3 {
+      margin-top: 50px;
+      margin-bottom: 75px;
+      font-size: 1.2rem;
+  }
+  .revbod, .colon, .revn, .revnj {
+    flex-direction: column;
+    align-items: start;
+  }
 }
 
 body {
