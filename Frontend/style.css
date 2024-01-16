@@ -1,0 +1,63 @@
+/* Reviews section */
+
+.back {
+    background: linear-gradient(to bottom right, #4dc4ff 10%, #0099e6 30%, #006699 90%);
+}
+
+.rev {
+    color: #fff;
+    font-size: 1.875rem;
+    padding-top: 1.25rem;
+    display: flex;
+    justify-content: center;
+}
+
+.revbod {
+    color: #fff;
+    font-size: 1.125rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    opacity: 1;
+}
+
+.revq {
+    padding-top: 1.25rem;
+}
+
+.revn,
+.revnj {
+    font-weight: 600;
+    padding-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.revnj {
+    padding-bottom: 1.25rem;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .revbod {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .rev {
+        font-size: 1.5rem;
+    }
+
+    .revbod {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .revn,
+    .revnj {
+        font-size: 1rem;
+    }
+}
+
+
