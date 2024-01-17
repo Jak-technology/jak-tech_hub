@@ -387,3 +387,77 @@ nav img{
     margin-bottom: 20px;
     color: #fff;
 }
+
+
+.contact{
+    height: 100vh;
+    width: 100%;
+    background: #142140;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px;
+}
+
+.first-sec{
+    height: fit-content;
+    width: 500px;
+    background-color: antiquewhite;
+    align-items: center;
+    justify-content: center;
+}
+
+.main{
+    border-bottom: 2px solid #000;
+    padding: 20px;
+    height: 120px;
+    align-items: center;
+    justify-content: center;
+}
+
+.conn{
+    background: #071332;
+}
+
+.phon{
+    background: #ffffff;
+}
+
+.first-sec h3{
+    font-size: 1.4rem;
+    margin-bottom: 2px solid #000;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.first-sec h1{
+    font-size: 3.2rem;
+    color: #57e4ff;
+}
+
+.social-main{
+    font-size: 2rem;
+    border-bottom: 2px solid #000;
+    padding: 10px;
+    background: #57e4ff;
+    height: 120px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+
+.social-main ul{    
+    color: #fff;
+    display: flex;
+    list-style: none;
+}
+
+.footer__social a{
+    color: #000;
+    text-decoration: none;
+    list-style: none;
+    padding: 8px;
+    font-size: 3rem;
+}
+
+
