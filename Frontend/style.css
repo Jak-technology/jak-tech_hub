@@ -2,7 +2,7 @@
 /* Reviews section */
 
 .back {
-    background: linear-gradient(to bottom right, #82c5e7 10%, #2c9bd7 30%, #237ca8 90%);
+    background: linear-gradient(to bottom right, #01B3BE 10%, #05738B 30%, #092E54 90%);
     
 }
 
@@ -20,7 +20,7 @@
 }
 
 .revbod {
-    color: white;
+    color: #57E4FF;
     font-size: 1.125rem;
     margin-left: 2.5rem;
     margin-right: 2.5rem;
@@ -31,7 +31,7 @@
 }
 
 .colon {
-    color: white;
+    color: #57E4FF;
     font-size: 4rem;
     margin-left: 2.5rem;
     margin-right: 2.5rem;
@@ -60,8 +60,7 @@
   font-size: 1.5rem;
 }
 
-.revn,
-.revnj {
+.revn {
     font-weight: 600;
     padding-top: 0.5rem;
     display: flex;
@@ -69,9 +68,6 @@
     margin-top: 40px;
 }
 
-.revnj {
-    padding-bottom: 1.25rem;
-}
 
 /* Responsive styles */
 @media screen and (max-width: 768px) {
