@@ -32,7 +32,7 @@ class BlogPostComment(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     blogpost = models.ForeignKey(BlogPost, on_delete=models.CASCADE, related_name='comments')
     date_created = models.DateTimeField(auto_now_add=True)
-    date_updated = models.DateTimeField(auto_now_add=True)
+    date_updated = models.DateTimeField(auto_now=True)
 
     class Meta:
         ordering = ['author', 'date_created']
