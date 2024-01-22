@@ -30,7 +30,7 @@ class BlogPost(models.Model):
 class BlogPostComment(models.Model):
     content = models.TextField()
     author = models.ForeignKey(User, on_delete=models.CASCADE)
-    blogpost = models.ForeignKey(BlogPost, on_delete=models.CASCADE)
+    blogpost = models.ForeignKey(BlogPost, on_delete=models.CASCADE, related_name='comments')
     date_created = models.DateTimeField(auto_now_add=True)
     date_updated = models.DateTimeField(auto_now_add=True)
 

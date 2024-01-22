@@ -4,9 +4,16 @@ from users.serializers import UserSerializer
 
 from .models import BlogPost, BlogPostComment
 
-
+        
 class BlogPostSerializer(serializers.ModelSerializer):
-    author = UserSerializer(read_only=True)
+    author = UserSerializer(read_only=True)    
     class Meta:
         model = BlogPost
-        fields = '__all__'
+        fields = ['author', 'title', 'content', 'date_created', 'date_updated']
+
+
+class BlogPostCommentSerializer(serializers.ModelSerializer):
+    author = UserSerializer(read_only=True)
+    class Meta:
+        model = BlogPostComment
+        fields = ['content', 'author', 'date_created', 'date_updated']

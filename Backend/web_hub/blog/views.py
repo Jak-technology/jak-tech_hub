@@ -4,7 +4,7 @@ from rest_framework import status, generics
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from .serializers import BlogPostSerializer
+from .serializers import BlogPostSerializer, BlogPostCommentSerializer
 from .models import BlogPost, BlogPostComment
 
 
@@ -46,6 +46,18 @@ class BlogDetailView(generics.RetrieveAPIView):
     queryset = BlogPost.objects.all()
     serializer_class = BlogPostSerializer
     lookup_field = 'id'
+
+    def retrieve(self, request, *args, **kwargs):
+        instance = self.get_object()
+        serializer = self.get_serializer(instance)
+
+        comments_queryset = instance.comments.all()
+        comments_serializer = BlogPostCommentSerializer(comments_queryset, many=True)
+
+        data = serializer.data
+        data['comments'] = comments_serializer.data
+        
+        return Response(data)
 
 
 class BlogUpdateView(generics.RetrieveUpdateAPIView):
