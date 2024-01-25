@@ -7,11 +7,17 @@ class Project(models.Model):
     title = models.CharField(max_length=255)
     content = models.TextField()
     author = models.ForeignKey(User, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='images/project_images/uploads/%Y/%m-%d/', default='/images/project_images/default.jpg')
     date_created = models.DateTimeField(auto_now_add=True)
-    date_updated = models.DateTimeField(auto_now_add=True)
+    date_updated = models.DateTimeField(auto_now=True)
 
     class Meta:
         ordering = ['title', 'date_created']
+
+    def save(self, *args, **kwargs):
+        if not self.author_id and hasattr(self, '_request') and self._request.user.is_authenticated:
+            self.author = self._request.user
+        super().save(*args, **kwargs)
 
     def __str__(self):
         """ String for representing the Model object. """
@@ -25,9 +31,9 @@ class Project(models.Model):
 class ProjectComment(models.Model):
     content = models.TextField()
     author = models.ForeignKey(User, on_delete=models.CASCADE)
-    project = models.ForeignKey(Project, on_delete=models.CASCADE)
+    project = models.ForeignKey(Project, on_delete=models.CASCADE, related_name='comments')
     date_created = models.DateTimeField(auto_now_add=True)
-    date_updated = models.DateTimeField(auto_now_add=True)
+    date_updated = models.DateTimeField(auto_now=True)
 
     class Meta:
         ordering = ['author', 'date_created']
