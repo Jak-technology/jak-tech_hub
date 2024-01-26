@@ -1,6 +1,5 @@
 from django.urls import path
-from .views import (alt_apiview,
-                    BlogCreateView,
+from .views import (BlogCreateView,
                     BlogListView,
                     BlogDetailView,
                     BlogUpdateView,
@@ -10,7 +9,6 @@ from .views import (alt_apiview,
 
 
 urlpatterns = [
-    path('blog/', alt_apiview, name='blogs-list'),
     path('blog/create/', BlogCreateView.as_view(), name='create-blog'),
     path('blog/list/', BlogListView.as_view(), name='list-blog'),
     path('blog/list/<int:id>', BlogDetailView.as_view(), name='blog-detail'),
