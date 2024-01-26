@@ -25,7 +25,8 @@ class BlogListView(generics.ListAPIView):
     serializer_class = BlogPostSerializer
 
 
-class BlogDetailView(generics.RetrieveAPIView):
+class BlogDetailView(generics.RetrieveUpdateDestroyAPIView):
+    permission_classes = [IsAuthorOrReadOnly]
     queryset = BlogPost.objects.all()
     serializer_class = BlogPostSerializer
     lookup_field = 'id'
@@ -41,17 +42,3 @@ class BlogDetailView(generics.RetrieveAPIView):
         data['comments'] = comments_serializer.data
         
         return Response(data)
-
-
-class BlogUpdateView(generics.RetrieveUpdateAPIView):
-    permission_classes = [IsAuthorOrReadOnly]
-    queryset = BlogPost.objects.all()
-    serializer_class = BlogPostSerializer
-    lookup_field = 'id'
-
-
-class BlogDeleteView(generics.RetrieveDestroyAPIView):
-    permission_classes = [IsAuthorOrReadOnly]
-    queryset = BlogPost.objects.all()
-    serializer_class = BlogPostSerializer
-    lookup_field = 'id'
