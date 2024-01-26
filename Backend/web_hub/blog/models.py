@@ -6,6 +6,7 @@ class BlogPost(models.Model):
     title = models.CharField(max_length=255)
     content = models.TextField()
     author = models.ForeignKey(User, on_delete=models.CASCADE)
+    image = models.ImageField(default="images/blog_images/default.png/", upload_to="images/blog_images/uploads/%Y/%m-%d")
     date_created = models.DateTimeField(auto_now_add=True)
     date_updated = models.DateTimeField(auto_now=True)
     class Meta:

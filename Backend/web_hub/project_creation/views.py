@@ -11,7 +11,6 @@ from .permissions import IsAuthorOrReadOnly, IsStaffOrReadOnly
 
 
 class ProjectCreateView(generics.CreateAPIView):
-    permisssion_classes = [IsStaffOrReadOnly]
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
 

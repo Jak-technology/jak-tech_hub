@@ -6,24 +6,7 @@ from rest_framework.response import Response
 
 from .serializers import BlogPostSerializer, BlogPostCommentSerializer
 from .models import BlogPost, BlogPostComment
-
-
-@api_view(['GET', 'POST'])
-def alt_apiview(request):
-    blogs = BlogPost.objects.all()
-    if request.method == 'GET':
-        serializer = BlogPostSerializer(blogs, many=True)
-        return Response(serializer.data)
-    elif request.method == 'POST':
-        serializer = BlogPostSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            print(f'{serializer.data}')
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        print(f'{serializer.errors}')
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-    else:
-        return Response({'message': 'Only GET requests allowed!!'}, status=status.HTTP_405_METHOD_NOT_ALLOWED)
+from project_creation.permissions import IsAuthorOrReadOnly
 
 
 class BlogCreateView(generics.CreateAPIView):
@@ -61,12 +44,14 @@ class BlogDetailView(generics.RetrieveAPIView):
 
 
 class BlogUpdateView(generics.RetrieveUpdateAPIView):
+    permission_classes = [IsAuthorOrReadOnly]
     queryset = BlogPost.objects.all()
     serializer_class = BlogPostSerializer
     lookup_field = 'id'
 
 
 class BlogDeleteView(generics.RetrieveDestroyAPIView):
+    permission_classes = [IsAuthorOrReadOnly]
     queryset = BlogPost.objects.all()
     serializer_class = BlogPostSerializer
     lookup_field = 'id'
