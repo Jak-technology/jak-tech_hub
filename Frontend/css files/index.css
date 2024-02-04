@@ -38,7 +38,7 @@ body{
 
 /*===Hero Page===*/
 .hero-page{
-  background: linear-gradient(rgba(58, 55, 55, 0.8), rgba(0, 0, 0, 0.8)), url('/assets/project-main.png');
+  background: linear-gradient(rgba(58, 55, 55, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/project-main.png');
   min-height: 90vh;
   max-width: 100%;
   background-size: cover;
