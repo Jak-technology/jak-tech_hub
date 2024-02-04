@@ -1,0 +1,295 @@
+ul{
+  list-style: none;
+}
+
+ul li a{
+  text-decoration: none;
+  color: #000;
+ }
+
+ a{
+  text-decoration: none;
+  color: #000;
+ }
+
+
+
+ header{
+    width: 100%;
+    height: 12vh;
+    display: flex;
+	padding: 30px;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 99;
+    box-shadow: 0 0 10px #000;
+    background: rgb(248, 245, 245);
+}
+
+#chk1{
+    display: none; 
+}
+
+i{
+    color: #fff;
+    cursor: pointer;
+}
+
+header .jak-logo{
+    display: flex;
+}
+
+header .jak-logo img{
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+}
+
+header .jak-logo .jak-texts{
+  font-size: 0.7rem;
+}
+
+header .jak-logo .jak-texts h1{
+    color: #2D3192;
+}
+
+header .logo{
+    flex: 1;
+    color:#fff;
+    margin-left: 50px;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+
+header ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1rem;
+}
+
+header ul li{
+    list-style: none;
+}
+
+button{
+    color: #fff;
+}
+
+header ul .but .btn{
+    color: #fff;
+}
+ 
+
+header ul li a{
+    text-decoration: none;
+    color:#000000;
+    margin-right: 50px;
+    font-weight: 600;
+    padding: 10px 15px;
+}
+
+header ul li a:hover{
+    border-bottom: 2px solid cadetblue;
+}
+
+.mid{
+	display: none;
+}
+
+header .menu{
+    font-size: 1.5em;
+    display: none;
+}
+
+@media(max-width:1000px){
+    header ul{
+        position: fixed;
+        top: 12vh;
+        right: -100%;
+        background: #434584;
+        height: calc(100vh - 12vh);
+        width: 45%;
+        padding-left: 30px;
+        flex-direction: column;
+        align-items: flex-start;
+        transition: right 0.5s linear;
+    }
+
+    header ul li a{
+        color: #fff;
+    }
+
+	.mid{
+		display: none;
+	}
+
+    header ul .but .btn{
+        color: #fff;
+        background: #44a7d8;
+    }
+     
+    header .menu{
+        display: block;
+        width:100px;
+        text-align: center;
+    }
+
+	header .menu label i{
+		color: #000;
+	}
+
+
+    #chk1:checked ~ ul{
+        right: 0;
+        
+    }
+  
+}
+
+
+
+
+
+
+
+
+
+/*===Footer===*/
+.container{
+	max-width: 100%;
+	margin:auto;
+}
+
+.row{
+	display: flex;
+	flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+ul{
+	list-style: none;
+}
+
+.footer{
+	background-color: #D1D3FB;
+  padding: 70px 0;
+}
+
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+
+.footer-col .jak-footer-main{
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.footer-col .jak-footer-main img{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.footer-col .jak-footer-main .jak-texts h1{
+    color: #2D3192;
+}
+
+.footer-col .jak-footer-main .jak-texts{
+  font-size: 0.75rem;
+}
+
+/* .footer-col .footer-text{
+    margin-bottom: 20px;
+} */
+
+
+
+
+.footer-col h4{
+	font-size: 18px;
+	color: #2D3192;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #514e4e;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #000;
+	text-decoration: none;
+	font-weight: 300;
+	display: block;
+	transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+	color: #2D3192;
+	padding-left: 8px;
+}
+
+.footer-col .social-links a{
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 10px;
+	border-radius: 50%;
+	color: #000000;
+	transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover{
+	color: #8ea4da;
+}
+
+.footer-col button{
+  margin-bottom: 30px;
+}
+
+/*responsive*/
+@media(max-width:1000px){
+  .row{
+    padding: 30px;
+  }
+
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .row{
+    padding: 30px;
+  }
+
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+
+
+
+
