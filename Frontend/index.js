@@ -6,105 +6,114 @@ var image1 = document.getElementById("image1");
             anchor.scrollIntoView({ block: "start", behavior: "smooth" });
           }
         });
-      }
+}
+
+document.querySelector('.menu').addEventListener('click', function() {
+  var navLinks = document.querySelector('.nav-links');
+  if (navLinks.style.display === "none") {
+    navLinks.style.display = "flex";
+  } else {
+    navLinks.style.display = "none";
+  }
+});
       
-      var about = document.getElementById("about");
+var about = document.getElementById("about");
       if (about) {
         about.addEventListener("click", function (e) {
           window.location.href = "./component.html";
         });
-      }
+}
       
-      var navAbout = document.getElementById("navAbout");
+var navAbout = document.getElementById("navAbout");
       if (navAbout) {
         navAbout.addEventListener("click", function (e) {
           window.location.href = "./about.html";
         });
-      }
+}
       
-      var ourServices = document.getElementById("ourServices");
+var ourServices = document.getElementById("ourServices");
       if (ourServices) {
         ourServices.addEventListener("click", function (e) {
           window.location.href = "./component.html";
         });
-      }
+}
       
-      var navServices = document.getElementById("navServices");
+var navServices = document.getElementById("navServices");
       if (navServices) {
         navServices.addEventListener("click", function (e) {
           window.location.href = "./services.html";
         });
-      }
+}
       
-      var blog = document.getElementById("blog");
+var blog = document.getElementById("blog");
       if (blog) {
         blog.addEventListener("click", function (e) {
           window.location.href = "./blog.html";
         });
-      }
+}
       
-      var navBlog = document.getElementById("navBlog");
+var navBlog = document.getElementById("navBlog");
       if (navBlog) {
         navBlog.addEventListener("click", function (e) {
           window.location.href = "./blog.html";
         });
-      }
+}
       
-      var contact = document.getElementById("contact");
+var contact = document.getElementById("contact");
       if (contact) {
         contact.addEventListener("click", function (e) {
           window.location.href = "./contact.html";
         });
-      }
+}
       
-      var navContact = document.getElementById("navContact");
+var navContact = document.getElementById("navContact");
       if (navContact) {
         navContact.addEventListener("click", function (e) {
           window.location.href = "./contact.html";
         });
-      }
+}
       
-      var navButton = document.getElementById("navButton");
+var navButton = document.getElementById("navButton");
       if (navButton) {
         navButton.addEventListener("click", function (e) {
-          window.open("./project.html");
-        });
-      }
+          window.location.href = "./project.html"
+      });
+}
       
-      var getStartedButton = document.getElementById("getStartedButton");
+var getStartedButton = document.getElementById("getStartedButton");
       if (getStartedButton) {
         getStartedButton.addEventListener("click", function (e) {
           window.location.href = "./component.html";
-        });
-      }
+      });
+}
       
-      var learnMoreButton = document.getElementById("learnMoreButton");
+var learnMoreButton = document.getElementById("learnMoreButton");
       if (learnMoreButton) {
         learnMoreButton.addEventListener("click", function (e) {
           window.location.href = "./component.html";
-        });
-      }
+      });
+}
       
-      var aboutButton = document.getElementById("aboutButton");
+var aboutButton = document.getElementById("aboutButton");
       if (aboutButton) {
         aboutButton.addEventListener("click", function (e) {
           window.location.href = "./component.html";
         });
-      }
+}
       
-      var quoteButton = document.getElementById("quoteButton");
+var quoteButton = document.getElementById("quoteButton");
       if (quoteButton) {
         quoteButton.addEventListener("click", function (e) {
           window.location.href = "./component.html";
         });
-      }
+}
       
-      var servicesButton = document.getElementById("servicesButton");
+var servicesButton = document.getElementById("servicesButton");
       if (servicesButton) {
         servicesButton.addEventListener("click", function (e) {
           window.location.href = "./component.html";
         });
-      }
+}
       
       var contactButton = document.getElementById("contactButton");
       if (contactButton) {

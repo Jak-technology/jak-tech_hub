@@ -142,42 +142,7 @@
     align-items: center;
     gap: var(--gap-xl);
   }
-  .vector-icon,
-  .vector-icon1 {
-    position: absolute;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-  }
-  .vector-icon {
-    height: 83.33%;
-    width: 83.33%;
-    top: 8.33%;
-    right: 8.24%;
-    bottom: 8.33%;
-    left: 8.43%;
-    opacity: 0.5;
-  }
-  .vector-icon1 {
-    height: 39.58%;
-    width: 56.27%;
-    top: 30.21%;
-    right: 21.76%;
-    bottom: 30.21%;
-    left: 21.96%;
-  }
-  .menu {
-    cursor: pointer;
-    border: 0;
-    padding: 0;
-    background-color: transparent;
-    height: 3rem;
-    width: 3.19rem;
-    position: relative;
-    overflow: hidden;
-    flex-shrink: 0;
-    display: none;
-  }
+  
   .nav-links {
     width: 25.69rem;
     display: flex;
@@ -256,6 +221,13 @@
     background-color: var(--color-white);
     justify-content: flex-start;
     padding: 0 var(--padding-3xl);
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 65px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   .text {
     flex: 1;
@@ -310,7 +282,6 @@
     display: flex;
     justify-content: space-between;
     gap: var(--gap-3xl);
-    animation: fade-in 0.5s ease-in-out;
   }
   .getstarted-button {
     cursor: pointer;
@@ -399,6 +370,7 @@
     font-size: var(--font-size-16xl-9);
     color: var(--color-white);
     font-family: var(--font-nunito);
+    padding-top: 70px;
   }
   .exce-icon,
   .heading-6 {
