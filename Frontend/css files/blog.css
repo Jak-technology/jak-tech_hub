@@ -1,0 +1,201 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 1rem;
+    width: 100%;
+}
+
+
+/*===Hero Page===*/
+.hero-page{
+    background: linear-gradient(rgba(58, 55, 55, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/project-main.png');
+    min-height: 90vh;
+    max-width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+
+}
+
+.hero-page .texts{
+    position: absolute;
+    top: 55%;
+    left: 5%; /* Adjust the left value to position the text accordingly */
+    transform: translate(0%, -50%);
+    color: white; /* Adjust text color */
+    width: 850px;
+}
+
+.hero-page .texts h1{
+    font-size: 2.5rem;
+    line-height: 3.0625rem;
+}
+
+.hero-page .texts p{
+    margin: 14px 0;
+    font-size: 1.1rem;
+    line-height: 1.6875rem;
+}
+
+.hero-page .hero-page-buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 370px;
+    margin-top: 20px;
+}
+
+.hero-page .hero-page-buttons .btn{
+  width: 135px;
+  height: 35px;
+  font-size: 14px;
+  border: none;
+  border-radius: 7px;
+  background: #42459C;
+  color: #fff;
+}
+
+
+
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    max-width: 1250px;
+    margin: 150px auto;
+    padding: 20px;
+    gap: 20px;
+}
+.card-list .card-item {
+    background: #fff;
+    padding: 26px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+    list-style: none;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: border 0.5s ease;
+}
+.card-list .card-item:hover {
+    border: 2px solid #000;
+}
+.card-list .card-item img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.card-list span {
+    display: inline-block;
+    background: #F7DFF5;
+    margin-top: 32px;
+    padding: 8px 15px;
+    font-size: 0.75rem;
+    border-radius: 50px;
+    font-weight: 600;
+}
+.card-list .developer {
+    background-color: #F7DFF5; 
+    color: #B22485;
+}   
+.card-list .designer {
+    background-color: #d1e8ff;
+    color: #2968a8;
+}
+.card-list .editor {
+    background-color: #d6f8d6; 
+    color: #205c20;
+}
+.card-item h3 {
+    color: #000;
+    font-size: 1.438rem;
+    margin-top: 28px;
+    font-weight: 600;
+}
+.card-item .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-35deg);
+    height: 40px;
+    width: 40px;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin-top: 40px;
+    transition: 0.2s ease;
+}
+.card-list .card-item:hover .arrow  {
+    background: #000;
+    color: #fff; 
+}
+
+@media (max-width: 1000px) {
+    .card-list .card-item {
+        padding: 15px;
+    }
+}
+@media screen and (max-width: 980px) {
+    .card-list {
+        margin: 0 auto;
+    }
+}
+
+
+
+/* Get-Updates */
+
+.get-updates {
+    max-width: 60%;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);     padding: 30px;
+  }
+  
+  .get-updates-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Additional styling for your container */
+  }
+  
+  .text {
+    width: 60%;
+    line-height: 25px;
+  }
+  
+  .email {
+    width: 40%; /* Adjust the width of the email container */
+    text-align: center;
+    display: flex; /* Set the email container as a flex container */
+  }
+  
+  button {
+    padding: 10px 20px;
+    max-width: 140px;
+    min-height: 38px;
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    border: none;
+    border-radius: 7px;
+    background: #42459C;
+    color: #fff;
+    /* Additional styling for your button */
+  }
+  
+  input[type="email"] {
+    width: 70%; /* Adjust the width of the email input */
+    padding: 10px;
+    outline: none;
+    border: .1px solid #000;
+    /* Additional styling for your email input */
+  }
+
+  input[type="email"]:focus {
+    outline: none;
+    border-color: #42459C; /* Change the border color on focus */
+  }

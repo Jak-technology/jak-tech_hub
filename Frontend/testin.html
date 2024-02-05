@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+  <style>
+    /* Add your custom styles here */
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px; /* Adjust the gap between elements */
+    }
+
+    label {
+      margin-bottom: 8px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .file-upload {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .file-input {
+      margin-bottom: 8px;
+      cursor: pointer;
+      color: #3498db;
+      text-decoration: underline;
+    }
+
+    .drag-drop-box {
+      border: 2px dashed #ccc;
+      padding: 16px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .drag-drop-box input {
+      display: none;
+    }
+
+    .selected-files {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .file-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4px;
+    }
+
+    .file-item button {
+      background-color: #e74c3c;
+      color: #fff;
+      border: none;
+      padding: 4px 8px;
+      cursor: pointer;
+    }
+
+    .add-more-button {
+      display: none;
+      background-color: #27ae60;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+
+    button {
+      grid-column: span 2; /* Span the button across both columns */
+      background-color: #3498db;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="#" method="post">
+    <label for="first_name">First Name:</label>
+    <input type="text" id="first_name" name="first_name" required>
+
+    <label for="last_name">Last Name:</label>
+    <input type="text" id="last_name" name="last_name" required>
+
+    <label for="phone_number">Phone Number:</label>
+    <input type="tel" id="phone_number" name="phone_number" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="company_name">Company Name:</label>
+    <input type="text" id="company_name" name="company_name" required>
+
+    <label for="country">Country:</label>
+    <select id="country" name="country" required>
+      <option value="usa">USA</option>
+      <option value="canada">Canada</option>
+      <!-- Add more options as needed -->
+    </select>
+
+    <label for="contact_method">Preferred Method of Contact:</label>
+    <select id="contact_method" name="contact_method" required>
+      <option value="email">Email</option>
+      <option value="phone">Phone</option>
+      <!-- Add more options as needed -->
+    </select>
+
+    <label for="business_type">Select Business Type:</label>
+    <select id="business_type" name="business_type" required>
+      <option value="small">Small Business</option>
+      <option value="medium">Medium Business</option>
+      <option value="large">Large Business</option>
+      <!-- Add more options as needed -->
+    </select>
+
+    <div class="file-upload">
+      <label for="file" class="file-input">Upload File (click on the button below to add or drag file):</label>
+      <input type="file" id="file" name="file" accept=".pdf, .doc, .docx" style="display: none" multiple>
+      <div class="drag-drop-box" onclick="document.getElementById('file').click()">
+        Drag and drop or <span id="chooseFile">choose files</span>
+      </div>
+      <div class="selected-files" id="selectedFiles"></div>
+      <button type="button" class="add-more-button" id="addMoreButton
