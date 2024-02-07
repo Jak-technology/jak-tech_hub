@@ -97,7 +97,7 @@ body{
 
 .contact-first-form{
     margin-top: 50px;
-    width: 600px;
+    width: 900px;
     height: fit-content;
     border-radius: 7px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);     padding: 30px;
@@ -268,8 +268,8 @@ body{
 
 
 
-  /* contact-us media queries for mobile and tablet (800px) */
-@media only screen and (max-width: 800px) {
+  /* contact-us media queries for mobile and tablet  */
+@media only screen and (max-width: 660px) {
 
   /* hero section */
   .hero-page .hero-page-buttons{
@@ -349,8 +349,7 @@ body{
    .contact-first-form{
     display: block;
     /* background-color: #efecec; */
-    /* margin-left: auto;
-    margin-right: auto; */
+    margin-left: auto;
     margin-top: 50px;
     margin-bottom: 200px;
     width: 350px;
@@ -373,16 +372,28 @@ body{
 }
 
 
-/* contact-us media queries for tablet (800) */
+@media only screen and (max-width: 1008px) {
+  
 
-/* @media only screen and (min-width: 800px) {
-  .contact-first-form {
-    width: 80%;
-    padding: 100px;
+  .get-updates {
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 50px;
+    margin-bottom: 20px;
   }
 
-  .before-form {
-    margin-right: 10p;
+  .get-updates-main {
+    display: block;
+    text-align: left;
+    margin: auto;
+  }
+
+  .get-updates .get-updates-main .text {
+    width: 100%;
+  }
+
+  .get-updates .get-updates-main .email {
+    width: 100%;
   }
   
-} */
+}
