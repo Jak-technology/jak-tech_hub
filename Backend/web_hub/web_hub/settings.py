@@ -31,6 +31,12 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'users.apps.UsersConfig',
+    'project_creation.apps.ProjectCreationConfig',
+    'blog.apps.BlogConfig',
+    'dashboard.apps.DashboardConfig',
+    'emoji_picker',
+    'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
