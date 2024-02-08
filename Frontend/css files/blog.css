@@ -11,7 +11,7 @@ body{
 
 
 /*===Hero Page===*/
-.hero-page{
+.hero-page {
     background: linear-gradient(rgba(58, 55, 55, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/project-main.png');
     min-height: 90vh;
     max-width: 100%;
@@ -19,7 +19,7 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     align-items: center;
-
+    position: relative; /* Add position relative for absolute positioning of children */
 }
 
 .hero-page .texts{
@@ -60,6 +60,139 @@ body{
 }
 
 
+/* Media Queries for Responsive Design */
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .hero-page {
+        min-height: 90vh;
+        width: 100%;
+    }
+
+    .hero-page .texts {
+        width: 100%;
+        color: orange;
+    }
+
+    .hero-page .texts h1 {
+        font-size: 1.9rem; 
+        line-height: 2.2rem;
+    }
+
+    .hero-page .texts p {
+        font-size: 0.9rem; 
+        line-height: 1.2rem; 
+    }
+
+    .hero-page .hero-page-buttons{
+        width: 270px;
+    }
+
+    .hero-page .hero-page-buttons .btn {
+        width: 100px; 
+        font-size: 11px; 
+    }
+}
+
+
+/* next small screen  */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .hero-page {
+        min-height: 90vh;
+        width: 100%;
+    }
+
+    .hero-page .texts {
+        width: 50%;
+        color: red; 
+    }
+
+    .hero-page .texts h1 {
+        font-size: 1.6rem; 
+        line-height: 2rem; 
+    }
+
+    .hero-page .texts p {
+        font-size: 0.9rem; 
+        line-height: 1.2rem; 
+    }
+
+    .hero-page .hero-page-buttons{
+        width: 270px;
+    }
+
+    .hero-page .hero-page-buttons .btn {
+        width: 90px; 
+        font-size: 9px; 
+    }
+}
+
+
+/* small screen size */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+    .hero-page .texts {
+        width: 80%;
+        color: pink;
+    }
+
+    .hero-page .texts h1 {
+        font-size: 1.5rem; 
+        line-height: 1.9rem; 
+    }
+
+    .hero-page .texts p {
+        font-size: 0.7rem; 
+        line-height: 1rem; 
+    }
+
+    .hero-page .hero-page-buttons{
+        width: 250px;
+    }
+
+    .hero-page .hero-page-buttons .btn {
+        width: 90px; 
+        font-size: 9px; 
+    }
+}
+
+
+
+/* very small screen  */
+@media only screen and (max-width: 599px) {
+
+    .hero-page {
+        min-height: 90vh;
+        width: 100%;
+    }
+
+
+    .hero-page .texts {
+        width: 70%;
+        color: green;
+    }
+
+    .hero-page .texts h1 {
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+    }
+
+    .hero-page .texts p {
+        font-size: 0.6rem;
+        line-height: 1rem;
+    }
+
+    .hero-page .hero-page-buttons{
+        width: 230px;
+    }
+
+    .hero-page .hero-page-buttons .btn {
+        width: 85px;
+        font-size: 8px;
+    }
+}
+
+
+
+
 
 .card-list {
     display: grid;
@@ -69,6 +202,7 @@ body{
     padding: 20px;
     gap: 20px;
 }
+
 .card-list .card-item {
     background: #fff;
     padding: 26px;
@@ -80,6 +214,7 @@ body{
     border: 2px solid transparent;
     transition: border 0.5s ease;
 }
+
 .card-list .card-item:hover {
     border: 2px solid #000;
 }
@@ -134,14 +269,119 @@ body{
     color: #fff; 
 }
 
-@media (max-width: 1000px) {
-    .card-list .card-item {
-        padding: 15px;
+
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .card-list {
+        margin: 100px auto;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .card-item h3 {
+        color: #000;
+        font-size: 1.438rem;
+        margin-top: 28px;
+        font-weight: 600;
+    }
+    .card-item .arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(-35deg);
+        height: 40px;
+        width: 40px;
+        color: #000;
+        border: 1px solid #000;
+        border-radius: 50%;
+        margin-top: 40px;
+        transition: 0.2s ease;
     }
 }
-@media screen and (max-width: 980px) {
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
     .card-list {
-        margin: 0 auto;
+        margin: 100px auto;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .card-item h3 {
+        color: #000;
+        font-size: 1.238rem;
+        margin-top: 25px;
+        font-weight: 600;
+    }
+    .card-item .arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(-35deg);
+        height: 37px;
+        width: 37px;
+        color: #000;
+        border: 1px solid #000;
+        border-radius: 50%;
+        margin-top: 40px;
+        transition: 0.2s ease;
+    }
+}
+
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+    .card-list {
+        margin: 100px auto;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .card-item h3 {
+        color: #000;
+        font-size: 1.1rem;
+        margin-top: 20px;
+        font-weight: 600;
+    }
+    .card-item .arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(-35deg);
+        height: 35px;
+        width: 35px;
+        color: #000;
+        border: 1px solid #000;
+        border-radius: 50%;
+        margin-top: 40px;
+        transition: 0.2s ease;
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    .card-list {
+        margin: 100px auto;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .card-item h3 {
+        color: #000;
+        font-size: 1rem;
+        margin-top: 20px;
+        font-weight: 600;
+    }
+    .card-item .arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(-35deg);
+        height: 30px;
+        width: 30px;
+        color: #000;
+        border: 1px solid #000;
+        border-radius: 50%;
+        margin-top: 40px;
+        transition: 0.2s ease;
     }
 }
 
@@ -152,7 +392,8 @@ body{
 .get-updates {
     max-width: 60%;
     margin: 0 auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);     padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);     
+    padding: 30px;
   }
   
   .get-updates-main {
@@ -199,3 +440,133 @@ body{
     outline: none;
     border-color: #42459C; /* Change the border color on focus */
   }
+
+  /* next small screen  */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .get-updates {
+        background: green;
+        max-width: 60%;
+        margin: 0 auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);     
+        padding: 20px;
+      }
+  
+      .text {
+        width: 50%;
+        line-height: 24px;
+      }
+      
+      .email {
+        width: 45%; /* Adjust the width of the email container */
+        text-align: center;
+        display: flex; /* Set the email container as a flex container */
+      }
+      
+      button {
+        padding: 8px 15px;
+        max-width: 100px;
+        min-height: 28px;
+        margin-left: 5px;
+        cursor: pointer;
+        font-size: 12px;
+      }
+      
+      input[type="email"] {
+        width: 70%; /* Adjust the width of the email input */
+        padding: 10px;
+        outline: none;
+        border: .1px solid #7e2a76;
+        /* Additional styling for your email input */
+      }
+}
+
+
+/* small screen size */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+    .get-updates {
+        background: rgb(194, 122, 14);
+        max-width: 60%;
+        margin: 0 auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);     
+        padding: 20px;
+      }
+  
+      .text {
+        width: 50%;
+        line-height: 24px;
+      }
+      
+      .email {
+        width: 50%; /* Adjust the width of the email container */
+        text-align: center;
+        display: block; /* Set the email container as a flex container */
+      }
+      
+      button {
+        padding: 10px 20px;
+        max-width: 150px;
+        min-height: 28px;
+        margin: 5px;
+        cursor: pointer;
+        font-size: 12px;
+      }
+      
+      input[type="email"] {
+        width: 70%; /* Adjust the width of the email input */
+        padding: 10px;
+        outline: none;
+        border: .1px solid #7e2a76;
+        /* Additional styling for your email input */
+      }
+    }
+
+
+
+/* very small screen  */
+@media only screen and (max-width: 599px) {
+    .get-updates {
+        background: red;
+        max-width: 60%;
+        margin: 0 auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);     
+        padding: 20px;
+      }
+
+      .get-updates-main {
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+        /* Additional styling for your container */
+      }
+      
+  
+      .text {
+        width: 100%;
+        line-height: 24px;
+        margin-bottom: 20px;
+      }
+      
+      .email {
+        width: 100%; /* Adjust the width of the email container */
+        text-align: center;
+        display: flex; /* Set the email container as a flex container */
+      }
+      
+      button {
+        padding: 10px 20px;
+        max-width: 150%;
+        min-height: 30px;
+        margin: 5px;
+        cursor: pointer;
+        font-size: 12px;
+      }
+      
+      input[type="email"] {
+        width: 70%; /* Adjust the width of the email input */
+        padding: 10px;
+        outline: none;
+        border: .1px solid #7e2a76;
+        /* Additional styling for your email input */
+      }
+}
+

@@ -67,7 +67,7 @@ header ul {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    font-size: 1rem;
+    font-size: 0.85rem;
 }
 
 header ul li{
@@ -78,7 +78,7 @@ button{
     color: #fff;
 }
 
-header ul .but .btn{
+header ul .but .btn a{
     color: #fff;
 }
  
@@ -104,7 +104,60 @@ header .menu{
     display: none;
 }
 
-@media(max-width:1000px){
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    header{
+        background: red;
+    }
+
+    header ul{
+        position: fixed;
+        top: 12vh;
+        right: -100%;
+        background: #434584;
+        height: calc(100vh - 12vh);
+        width: 45%;
+        padding-left: 30px;
+        flex-direction: column;
+        align-items: flex-start;
+        transition: right 0.5s linear;
+    }
+
+    header ul li a{
+        color: #fff;
+    }
+
+	.mid{
+		display: none;
+	}
+
+    header ul .but .btn{
+        color: #fff;
+        background: #44a7d8;
+        width: 100%;
+        padding: 10px 20px;
+    }
+     
+    header .menu{
+        display: block;
+        width:100px;
+        text-align: center;
+    }
+
+	header .menu label i{
+		color: #000;
+	}
+
+
+    #chk1:checked ~ ul{
+        right: 0;
+        
+    }
+}
+
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
     header ul{
         position: fixed;
         top: 12vh;
@@ -146,8 +199,57 @@ header .menu{
         right: 0;
         
     }
-  
 }
+
+
+@media only screen and (max-width: 599px) {
+    header{
+        background: orange;
+    }
+
+    header ul{
+        position: fixed;
+        top: 12vh;
+        right: -50%;
+        background: #434584;
+        height: calc(100vh - 12vh);
+        width: 45%;
+        padding-left: 30px;
+        flex-direction: column;
+        align-items: flex-start;
+        transition: right 0.5s linear;
+    }
+
+    header ul li a{
+        color: #fff;
+    }
+
+	.mid{
+		display: none;
+	}
+
+    header ul .but .btn{
+        color: #fff;
+        background: #44a7d8;
+    }
+     
+    header .menu{
+        display: block;
+        width:100px;
+        text-align: center;
+    }
+
+	header .menu label i{
+		color: #000;
+	}
+
+
+    #chk1:checked ~ ul{
+        right: 0;
+        
+    }
+}
+
 
 
 
@@ -159,14 +261,10 @@ header .menu{
 
 /*===Footer===*/
 .container{
-	max-width: 100%;
-	margin:auto;
-}
-
-.row{
 	display: flex;
 	flex-wrap: wrap;
-  padding: 0 20px;
+    padding: 0 20px;
+    justify-content: space-between;
 }
 
 ul{
@@ -175,17 +273,17 @@ ul{
 
 .footer{
 	background-color: #D1D3FB;
-  padding: 70px 0;
+    padding: 50px 0;
 }
 
 .footer-col{
-   width: 25%;
-   padding: 0 15px;
+   padding: 0 10px;
+   width: fit-content;
 }
 
 .footer-col .jak-footer-main{
     display: flex;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     align-items: center;
 }
 
@@ -203,9 +301,10 @@ ul{
   font-size: 0.75rem;
 }
 
-/* .footer-col .footer-text{
+.footer-col .footer-text{
+    width: 230px;
     margin-bottom: 20px;
-} */
+}
 
 
 
@@ -218,6 +317,7 @@ ul{
 	font-weight: 500;
 	position: relative;
 }
+
 .footer-col h4::before{
 	content: '';
 	position: absolute;
@@ -245,7 +345,7 @@ ul{
 
 .footer-col ul li a:hover{
 	color: #2D3192;
-	padding-left: 8px;
+	padding-left: 3px;
 }
 
 .footer-col .social-links a{
@@ -265,30 +365,62 @@ ul{
 }
 
 .footer-col button{
-  margin-bottom: 30px;
-}
-
-/*responsive*/
-@media(max-width:1000px){
-  .row{
-    padding: 30px;
-  }
-
-  .footer-col{
-    width: 50%;
     margin-bottom: 30px;
-}
-}
-@media(max-width: 574px){
-  .row{
-    padding: 30px;
-  }
+    }
 
-  .footer-col{
-    width: 50%;
-    margin-bottom: 30px;
+    /*responsive*/
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+        .container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: center;
+            justify-content: space-evenly;
+        }
+
+        .footer-col{
+            margin-bottom: 30px;
+        }
 }
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+
+    .footer-col{
+        width: 50%;
+    }
 }
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+
+    .footer-col{
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    .container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+    }
+
+    .footer-col{
+       width: 50%;
+       margin-bottom: 20px;
+    }
+}
+
+
 
 
 
