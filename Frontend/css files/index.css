@@ -11,9 +11,10 @@ body{
 
 
 /*===Hero Page===*/
-.hero-page{
-  background: linear-gradient(rgba(92, 81, 81, 0.8), rgba(3, 3, 3, 0.8)), url('../assets/hero@3x.png');
-  color: var(--color-white);
+
+.hero-page {
+  background: linear-gradient(rgba(58, 55, 55, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/project-main.png');
+
   min-height: 90vh;
   max-width: 85em;
   background-size: cover;
@@ -22,8 +23,7 @@ body{
   align-items: center;
   font-family: var(--font-nunito);
   width: 100%;
-  
-}
+  position: relative; /* Add position relative for absolute positioning of children */
 
 .hero-page .texts{
   font-family: var(--font-nunito);
@@ -71,9 +71,136 @@ color: var(--color-white);
   background: #42459C;
 }
 
-.hero-page .hero-page-buttons .learn-button{
-  background: #0f0f10;
+/* Media Queries for Responsive Design */
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .hero-page {
+      min-height: 90vh;
+      width: 100%;
+  }
+
+  .hero-page .texts {
+      width: 100%;
+  }
+
+  .hero-page .texts h1 {
+      font-size: 1.9rem; 
+      line-height: 2.2rem;
+  }
+
+  .hero-page .texts p {
+      font-size: 0.9rem; 
+      line-height: 1.2rem; 
+  }
+
+  .hero-page .hero-page-buttons{
+      width: 270px;
+  }
+
+  .hero-page .hero-page-buttons .btn {
+      width: 100px; 
+      font-size: 11px; 
+  }
 }
+
+
+/* next small screen  */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .hero-page {
+      min-height: 90vh;
+      width: 100%;
+  }
+
+  .hero-page .texts {
+      width: 50%;
+  }
+
+  .hero-page .texts h1 {
+      font-size: 1.6rem; 
+      line-height: 2rem; 
+  }
+
+  .hero-page .texts p {
+      font-size: 0.9rem; 
+      line-height: 1.2rem; 
+  }
+
+  .hero-page .hero-page-buttons{
+      width: 270px;
+  }
+
+  .hero-page .hero-page-buttons .btn {
+      width: 90px; 
+      font-size: 9px; 
+  }
+}
+
+
+/* small screen size */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .hero-page .texts {
+      width: 80%;
+  }
+
+  .hero-page .texts h1 {
+      font-size: 1.5rem; 
+      line-height: 1.9rem; 
+  }
+
+  .hero-page .texts p {
+      font-size: 0.7rem; 
+      line-height: 1rem; 
+  }
+
+  .hero-page .hero-page-buttons{
+      width: 250px;
+  }
+
+  .hero-page .hero-page-buttons .btn {
+      width: 90px; 
+      font-size: 9px; 
+  }
+}
+
+
+
+/* very small screen  */
+@media only screen and (max-width: 599px) {
+
+  .hero-page {
+      min-height: 90vh;
+      width: 100%;
+  }
+
+
+  .hero-page .texts {
+      width: 70%;
+  }
+
+  .hero-page .texts h1 {
+      font-size: 1.3rem;
+      line-height: 1.8rem;
+  }
+
+  .hero-page .texts p {
+      font-size: 0.6rem;
+      line-height: 1rem;
+  }
+
+  .hero-page .hero-page-buttons{
+      width: 230px;
+  }
+
+  .hero-page .hero-page-buttons .btn {
+      width: 85px;
+      font-size: 8px;
+  }
+}
+
+
+
+
+
 
 .hero-page .hero-page-buttons .get-button:hover{
   background: #0B0E5E;
@@ -1084,59 +1211,9 @@ color: var(--color-white);
 
 
 
-/* Get-Updates */
 
-.get-updates {
-  max-width: 60%;
-  margin: 0 auto;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);     
-  padding: 30px;
-}
 
-.get-updates-main {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* Additional styling for your container */
-}
 
-.text {
-  width: 60%;
-  line-height: 25px;
-}
-
-.email {
-  width: 40%; /* Adjust the width of the email container */
-  text-align: center;
-  display: flex; /* Set the email container as a flex container */
-}
-
-button {
-  padding: 10px 20px;
-  max-width: 140px;
-  min-height: 38px;
-  margin-left: 5px;
-  cursor: pointer;
-  font-size: 14px;
-  border: none;
-  border-radius: 7px;
-  background: #42459C;
-  color: #fff;
-  /* Additional styling for your button */
-}
-
-input[type="email"] {
-  width: 70%; /* Adjust the width of the email input */
-  padding: 10px;
-  outline: none;
-  border: .1px solid #000;
-  /* Additional styling for your email input */
-}
-
-input[type="email"]:focus {
-  outline: none;
-  border-color: #42459C; /* Change the border color on focus */
-}
 
 
 
