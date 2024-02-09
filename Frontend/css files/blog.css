@@ -189,21 +189,27 @@ body{
   
   
 
+  .blogs{
+    max-width: 100%;
+    min-height: auto;
+    margin-top: 50px;
+  }
+  .blogs .texts{
+    justify-content: center;
+    text-align: center;
+    padding: 20px 0;
+    line-height: 50px;
+  }
   
-  
-
-
-
-.card-list {
+  .card-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     max-width: 1250px;
-    margin: 150px auto;
+    margin: 20px auto;
     padding: 20px;
     gap: 20px;
-}
-
-.card-list .card-item {
+  }
+  .card-list .card-item {
     background: #fff;
     padding: 26px;
     border-radius: 8px;
@@ -213,175 +219,126 @@ body{
     text-decoration: none;
     border: 2px solid transparent;
     transition: border 0.5s ease;
-}
-
-.card-list .card-item:hover {
+  }
+  .card-list .card-item:hover {
     border: 2px solid #000;
-}
-.card-list .card-item img {
+  }
+  .card-list .card-item img {
     width: 100%;
     aspect-ratio: 16/9;
     border-radius: 8px;
     object-fit: cover;
-}
-.card-list span {
+  }
+  .card-list .span-container {
+    display: flex;
+    justify-content: flex-end;
+    
+  }
+  .card-list span {
     display: inline-block;
     background: #F7DFF5;
-    margin-top: 32px;
+    margin: 20px 35px;
     padding: 8px 15px;
     font-size: 0.75rem;
     border-radius: 50px;
     font-weight: 600;
-}
-.card-list .developer {
+   
+  }
+  .card-list .developer {
     background-color: #F7DFF5; 
     color: #B22485;
-}   
-.card-list .designer {
+  }   
+  .card-list .designer {
     background-color: #d1e8ff;
     color: #2968a8;
-}
-.card-list .editor {
+  }
+  .card-list .editor {
     background-color: #d6f8d6; 
     color: #205c20;
-}
-.card-item h3 {
-    color: #000;
+  }
+  .card-list .read {
+    margin-top: 20px;
+    color: #928e8e;
+    font-size: x-small;
+  }
+  .card-item h3 {
+    color: #2d3192;
     font-size: 1.438rem;
     margin-top: 28px;
     font-weight: 600;
-}
-.card-item .arrow {
+  }
+  .card-item .blog-p {
+    color: #000;
+    font-size: 1rem;
+    margin-top: 20px;
+    line-height: 1.5;
+  }
+  .card-item .arrow {
     display: flex;
     align-items: center;
     justify-content: center;
     transform: rotate(-35deg);
     height: 40px;
     width: 40px;
-    color: #000;
+    color: #2d3192;
     border: 1px solid #000;
     border-radius: 50%;
     margin-top: 40px;
     transition: 0.2s ease;
-}
-.card-list .card-item:hover .arrow  {
-    background: #000;
+  }
+  .card-list .card-item:hover .arrow  {
+    background: #2d3192;
     color: #fff; 
-}
-
-
-
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  }
+  @media screen and (min-width: 1201px) {
     .card-list {
-        margin: 100px auto;
-        padding: 20px;
-        gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust as needed */
     }
-
-    .card-item h3 {
-        color: #000;
-        font-size: 1.438rem;
-        margin-top: 28px;
-        font-weight: 600;
-    }
-    .card-item .arrow {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transform: rotate(-35deg);
-        height: 40px;
-        width: 40px;
-        color: #000;
-        border: 1px solid #000;
-        border-radius: 50%;
-        margin-top: 40px;
-        transition: 0.2s ease;
-    }
-}
-
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+  }
+  
+  
+  
+  @media screen and (max-width: 992px) {
     .card-list {
-        margin: 100px auto;
-        padding: 20px;
-        gap: 20px;
+      grid-template-columns: 1fr; /* 1 per row */
     }
-
-    .card-item h3 {
-        color: #000;
-        font-size: 1.238rem;
-        margin-top: 25px;
-        font-weight: 600;
+    .card-list .card-item {
+      width: 80%; /* Adjust as needed */
+      height: auto; /* Adjust as needed */
+      margin: auto;
     }
-    .card-item .arrow {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transform: rotate(-35deg);
-        height: 37px;
-        width: 37px;
-        color: #000;
-        border: 1px solid #000;
-        border-radius: 50%;
-        margin-top: 40px;
-        transition: 0.2s ease;
-    }
-}
-
-
-@media only screen and (min-width: 600px) and (max-width: 767px) {
+  }
+  
+  @media screen and (max-width: 768px) {
     .card-list {
-        margin: 100px auto;
-        padding: 20px;
-        gap: 20px;
+      grid-template-columns: 1fr; /* 1 per row */
     }
-
-    .card-item h3 {
-        color: #000;
-        font-size: 1.1rem;
-        margin-top: 20px;
-        font-weight: 600;
+    .card-list .card-item {
+      width: 80%; /* Adjust as needed */
+      height: auto; /* Adjust as needed */
+      margin: auto;
     }
-    .card-item .arrow {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transform: rotate(-35deg);
-        height: 35px;
-        width: 35px;
-        color: #000;
-        border: 1px solid #000;
-        border-radius: 50%;
-        margin-top: 40px;
-        transition: 0.2s ease;
-    }
-}
-
-@media only screen and (max-width: 599px) {
+  }
+  
+  @media screen and (max-width: 600px) {
     .card-list {
-        margin: 100px auto;
-        padding: 20px;
-        gap: 20px;
+      grid-template-columns: 1fr; /* 1 per row */
     }
+    .card-list .card-item {
+      width: 80%; /* Adjust as needed */
+      margin: auto;
+    }
+  }
+  
+  @media screen and (max-width: 498px) {
+    .card-list {
+      grid-template-columns: 1fr; /* 1 per row */
+    }
+    .card-list .card-item {
+      width: 100%; /* Adjust as needed */
+    }
+  }  
+  
 
-    .card-item h3 {
-        color: #000;
-        font-size: 1rem;
-        margin-top: 20px;
-        font-weight: 600;
-    }
-    .card-item .arrow {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transform: rotate(-35deg);
-        height: 30px;
-        width: 30px;
-        color: #000;
-        border: 1px solid #000;
-        border-radius: 50%;
-        margin-top: 40px;
-        transition: 0.2s ease;
-    }
-}
+
 

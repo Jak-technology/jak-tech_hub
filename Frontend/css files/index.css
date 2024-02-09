@@ -713,77 +713,67 @@ color: var(--color-white);
     transition: all ease 0.3s;
   }
 }
-.contact-b {
-  flex: 1;
+.contact-us-small{
+  width: 100%;
+  min-height: 40vh;
   position: relative;
-  line-height: 1.87rem;
-}
-.contact-us1 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem; /* Adjust as needed */
-  background-image: url(../assets/contact-us@3x.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
   text-align: center;
-  font-size: var(--font-size-lg-7);
-  color: var(--color-white);
-  font-family: var(--font-nunito);
+  background-color: rgba(24, 25, 31, 0.5);
 }
-.contact-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-white);
+
+.contact-us-small::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../assets/rectangle-20-1png.png') center/cover no-repeat;
+  opacity: 0.8;
+  z-index: -1;
 }
-.contact-us2 {
-  font-size: var(--font-size-2xs-9);
-  line-height: 0.68rem;
-  text-transform: capitalize;
-  font-family: var(--font-nunito-sans);
-  color: var(--color-white);
-  text-align: center;
+
+.contact-us-small-all{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
 }
-.contact-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  border: 0;
-  padding: 0.69rem var(--padding-xl);
-  background-color: var(--a86);
-  border-radius: var(--br-2xs-9);
+
+.contact-us-small-all h3{
+  line-height: 25px;
+  margin-bottom: 35px;
+  font-size: 1rem;
 }
-.contactus-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 4.56rem;
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
 }
-@media screen and (max-width: 768px) {
-  .contact-b {
-    line-height: 1.4rem;
-  }
-  .contact-us1 {
-    padding: 0.5rem;
-    font-size: var(--font-size-md-5);
-  }
-  .contact-us2 {
-    font-size: var(--font-size-xs-8);
-    line-height: 0.5rem;
-  }
-  .contact-button {
-    padding: 0.5rem var(--padding-md);
-  }
-  .contactus-content {
-    gap: 2.5rem;
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .contact-us-small-all h3{
+    line-height: 20px;
+    margin-bottom: 35px;
+    font-size: 0.8rem;
   }
 }
+
+@media only screen and (max-width: 599px) {
+  .contact-us-small-all h3{
+    line-height: 17px;
+    margin-bottom: 30px;
+    font-size: 0.7rem;
+  }
+
+  .contact-us-small-all{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+}
+
 
 .blogs{
   max-width: 100%;
