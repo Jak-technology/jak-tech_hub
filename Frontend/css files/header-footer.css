@@ -67,7 +67,7 @@ header ul {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    font-size: 1rem;
+    font-size: 0.85rem;
 }
 
 header ul li{
@@ -78,7 +78,7 @@ button{
     color: #fff;
 }
 
-header ul .but .btn{
+header ul .but .btn a{
     color: #fff;
 }
  
@@ -104,7 +104,60 @@ header .menu{
     display: none;
 }
 
-@media(max-width:1000px){
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    header{
+    
+    }
+
+    header ul{
+        position: fixed;
+        top: 12vh;
+        right: -100%;
+        background: #434584;
+        height: calc(100vh - 12vh);
+        width: 45%;
+        padding-left: 30px;
+        flex-direction: column;
+        align-items: flex-start;
+        transition: right 0.5s linear;
+    }
+
+    header ul li a{
+        color: #fff;
+    }
+
+	.mid{
+		display: none;
+	}
+
+    header ul .but .btn{
+        color: #fff;
+        background: #44a7d8;
+        width: 100%;
+        padding: 10px 20px;
+    }
+     
+    header .menu{
+        display: block;
+        width:100px;
+        text-align: center;
+    }
+
+	header .menu label i{
+		color: #000;
+	}
+
+
+    #chk1:checked ~ ul{
+        right: 0;
+        
+    }
+}
+
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
     header ul{
         position: fixed;
         top: 12vh;
@@ -146,8 +199,372 @@ header .menu{
         right: 0;
         
     }
-  
 }
+
+
+@media only screen and (max-width: 599px) {
+    header{
+      
+    }
+
+    header ul{
+        position: fixed;
+        top: 12vh;
+        right: -50%;
+        background: #434584;
+        height: calc(100vh - 12vh);
+        width: 45%;
+        padding-left: 30px;
+        flex-direction: column;
+        align-items: flex-start;
+        transition: right 0.5s linear;
+    }
+
+    header ul li a{
+        color: #fff;
+    }
+
+	.mid{
+		display: none;
+	}
+
+    header ul .but .btn{
+        color: #fff;
+        background: #44a7d8;
+    }
+     
+    header .menu{
+        display: block;
+        width:100px;
+        text-align: center;
+    }
+
+	header .menu label i{
+		color: #000;
+	}
+
+
+    #chk1:checked ~ ul{
+        right: 0;
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+  /*====== 3-contact-details ======*/
+
+  .contact-details {
+    max-width: 80%;
+    min-height: 15vh;
+    margin: 50px auto;
+    border-radius: 7px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);     padding: 30px;
+  }
+  
+  .contact-details-all {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 0 10%;
+  }
+
+  .contact-details-all img{
+    max-width: 34px;
+    min-height: 34px;
+  }
+
+  .contact-details-all h4{
+    font-size: 1rem;
+  }
+
+  .contact-details-all p{
+    font-size: 0.9rem;
+  }
+
+  /*mobile responsiveness*/
+
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .contact-details {
+      max-width: 80%;
+      min-height: 15vh;
+      margin: 50px auto;
+      border-radius: 7px;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);     padding: 30px;
+    }
+    
+    .contact-details-all img{
+      max-width: 24px;
+      min-height: 24px;
+    }  
+
+    .contact-details-all h4{
+      font-size: 0.9rem;
+    }
+
+    .contact-details-all p{
+      font-size: 0.8;
+    }
+  }
+
+  @media only screen and (min-width: 600px) and (max-width: 767px) {
+    .contact-details {
+      max-width: 75%;
+      min-height: 13vh;
+      margin: 50px auto;
+      padding: 30px 0;
+    }
+
+    .contact-details-all {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      text-align: center;
+    }
+  
+
+    .contact-details-all img{
+      max-width: 20px;
+      min-height: 20px;
+    }  
+
+    .contact-details-all h4{
+      font-size: 0.8rem;
+    }
+
+    .contact-details-all p{
+      font-size: 0.7;
+    }
+  }
+
+  @media only screen and (max-width: 599px) {
+    .contact-details {
+      display: none;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Get-Updates */
+
+.get-updates {
+  max-width: 60%;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);     
+  padding: 30px;
+}
+
+.get-updates-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Additional styling for your container */
+}
+
+.text {
+  width: 60%;
+  line-height: 25px;
+}
+
+.email {
+  width: 40%; /* Adjust the width of the email container */
+  text-align: center;
+  display: flex; /* Set the email container as a flex container */
+}
+
+button {
+  padding: 10px 20px;
+  max-width: 140px;
+  min-height: 38px;
+  margin-left: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  border: none;
+  border-radius: 7px;
+  background: #42459C;
+  color: #fff;
+  /* Additional styling for your button */
+}
+
+input[type="email"] {
+  width: 70%; /* Adjust the width of the email input */
+  padding: 10px;
+  outline: none;
+  border: .1px solid #000;
+  /* Additional styling for your email input */
+}
+
+input[type="email"]:focus {
+  outline: none;
+  border-color: #42459C; /* Change the border color on focus */
+}
+
+/* next small screen  */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .get-updates {
+      max-width: 60%;
+      margin: 0 auto;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);     
+      padding: 20px;
+    }
+
+    .text {
+      width: 50%;
+      line-height: 24px;
+    }
+    
+    .email {
+      width: 45%; /* Adjust the width of the email container */
+      text-align: center;
+      display: flex; /* Set the email container as a flex container */
+    }
+    
+    button {
+      padding: 8px 15px;
+      max-width: 100px;
+      min-height: 28px;
+      margin-left: 5px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    
+    input[type="email"] {
+      width: 70%; /* Adjust the width of the email input */
+      padding: 10px;
+      outline: none;
+      border: .1px solid #7e2a76;
+      /* Additional styling for your email input */
+    }
+}
+
+
+/* small screen size */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .get-updates {
+      max-width: 60%;
+      margin: 0 auto;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);     
+      padding: 20px;
+    }
+
+    .text {
+      width: 50%;
+      line-height: 24px;
+    }
+    
+    .email {
+      width: 50%; /* Adjust the width of the email container */
+      text-align: center;
+      display: block; /* Set the email container as a flex container */
+    }
+    
+    button {
+      padding: 10px 20px;
+      max-width: 150px;
+      min-height: 28px;
+      margin: 5px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    
+    input[type="email"] {
+      width: 70%; /* Adjust the width of the email input */
+      padding: 10px;
+      outline: none;
+      border: .1px solid #7e2a76;
+      /* Additional styling for your email input */
+    }
+  }
+
+
+
+/* very small screen  */
+@media only screen and (max-width: 599px) {
+  .get-updates {
+      max-width: 60%;
+      margin: 0 auto;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);     
+      padding: 20px;
+      
+    }
+
+    .get-updates-main {
+      display: block;
+      justify-content: space-between;
+      align-items: center;
+      /* Additional styling for your container */
+    }
+    
+
+    .text {
+      width: 100%;
+      line-height: 24px;
+      margin-bottom: 20px;
+    }
+    
+    .email {
+      width: 100%; /* Adjust the width of the email container */
+      text-align: center;
+      flex-direction: column;
+    }
+    
+    button {
+      padding: 10px 20px;
+      max-width: 150%;
+      min-height: 30px;
+      margin: 5px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    
+    input[type="email"] {
+      width: 100%; /* Adjust the width of the email input */
+      padding: 10px;
+      outline: none;
+      border: .1px solid #7e2a76;
+      /* Additional styling for your email input */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -159,14 +576,11 @@ header .menu{
 
 /*===Footer===*/
 .container{
-	max-width: 100%;
-	margin:auto;
-}
-
-.row{
 	display: flex;
 	flex-wrap: wrap;
   padding: 0 20px;
+  justify-content: space-between;
+  
 }
 
 ul{
@@ -174,18 +588,21 @@ ul{
 }
 
 .footer{
+  
 	background-color: #D1D3FB;
-  padding: 70px 0;
+  padding: 50px 0;
+  width: 100%;
+  
 }
 
 .footer-col{
-   width: 25%;
-   padding: 0 15px;
+   padding: 0 10px;
+   width: fit-content;
 }
 
 .footer-col .jak-footer-main{
     display: flex;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     align-items: center;
 }
 
@@ -203,9 +620,10 @@ ul{
   font-size: 0.75rem;
 }
 
-/* .footer-col .footer-text{
+.footer-col .footer-text{
+    width: 230px;
     margin-bottom: 20px;
-} */
+}
 
 
 
@@ -218,6 +636,7 @@ ul{
 	font-weight: 500;
 	position: relative;
 }
+
 .footer-col h4::before{
 	content: '';
 	position: absolute;
@@ -245,10 +664,10 @@ ul{
 
 .footer-col ul li a:hover{
 	color: #2D3192;
-	padding-left: 8px;
+	padding-left: 3px;
 }
 
-.footer-col .social-links a{
+.footer-col .social-links a i{
 	display: inline-block;
 	height: 30px;
 	width: 30px;
@@ -256,39 +675,128 @@ ul{
 	text-align: center;
 	line-height: 10px;
 	border-radius: 50%;
-	color: #000000;
-	transition: all 0.5s ease;
+  color: blue;
+  transition: all 0.5s ease;
 }
+
+
 
 .footer-col .social-links a:hover{
 	color: #8ea4da;
 }
 
 .footer-col button{
-  margin-bottom: 30px;
-}
-
-/*responsive*/
-@media(max-width:1000px){
-  .row{
-    padding: 30px;
-  }
-
-  .footer-col{
-    width: 50%;
     margin-bottom: 30px;
-}
-}
-@media(max-width: 574px){
-  .row{
-    padding: 30px;
-  }
+    }
 
-  .footer-col{
-    width: 50%;
-    margin-bottom: 30px;
+    /*responsive*/
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+        .container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: center;
+            justify-content: space-evenly;
+        }
+
+        .footer-col{
+            margin-bottom: 30px;
+        }
 }
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+
+    .footer-col{
+        width: 50%;
+    }
 }
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+
+    .footer-col{
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    .container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+
+    .footer-col{
+       width: 50%;
+       margin-bottom: 20px;
+    }
+}
+
+.footer-bottom {
+  background-color: #2D3192;
+  color: #fff;
+  display: flex;
+  justify-content: space-between; /* Distributes content evenly */
+  align-items: center;
+  padding: 10px; /* Adjust padding as needed */
+  width: 100%;
+}
+
+/* Style the individual paragraphs */
+.footer-bottom p {
+  margin: 0; /* Remove default margin */
+}
+
+.footer-bottom p a {
+  color: #fff; /* Change the color of the links */
+  text-decoration: none; /* Remove the default underline */
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+@media only screen and (max-width: 1199px) {
+  .footer-bottom {
+      padding: 8px; /* Adjust as needed */
+  }
+}
+@media only screen and (max-width: 991px) {
+  .footer-bottom {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .footer-bottom {
+      
+      
+      align-items: center;
+  }
+  .footer-bottom p {
+      font-size: 14px; /* Adjust as needed */
+      margin-bottom: 5px; /* Add spacing between paragraphs */
+     
+      
+  }
+}
+@media only screen and (max-width: 599px) {
+  .footer-bottom {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+
+
+
+
 
 
 
