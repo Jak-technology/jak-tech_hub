@@ -400,6 +400,10 @@ header .menu{
   /* Additional styling for your container */
 }
 
+.get-updates .get-updates-main .text p {
+  margin-left: 0;
+}
+
 .text {
   width: 60%;
   line-height: 25px;
