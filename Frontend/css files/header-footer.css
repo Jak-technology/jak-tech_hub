@@ -577,8 +577,9 @@ input[type="email"]:focus {
 .container{
 	display: flex;
 	flex-wrap: wrap;
-    padding: 0 20px;
-    justify-content: space-between;
+  padding: 0 20px;
+  justify-content: space-between;
+  width: 100%;
 }
 
 ul{
@@ -586,8 +587,10 @@ ul{
 }
 
 .footer{
+  
 	background-color: #D1D3FB;
-    padding: 50px 0;
+  padding: 50px 0;
+  width: 100%;
 }
 
 .footer-col{
@@ -662,7 +665,7 @@ ul{
 	padding-left: 3px;
 }
 
-.footer-col .social-links a{
+.footer-col .social-links a i{
 	display: inline-block;
 	height: 30px;
 	width: 30px;
@@ -670,9 +673,11 @@ ul{
 	text-align: center;
 	line-height: 10px;
 	border-radius: 50%;
-	color: #000000;
-	transition: all 0.5s ease;
+  color: blue;
+  transition: all 0.5s ease;
 }
+
+
 
 .footer-col .social-links a:hover{
 	color: #8ea4da;
@@ -701,7 +706,7 @@ ul{
     .container{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        justify-items: center;
+        
     }
 
     .footer-col{
@@ -713,7 +718,7 @@ ul{
     .container{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        justify-items: center;
+        
     }
 
     .footer-col{
@@ -725,7 +730,7 @@ ul{
     .container{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        justify-items: center;
+        
     }
 
     .footer-col{
