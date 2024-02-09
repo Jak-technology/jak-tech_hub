@@ -263,7 +263,7 @@ header .menu{
   .contact-details {
     max-width: 80%;
     min-height: 15vh;
-    margin: 50px auto;
+    margin: 200px auto;
     border-radius: 7px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);     padding: 30px;
   }
@@ -530,7 +530,7 @@ input[type="email"]:focus {
     .email {
       width: 100%; /* Adjust the width of the email container */
       text-align: center;
-      display: flex; /* Set the email container as a flex container */
+      display: block; 
     }
     
     button {
