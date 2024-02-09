@@ -247,7 +247,7 @@ color: #fff;
 
 
 /* next small screen  */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1048px) {
   .hero-page {
       min-height: 90vh;
       width: 100%;
@@ -399,10 +399,3 @@ color: #fff;
     }
     
   }
-
-@media only screen and (max-width: 280px) {
-  .footer-col .footer-text{
-    width: 100px;
-    margin-bottom: 20px;
-}
-}
