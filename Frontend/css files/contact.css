@@ -1,12 +1,3 @@
-
-html, body {
-  overflow-x: hidden;
-}
-.container {
- max-width: 70%;
- margin: auto auto;
-}
-
 *{
     padding: 0;
     margin: 0;
@@ -15,74 +6,204 @@ html, body {
 
 body{
     font-size: 1rem;
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
+    width: 100%;
 }
 
 /*===Hero Page===*/
-.hero-page{
-    background: linear-gradient(rgba(58, 55, 55, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/project-main.png');
-    min-height: 90vh;
-    max-width: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    align-items: center;
-
+.hero-page {
+  background: linear-gradient(rgba(58, 55, 55, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/project-main.png');
+  min-height: 90vh;
+  max-width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-items: center;
+  position: relative; /* Add position relative for absolute positioning of children */
 }
 
 .hero-page .texts{
-    position: absolute;
-    top: 55%;
-    left: 5%; /* Adjust the left value to position the text accordingly */
-    transform: translate(0%, -50%);
-    color: white; /* Adjust text color */
-    width: 850px;
+  position: absolute;
+  top: 55%;
+  left: 5%; /* Adjust the left value to position the text accordingly */
+  transform: translate(0%, -50%);
+  color: white; /* Adjust text color */
+  width: 850px;
 }
 
 .hero-page .texts h1{
-    font-size: 2.5rem;
-    line-height: 3.0625rem;
+  font-size: 2.5rem;
+  line-height: 3.0625rem;
 }
 
 .hero-page .texts p{
-    margin: 14px 0;
-    font-size: 1.1rem;
-    line-height: 1.6875rem;
+  margin: 14px 0;
+  font-size: 1.1rem;
+  line-height: 1.6875rem;
 }
 
 .hero-page .hero-page-buttons{
-    display: flex;
-    justify-content: space-between;
-    width: 370px;
-    margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 370px;
+  margin-top: 20px;
 }
 
 .hero-page .hero-page-buttons .btn{
-  max-width: 200px;
-  height: 35px;
-  font-size: 14px;
-  border: none;
-  border-radius: 7px;
-  background: #42459C;
-  color: #fff;
+width: 135px;
+height: 35px;
+font-size: 14px;
+border: none;
+border-radius: 7px;
+background: #42459C;
+color: #fff;
 }
+
+
+/* Media Queries for Responsive Design */
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .hero-page {
+      min-height: 90vh;
+      width: 100%;
+  }
+
+  .hero-page .texts {
+      width: 100%;
+  }
+
+  .hero-page .texts h1 {
+      font-size: 1.9rem; 
+      line-height: 2.2rem;
+  }
+
+  .hero-page .texts p {
+      font-size: 0.9rem; 
+      line-height: 1.2rem; 
+  }
+
+  .hero-page .hero-page-buttons{
+      width: 270px;
+  }
+
+  .hero-page .hero-page-buttons .btn {
+      width: 100px; 
+      font-size: 11px; 
+  }
+}
+
+
+/* next small screen  */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .hero-page {
+      min-height: 90vh;
+      width: 100%;
+  }
+
+  .hero-page .texts {
+      width: 50%;
+  }
+
+  .hero-page .texts h1 {
+      font-size: 1.6rem; 
+      line-height: 2rem; 
+  }
+
+  .hero-page .texts p {
+      font-size: 0.9rem; 
+      line-height: 1.2rem; 
+  }
+
+  .hero-page .hero-page-buttons{
+      width: 270px;
+  }
+
+  .hero-page .hero-page-buttons .btn {
+      width: 90px; 
+      font-size: 9px; 
+  }
+}
+
+
+/* small screen size */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .hero-page .texts {
+      width: 80%;
+  }
+
+  .hero-page .texts h1 {
+      font-size: 1.5rem; 
+      line-height: 1.9rem; 
+  }
+
+  .hero-page .texts p {
+      font-size: 0.7rem; 
+      line-height: 1rem; 
+  }
+
+  .hero-page .hero-page-buttons{
+      width: 250px;
+  }
+
+  .hero-page .hero-page-buttons .btn {
+      width: 90px; 
+      font-size: 9px; 
+  }
+}
+
+
+
+/* very small screen  */
+@media only screen and (max-width: 599px) {
+
+  .hero-page {
+      min-height: 90vh;
+      width: 100%;
+  }
+
+
+  .hero-page .texts {
+      width: 70%;
+  }
+
+  .hero-page .texts h1 {
+      font-size: 1.3rem;
+      line-height: 1.8rem;
+  }
+
+  .hero-page .texts p {
+      font-size: 0.6rem;
+      line-height: 1rem;
+  }
+
+  .hero-page .hero-page-buttons{
+      width: 230px;
+  }
+
+  .hero-page .hero-page-buttons .btn {
+      width: 85px;
+      font-size: 8px;
+  }
+}
+
+
+
+
+
+
+
 
   /*======= contact-form========*/
 .contact-form{
     display: flex;
-    margin-top: 150px;
-    margin-bottom: 200px;
-    max-width: 90%;
+    margin: 50px;
+    width: 100%;
     height: 60vh;
     align-items: center;
     justify-content: center;
 }
 
 .before-form{
- margin-right: 100px;
- margin-left: 10%;
+ margin-right: 150px;
  width: 800px;
 }
 
@@ -96,13 +217,11 @@ body{
 }
 
 .contact-first-form{
-    margin-top: 50px;
-    width: 900px;
+    width: 600px;
     height: fit-content;
     border-radius: 7px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);     padding: 30px;
 }
-
 
 .contact-first-form label{
     gap: 20px;
@@ -128,142 +247,7 @@ body{
     font-size: 1.2rem;
     padding: 14px;
     margin: 10px 0 20px;
-  }
-
-
-
-
-
-
-
-
-
-
-
-  /*======= contact-us-small ========*/
-
-  .contact-us-small{
-    width: 100%;
-    min-height: 40vh;
-    position: relative;
-    text-align: center;
-    background-color: rgba(24, 25, 31, 0.5); 
-  }
-
-  .contact-us-small::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('../assets/rectangle-20-1png.png') center/cover no-repeat;
-    opacity: 0.8; /* Adjust the opacity as needed */
-    z-index: -1; /* Move the pseudo-element to the back */
-  }
-  
-  .contact-us-small-all{
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: #fff;
-  }
-
-  .contact-us-small-all h3{
-    line-height: 25px;
-    margin-bottom: 35px;
-    font-size: 1rem;
-  }
-
-  
-
-
-
-  /*====== 3-contact-details ======*/
-
-  .contact-details {
-    max-width: 80%;
-    min-height: 15vh;
-    margin: 50px auto;
-    border-radius: 7px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);     padding: 30px;
-  }
-  
-  .contact-details-all {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    padding: 0 10%;
-  }
-
-  .contact-details-all img{
-    max-width: 34px;
-    min-height: 34px;
-  }
-
-
-
-/* Get-Updates */
-
-.get-updates {
-    margin-top: 50px;
-    max-width: 60%;
-    margin: 0 auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);     
-    padding: 30px;
-  }
-  
-  .get-updates p{
-    padding-left: 0;
-    margin-left: 0;
-  }
-  .get-updates-main {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* Additional styling for your container */
-  }
-  
-  .text {
-    width: 60%;
-    line-height: 25px;
-  }
-  
-  .email {
-    width: 40%; /* Adjust the width of the email container */
-    text-align: center;
-    display: flex; /* Set the email container as a flex container */
-  }
-  
-  button {
-    padding: 10px 20px;
-    max-width: 140px;
-    min-height: 38px;
-    margin-left: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    border: none;
-    border-radius: 7px;
-    background: #42459C;
-    color: #fff;
-    /* Additional styling for your button */
-  }
-  
-  input[type="email"] {
-    width: 70%; /* Adjust the width of the email input */
-    padding: 10px;
-    outline: none;
-    border: .1px solid #000;
-    /* Additional styling for your email input */
-  }
-
-  input[type="email"]:focus {
-    outline: none;
-    border-color: #42459C; /* Change the border color on focus */
-  }
-
+}
 
 
 
