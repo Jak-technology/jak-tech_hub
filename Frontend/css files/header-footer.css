@@ -346,7 +346,10 @@ header .menu{
 
   @media only screen and (max-width: 599px) {
     .contact-details {
-      display: none;
+      margin-top: 100px;
+    }
+    .contact-details-all {
+      display: block;
     }
   }
 
@@ -506,13 +509,25 @@ input[type="email"]:focus {
 
 /* very small screen  */
 @media only screen and (max-width: 599px) {
-  .get-updates {
+  /* .get-updates {
       max-width: 60%;
       margin: 0 auto;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);     
       padding: 20px;
+<<<<<<< HEAD
       
+=======
+    } */
+
+    .get-updates {
+      border-radius: 10px;
+      padding: 10px;
+      margin-top: 30%;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+>>>>>>> frontend-all
     }
+  
 
     .get-updates-main {
       display: block;
@@ -531,7 +546,11 @@ input[type="email"]:focus {
     .email {
       width: 100%; /* Adjust the width of the email container */
       text-align: center;
+<<<<<<< HEAD
       flex-direction: column;
+=======
+      display: block; 
+>>>>>>> frontend-all
     }
     
     button {
