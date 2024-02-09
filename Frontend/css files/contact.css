@@ -120,100 +120,7 @@ color: #fff;
       width: 90px; 
       font-size: 9px; 
   }
-<<<<<<< HEAD
 }
-
-
-
-/* very small screen  */
-@media only screen and (max-width: 599px) {
-
-  .hero-page {
-      min-height: 90vh;
-      width: 100%;
-  }
-
-
-  .hero-page .texts {
-      width: 70%;
-  }
-
-  .hero-page .texts h1 {
-      font-size: 1.3rem;
-      line-height: 1.8rem;
-  }
-
-  .hero-page .texts p {
-      font-size: 0.6rem;
-      line-height: 1rem;
-  }
-
-  .hero-page .hero-page-buttons{
-      width: 230px;
-  }
-
-  .hero-page .hero-page-buttons .btn {
-      width: 85px;
-      font-size: 8px;
-  }
-}
-=======
-
-  .contact-form{
-    display: block;
-    margin: 10% auto 500px auto;
-    width: 80%;
-    height: 70vh;
-    text-align: center;
-  }
-
-  .before-form{
-    display: block;
-    margin-right: 10px;
-    margin-left: 0;
-    margin-top: 0px;
-    width: 600px;
-    text-align: center
-  }
-
-  .contact-first-form{
-    display: block;
-    /* background-color: #efecec; */
-    /* margin-left: auto; */
-    margin-right: 5%px;
-    margin-left:5%;
-    margin-top: 50px;
-    margin-bottom: auto;
-    width: 90%;
-    height: fit-content;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);     padding: 10px;
-  }
-
-  .before-form h3{
-    margin-bottom: 10px;
-    text-align: left;
-  }
-
-  .before-form p{
-    line-height: 1;
-    width: 90%;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> frontend-all
-
 
 
 
@@ -257,7 +164,6 @@ color: #fff;
     gap: 20px;
     margin: 0 10px;
 }
-
 .contact-first-form .two-row{
     display: flex;
 }
@@ -276,14 +182,9 @@ color: #fff;
     resize: none;
     font-size: 1.2rem;
     padding: 14px;
-<<<<<<< HEAD
     margin: 10px 0 20px;
-  }
-
-
-=======
-    margin: 10px 0 20px;  
 }
+
 
 
 
@@ -444,4 +345,3 @@ color: #fff;
     }
     
   }
->>>>>>> frontend-all
