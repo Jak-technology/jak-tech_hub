@@ -42,6 +42,9 @@ body{
     font-size: 1.1rem;
     line-height: 1.6875rem;
   }
+  .hero-page .hero-page-buttons a{
+    color: #fff;
+  }
   
   .hero-page .hero-page-buttons{
     display: flex;

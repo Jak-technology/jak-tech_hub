@@ -49,6 +49,9 @@ body{
     margin-top: 20px;
   }
   
+  .hero-page .hero-page-buttons a{
+    color: #fff;
+  }
   .hero-page .hero-page-buttons .btn{
   width: 135px;
   height: 35px;
