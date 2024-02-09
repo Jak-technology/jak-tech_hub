@@ -1,3 +1,5 @@
+
+
 *{
     padding: 0;
     margin: 0;
@@ -19,6 +21,7 @@ body{
   background-repeat: no-repeat;
   align-items: center;
   position: relative; /* Add position relative for absolute positioning of children */
+
 }
 
 .hero-page .texts{
@@ -92,8 +95,78 @@ color: #fff;
 }
 
 
+
+
+
+
+
+
+  /*======= contact-form========*/
+.contact-form{
+    display: flex;
+    margin: 90px;
+    max-width: 100%;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.before-form{
+ margin-right: 150px;
+ max-width: 100%;
+}
+
+.before-form h2, p, h3{
+    margin-bottom: 40px;
+}
+
+.before-form span{
+    margin-right: 100px;
+    justify-content: space-between;
+}
+
+.contact-first-form{
+    width: 500px;
+    margin-top: 100px;
+    height: fit-content;
+    border-radius: 7px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);     padding: 30px;
+}
+
+.contact-first-form label{
+    gap: 20px;
+    margin: 0 10px;
+}
+.contact-first-form .two-row{
+    display: flex;
+}
+
+
+.contact-first-form input{
+    width: 100%;
+    margin-bottom: 30px;
+    height: 40px;
+    padding: 10px;
+}
+
+.message-field textarea{
+    width: 100%;
+    height: 100px;
+    resize: none;
+    font-size: 1.2rem;
+    padding: 14px;
+    margin: 10px 0 20px;
+}
+
+
+
+
+/* contact-us media queries for mobile and tablet  */
+
+
+
 /* next small screen  */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .hero-page {
       min-height: 90vh;
       width: 100%;
@@ -121,7 +194,20 @@ color: #fff;
       width: 90px; 
       font-size: 9px; 
   }
+
+  .contact-form {
+    margin: 30px;
+    height: 70vh;
+  }
+
+  .before-form {
+    margin-right: 50px;
+  }
+
+  
 }
+
+
 
 
 /* small screen size */
@@ -148,105 +234,149 @@ color: #fff;
       width: 90px; 
       font-size: 9px; 
   }
+
+  .contact-form{
+    display: block;
+    margin: 10% auto 500px auto;
+    width: 80%;
+    height: 70vh;
+    text-align: center;
+  }
+
+  .before-form{
+    display: block;
+    margin-right: 10px;
+    margin-left: 0;
+    margin-top: 0px;
+    width: 600px;
+    text-align: center
+  }
+
+  .contact-first-form{
+    display: block;
+    /* background-color: #efecec; */
+    /* margin-left: auto; */
+    margin-right: 5%px;
+    margin-left:5%;
+    margin-top: 50px;
+    margin-bottom: auto;
+    width: 90%;
+    height: fit-content;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);     padding: 10px;
+  }
+
+  .before-form h3{
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  .before-form p{
+    line-height: 1;
+    width: 90%;
+  }
 }
 
 
 
 /* very small screen  */
+  
 @media only screen and (max-width: 599px) {
 
-  .hero-page {
-      min-height: 90vh;
-      width: 100%;
+
+    .hero-page {
+        min-height: 90vh;
+        width: 100%;
+    }
+  
+  
+    .hero-page .texts {
+        width: 70%;
+    }
+  
+    .hero-page .texts h1 {
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+    }
+  
+    .hero-page .texts p {
+        font-size: 0.6rem;
+        line-height: 1rem;
+    }
+  
+    .hero-page .hero-page-buttons{
+        width: 230px;
+    }
+  
+    .hero-page .hero-page-buttons .btn {
+        width: 85px;
+        font-size: 8px;
+    }
+
+    /* .get-updates {
+        border-radius: 10px;
+        padding: 10px;
+        margin-top: 30%;
+        margin-bottom: 20px;
+      }
+    
+      .get-updates-main {
+        display: block;
+        text-align: left;
+        margin: auto;
+      }
+    
+      .get-updates .get-updates-main .text {
+        width: 100%;
+      }
+    
+      .get-updates .get-updates-main .email {
+        width: 100%;
+      } */
+      
+
+  
+    .contact-form{
+      display: block;
+      margin: 10% auto 500px auto;
+      width: 80%;
+      height: 70vh;
+      text-align: center;
+    }
+  
+    .before-form{
+      display: block;
+      margin-right: 10px;
+      margin-left: 0;
+      margin-top: 0px;
+      width: 600px;
+      text-align: center
+    }
+  
+    .contact-first-form{
+      display: block;
+      /* background-color: #efecec; */
+      /* margin-left: auto; */
+      margin-right: 5%px;
+      margin-left:5%;
+      margin-top: 50px;
+      margin-bottom: auto;
+      width: 90%;
+      height: fit-content;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);     padding: 10px;
+    }
+  
+    .before-form h3{
+      margin-bottom: 10px;
+      text-align: left;
+    }
+  
+    .before-form p{
+      line-height: 1;
+      width: 90%;
+    }
+    
   }
-
-
-  .hero-page .texts {
-      width: 70%;
-  }
-
-  .hero-page .texts h1 {
-      font-size: 1.3rem;
-      line-height: 1.8rem;
-  }
-
-  .hero-page .texts p {
-      font-size: 0.6rem;
-      line-height: 1rem;
-  }
-
-  .hero-page .hero-page-buttons{
-      width: 230px;
-  }
-
-  .hero-page .hero-page-buttons .btn {
-      width: 85px;
-      font-size: 8px;
-  }
-}
-
-
-
-
-
-
-
-
-  /*======= contact-form========*/
-.contact-form{
-    display: flex;
-    margin: 50px;
-    width: 100%;
-    height: 60vh;
-    align-items: center;
-    justify-content: center;
-}
-
-.before-form{
- margin-right: 150px;
- width: 800px;
-}
-
-.before-form h2, p, h3{
-    margin-bottom: 40px;
-}
-
-.before-form span{
-    margin-right: 50px;
-    justify-content: space-between;
-}
-
-.contact-first-form{
-    width: 600px;
-    height: fit-content;
-    border-radius: 7px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);     padding: 30px;
-}
-
-.contact-first-form label{
-    gap: 20px;
-    margin: 0 10px;
-}
-
-.contact-first-form .two-row{
-    display: flex;
-}
-
-
-.contact-first-form input{
-    width: 100%;
-    margin-bottom: 30px;
-    height: 40px;
-    padding: 10px;
-}
-
-.message-field textarea{
-    width: 100%;
-    height: 100px;
-    resize: none;
-    font-size: 1.2rem;
-    padding: 14px;
-    margin: 10px 0 20px;
-  }
-
-
