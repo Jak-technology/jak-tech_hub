@@ -511,6 +511,7 @@ input[type="email"]:focus {
       margin: 0 auto;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);     
       padding: 20px;
+      
     }
 
     .get-updates-main {
@@ -530,7 +531,7 @@ input[type="email"]:focus {
     .email {
       width: 100%; /* Adjust the width of the email container */
       text-align: center;
-      display: flex; /* Set the email container as a flex container */
+      flex-direction: column;
     }
     
     button {
@@ -543,7 +544,7 @@ input[type="email"]:focus {
     }
     
     input[type="email"] {
-      width: 70%; /* Adjust the width of the email input */
+      width: 100%; /* Adjust the width of the email input */
       padding: 10px;
       outline: none;
       border: .1px solid #7e2a76;
@@ -579,7 +580,7 @@ input[type="email"]:focus {
 	flex-wrap: wrap;
   padding: 0 20px;
   justify-content: space-between;
-  width: 100%;
+  
 }
 
 ul{
@@ -591,6 +592,7 @@ ul{
 	background-color: #D1D3FB;
   padding: 50px 0;
   width: 100%;
+  
 }
 
 .footer-col{
@@ -738,6 +740,61 @@ ul{
        margin-bottom: 20px;
     }
 }
+
+.footer-bottom {
+  background-color: #2D3192;
+  color: #fff;
+  display: flex;
+  justify-content: space-between; /* Distributes content evenly */
+  align-items: center;
+  padding: 10px; /* Adjust padding as needed */
+  width: 100%;
+}
+
+/* Style the individual paragraphs */
+.footer-bottom p {
+  margin: 0; /* Remove default margin */
+}
+
+.footer-bottom p a {
+  color: #fff; /* Change the color of the links */
+  text-decoration: none; /* Remove the default underline */
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+@media only screen and (max-width: 1199px) {
+  .footer-bottom {
+      padding: 8px; /* Adjust as needed */
+  }
+}
+@media only screen and (max-width: 991px) {
+  .footer-bottom {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .footer-bottom {
+      
+      
+      align-items: center;
+  }
+  .footer-bottom p {
+      font-size: 14px; /* Adjust as needed */
+      margin-bottom: 5px; /* Add spacing between paragraphs */
+     
+      
+  }
+}
+@media only screen and (max-width: 599px) {
+  .footer-bottom {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+
+
 
 
 

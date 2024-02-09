@@ -153,17 +153,23 @@ color: var(--color-white);
 @media screen and (max-width: 768px) {
   .excellence-item {
     flex: 1 0 calc(50% - 20px); /* 2 items per row */
+    max-width: 40%;
   }
 }
 @media screen and (max-width: 600px) {
   .excellence-item {
-    flex: 1 0 100%; /* 2 items per row, smaller */
+    flex: 1 0 calc(40% - 20%); /* 2 items per row, smaller */
+    max-width: 40%;
+    
   }
 }
 
 @media screen and (max-width: 489px) {
   .excellence-item {
-    flex: 1 0 calc(50%); /* 2 items per row, even smaller */
+    flex: 1 0 calc(40% - 20%); /* 2 items per row, even smaller */
+    max-width: 40%;
+    
+    
   }
 }
 
