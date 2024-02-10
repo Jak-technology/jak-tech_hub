@@ -19,7 +19,7 @@ body{
   background: linear-gradient(rgba(92, 81, 81, 0.8), rgba(3, 3, 3, 0.8)), url('../assets/hero@3x.png');
   color: var(--color-white);
   min-height: 90vh;
-  max-width: 85em;
+  max-width: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -90,90 +90,6 @@ color: var(--color-white);
 }
 
 
-.excellence-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  background-color: var(--color-white);
-  
-  padding: 20px;
-  font-size: var(--font-size-base-5);
-  color: var(--color-gray-800);
-  
-}
-
-.excellence-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 70%;
-  margin: auto;
-}
-
-.excellence-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex: 1 0 20%; /* adjust this value to control how many items per row */
-  box-sizing: border-box;
-  margin: 10px;
-  padding: 20px;
-  color: var(--color-darkslategray);
-  background-color: var(--color-lightsteelblue);
-  border-radius: 10px; /* rounded corners */
-  animation: fadeIn 1s ease-in-out;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* subtle shadow for a 3D effect */
-}
-
-.excellence-icon {
-  width: 100%;
-  max-width: 150px; /* adjust this value as needed */
-  margin-bottom: 20px; /* space between the icon and the title */
-}
-
-.excellence-title {
-  margin-bottom: 10px; /* space between the title and the description */
-  font-size: 1.2em; /* larger font size for the title */
-  font-weight: bold; /* bold font weight for the title */
-  
-}
-
-.excellence-description {
-  text-align: center; /* center-aligned text */
-}
-@media screen and (max-width: 1200px) {
-  .excellence-item {
-    flex: 1 0 calc(25% - 20%); /* 4 items per row */
-  }
-}
-@media screen and (max-width: 992px) {
-  .excellence-item {
-    flex: 1 0 25%; /* 4 items per row */
-  }
-}
-@media screen and (max-width: 768px) {
-  .excellence-item {
-    flex: 1 0 calc(50% - 20px); /* 2 items per row */
-    max-width: 40%;
-  }
-}
-@media screen and (max-width: 600px) {
-  .excellence-item {
-    flex: 1 0 calc(40% - 20%); /* 2 items per row, smaller */
-    max-width: 40%;
-    
-  }
-}
-
-@media screen and (max-width: 489px) {
-  .excellence-item {
-    flex: 1 0 calc(40% - 20%); /* 2 items per row, even smaller */
-    max-width: 40%;
-    
-    
-  }
-}
 
 
 .section-about-us {
