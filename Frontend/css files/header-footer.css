@@ -718,7 +718,14 @@ ul{
 
 .footer-col button{
     margin-bottom: 30px;
-    }
+}
+.footr :hover{
+  background-color: #2D3192;
+}
+.footer-col button a{
+  color: #fff;
+}
+
 
     /*responsive*/
     @media only screen and (min-width: 992px) and (max-width: 1199px) {
