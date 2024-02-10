@@ -200,16 +200,21 @@ color: #fff;
     text-align: center;
     margin-left: 50px;
   }
-  .the-story p {
-    text-align: left;
+  .story-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .the-story .story-layout .our-story p {
+    text-align: center;
     font-size: 1.2rem;
   }
-  .the-story h1{
-    text-align: left;
+  .the-story .story-layout .our-story h1{
+    text-align: center;
     font-size: 1.5rem;
   }
-  .the-story .story-img {
-    float: right;
+  .the-story .story-layout img {
+    float: none;
     max-width: 400px;
     max-height: 300px;
     margin-left: 15px;
@@ -219,29 +224,42 @@ color: #fff;
   .the-story .contactb{
     margin-top: 20px;
   }
-  .writing {
+  .why {
     margin-top: 40px;
     text-align: center;
     margin-right: 50px;
-    max-height: 400px;
+    }
+    .why .why-layout .w-img {
+      margin-left: 15px;
+      margin-right: 15px;
+      margin-top: 10px;
+    }
+  
+  .writing {
+    text-align: center;
+    max-height: fit-content;
   }
-  .writing .dedicated {
+  .why-layout .writing .dedicated {
     font-size: 1.4rem;
     line-height: 1.7rem;
     margin-top: 20px;
     width: auto;
   }
-  .writing .advantages {
+  .why .why-layout .writing .adv h3 {
     text-align: center;
-    margin-top: 70px;
   }
-  .writing .choose {
+  .why .why-layout .writing .adv .choose {
     margin-top: 20px;
     font-weight: 500;
   }
+  .why-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
   
-  .writing .why-img{
-    float: left;
+  .why-layout .w-img img{
+    float: none;
     max-width: 400px;
     max-height: 300px;
     margin-right: 15px;
@@ -275,23 +293,23 @@ color: #fff;
     width: auto;
     align-items: baseline;
   }
-  .writing .holistic-approach {
+  .why-layout .writing .holistic-approach {
     display: flex;
-    text-align: right;
+    text-align: start;
     margin-top: 20px;
     width: auto;
     align-items: baseline;
   }
-  .writing .tailored-solutions {
+  .why-layout .writing .tailored-solutions {
     display: flex;
-    text-align: right;
+    text-align: start;
     margin-top: 20px;
     width: auto;
     align-items: baseline;
   }
-  .writing .expertise {
+  .why-layout .writing .expertise {
     display: flex;
-    text-align: right;
+    text-align: start;
     margin-top: 20px;
     width: auto;
     align-items: baseline;
@@ -362,36 +380,49 @@ color: #fff;
 /* responsiveness */
 
 @media (max-width: 1200px) {
-  .hero-page .texts {
-    width: 70%;
-  }
+
 }
 
 @media (max-width: 992px) {
   .hero-page .texts {
     width: 80%;
   }
-  .the-story .story-img,
-  .writing .why-img {
-    float: none;
-    margin: 0 auto;
+  .the-story .story-layout .s-img,
+  .why .why-layout .w-img {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+    align-content: center;
+  }
+  .why-layout {
+    display: flex;
+    flex-direction: column;
+  }
+  .story-layout {
+    display: flex;
+    flex-direction: column;
   }
 }
 
 @media (max-width: 768px) {
-  .hero-page .texts {
-    width: 90%;
+  .story-layout {
+    display: flex;
+    flex-direction: column;
   }
-  .hero-page .texts h1 {
-    font-size: 2rem;
-    line-height: 2.5rem;
-  }
-  .the-story .story-img,
-  .writing .why-img {
+  .the-story .story-layout .s-img,
+  .why .why-layout .w-img {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
     width: 100%;
     height: auto;
-    margin: 20px 0;
     align-content: center;
+  }
+  .the-story {
+    margin-left: auto;
   }
   .the-story p {
     text-align: center;
@@ -402,18 +433,24 @@ color: #fff;
   .the-story,
   .writing {
     text-align: center;
+    margin: auto;
+  }
+  .why-layout{
+    display: flex;
+    flex-direction: column;
+  }
+  .why .why-layout .writing .the-icons0 {
+    display: flex;
+    justify-content: space-between;
   }
   .the-team {
     margin-top: 70px;
   }
   .the-team .grid-all {
-    grid-template-columns: auto;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .the-team .grid-all {
     margin-top: 20px;
     margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
     align-content: center;
     display: grid;
     grid-template-columns: auto auto;
@@ -423,15 +460,17 @@ color: #fff;
 }
 
 @media (max-width: 600px) {
-  .hero-page .texts {
-    width: 95%;
-    left: 2.5%;
+  .story-layout {
+    display: flex;
+    flex-direction: column;
   }
-  .hero-page .texts h1 {
-    font-size: 1.8rem;
-    line-height: 2.2rem;
-  }
-  .writing .why-img {
+  .the-story .story-layout .s-img,
+  .why .why-layout .w-img {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    width: auto;
+    height: auto;
     align-content: center;
   }
   .the-story h1,
@@ -445,26 +484,84 @@ color: #fff;
   .the-story h1 {
     text-align: center;
   }
-  .the-story .story-img {
-    align-content: center;
+  .why-layout {
+    display: flex;
+    flex-direction: column;
+  }
+  .the-story,
+  .writing {
+    text-align: center;
+    margin: auto;
   }
   .the-team {
     margin-top: 90px;
   }
   .the-team .grid-all {
-    grid-template-columns: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
+    align-content: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 50px;
+    padding: 10px;
   }
+
   .the-team .grid-all .teamz {
-    width: 80%;
-    margin: 0 auto 20px;
+    width: 100%;
+    margin: auto;
   }
 }
 
 @media (max-width: 420px) {
+  .the-story,
+  .writing {
+    text-align: center;
+    margin: auto;
+  }
   .the-story h1,
   .writing .dedicated {
     font-size: 1rem;
+  }
+  .story-layout {
+    display: flex;
+    flex-direction: column;
+  }
+  .the-story .story-layout .s-img,
+  .why .why-layout .w-img {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    width: auto;
+    height: auto;
+    align-content: center;
+  }
+  .why-layout {
+    display: flex;
+    flex-direction: column;
+  }
+  .the-icons0 {
+    display: flex;
+    flex-direction: column;
+  }
+  .the-team .grid-all {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+    padding: 10px;
+  }
+  .the-team .grid-all .teamz img {
+    max-width: 200px;
+    max-height: 200px;
+  }
+  .the-team .grid-all .teamz {
+    width: 100%;
+    margin: auto;
   }
 }
