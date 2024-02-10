@@ -9,29 +9,9 @@
     <link rel="stylesheet" href="../css files/global.css" />
     <link rel="stylesheet" href="../css files/header-footer.css">
     <link rel="stylesheet" href="../css files/animations.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Nunito Sans:wght@300;400;600;700;800&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;1,900&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@200;400;500;700;900&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400&display=swap"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
-    />
-    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
   </head>
   <body>
 
@@ -82,8 +62,8 @@
           <p>Crafting Tomorrow's Digital Landscape Today - Your Vision, Our Code</p>
 
       <div class="hero-page-buttons">
-      <button class="btn get-button">Get Started</button>
-      <button class="btn learn-button">Learn More</button>
+      <button  class="btn get-button"><a href="../html files/project.html">Get Started</a></button>
+      <button class="btn learn-button"><a href="../html files/Services.html">Learn More</a></button>
       </div>
   </div>
   </section>
@@ -125,9 +105,11 @@
           <p class="about-us-difference">
             What sets us apart goes beyond mere project delivery - we are a catalyst for individual Programming aspirations. Beyond the lines of code, we empower and inspire by imparting essential skills through effective teaching methods. You want to know more?
           </p>
+          <a href="../html files/about.html">
           <button class="btn-about-us" id="btnAboutUs">
             <span class="btn-about-us-text">Read More</span>
           </button>
+          </a>
 
         </div>
         <img class="about-us-image" alt="About us image" src="../assets/aboutimage@2x.png" />
@@ -163,9 +145,11 @@
                 </div>
               </div>
               <div class="frame2">
+                <a href="../html files/contact.html">
                 <button class="quote-button" id="quoteButton">
                   <div class="read-more">Contact Us</div>
                 </button>
+              </a>
               </div>
             </div>
           </div>
@@ -213,6 +197,11 @@
           </div>
           </div>
           </div>
+          <a href="../html files/Services.html">
+          <button class="btn-services" id="btnServices">
+            <span class="btn-services-text">More Services</span>
+          </button>
+        </a>
           
         </section>
         
@@ -365,30 +354,22 @@
           </div>
 
         </section>
-        <section class="contact-us1">
-          <div class="contactus-content">
-            <div class="contact-text">
-              <b class="contact-b">
-                <p class="we-set-high">
-                  Ready to take your business to new heights? Contact us
-                </p>
-                <p class="we-set-high">
-                  today and let's embark on a transformative journey together.
-                </p>
-              </b>
-            </div>
-            <button class="contact-button" id="contactButton">
-              <div class="contact-us2">Contact Us</div>
-            </button>
+        <section class="contact-us-small">
+          <div class="contact-us-small-all">
+              <h3>Ready to take your business to new heights? <br>Contact us
+                  today and let's embark on a transformative journey <br>together.</h3>
+  
+                  <button class="btn">Contact Us</button>
+  
           </div>
-        </section>
+      </section>
         <section class="blogs">
           <div class="texts">
               <h2>Our Blogs</h2>
               <h3>Take A look At What Is Happening</h3>
           </div>
             <div class="card-list">
-              <a href="#" class="card-item">
+              <div class="card-item">
                   <img src="../assets/main-article-section-bg-WZR.png" alt="Card Image">
                   <span class="developer">Trends</span>
                   <span class="designer">Dec 15th, 2023</span>
@@ -398,13 +379,15 @@
                     feature is a note contributing to the melody of digital
                     transformation........
                   </p>
-                  <div class="arrow">
+                  <a href="../html files/inner_html/blog-post1.html">
+                    <div class="arrow">
                       <i class="fas fa-arrow-right card-icon"></i>
-                  </div>
+                    </div>
+                  </a>
                   <p class="read" >1 mins read</p>
-              </a>
+              </div>
               
-              <a href="#" class="card-item">
+              <div  class="card-item">
                   <img src="../assets/rectangle-20-1png-4cj.png" alt="Card Image">
                   <div class="span-containerf">
                     <span class="designer">Trends</span>
@@ -416,12 +399,14 @@
                       emerges as the conductor orchestrating innovation and
                       progress.....
                     </p>
-                  <div class="arrow">
+                    <a href="../html files/inner_html/blog-post1.html">
+                      <div class="arrow">
                       <i class="fas fa-arrow-right card-icon"></i>
-                  </div>
+                      </div>
+                    </a>
                   <p class="read" >2 mins read</p>
-              </a>
-              <a href="#" class="card-item">
+                </div>
+              <div class="card-item">
                   <img src="../assets/rectangle-23-1png-eao.png" alt="Card Image">
                   <span class="editor">Trends</span>
                   <span class="designer">Jan 30th, 2023</span>
@@ -430,106 +415,15 @@
                     creativity, precision, and the relentless pursuit of
                     excellence.....
                   </p>
-                  <div class="arrow">
+                  <a href="../html files/inner_html/blog-post1.html">
+                    <div class="arrow">
                       <i class="fas fa-arrow-right card-icon"></i>
-                  </div>
+                    </div>
+                  </a>
                   <p class="read" >3 mins read</p>
-              </a>
+                </div>
           </div>
         </section>
-      
-            <!-- <div class="blogs-frames">
-              <a class="frame-1" id="frame11">
-                <img
-                  class="blogframe1-image-icon"
-                  alt=""
-                  src="../assets/blogframe1image@2x.png"
-                />
-
-                <div class="blogframe1-time">
-                  <div class="divelementor-container">
-                    <div class="divelementor-element">
-                      <div class="trends">Trends</div>
-                    </div>
-                    <div class="divelementor-element1">
-                      <div class="jan-30th-2023">Jan 30th, 2023</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="divelementor-element2">
-                  <div class="frame16">
-                    <div class="heading-5">Future of Web Developers</div>
-                  </div>
-                </div>
-                <div class="divelementor-element3">
-                  <div class="frame25">
-                    <div class="mins-read">1 mins read</div>
-                  </div>
-                </div>
-              </a>
-              <a class="frame-31" id="frame3">
-                <img
-                  class="link-pexels-fauxels-3184299-"
-                  alt=""
-                  src="../assets/link--pexelsrebrandcities1367274scaledjpg@2x.png"
-                />
-
-                <div class="section">
-                  <div class="divelementor-container1">
-                    <div class="divelementor-element4">
-                      <div class="trends1">Trends</div>
-                    </div>
-                    <div class="divelementor-element5">
-                      <div class="dec-30th-2023">Dec 30th, 2023</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="divelementor-element6">
-                  <div class="frame26">
-                    <div class="heading-51">
-                      The Future Of Jak Technologies and Benefits that comes
-                      with it.
-                    </div>
-                  </div>
-                </div>
-                <div class="divelementor-element7">
-                  <div class="frame27">
-                    <div class="mins-read1">1 mins read</div>
-                  </div>
-                </div>
-              </a>
-              <a class="frame-22" id="frame21">
-                <img
-                  class="link-pexels-fauxels-3184299-"
-                  alt=""
-                  src="../assets/link--pexelsfauxels3184299scaledjpg@2x.png"
-                />
-
-                <div class="section">
-                  <div class="divelementor-container">
-                    <div class="divelementor-element4">
-                      <div class="trends2">Trends</div>
-                    </div>
-                    <div class="divelementor-element9">
-                      <div class="dec-30th-2023">Aug 30th, 2023</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="divelementor-element6">
-                  <div class="frame28">
-                    <div class="heading-51">
-                      Introduction of AI to Programming Languages
-                    </div>
-                  </div>
-                </div>
-                <div class="divelementor-divider"></div>
-                <div class="divelementor-element7">
-                  <div class="frame27">
-                    <div class="mins-read1">1 mins read</div>
-                  </div>
-                </div>
-              </a>
-            </div> -->
 
 
         
@@ -548,66 +442,78 @@
       </section>
   
       <footer class="footer">
-          <div class="container">
-  
-                  <div class="footer-col">
-                      <div class="jak-footer-main">
-                          <div><a href="../html files/index.html"><img src="../assets/jak-img.png" alt="Jaktech logo"></div>
-                                
-                              <div class="jak-texts">
-                              <h1 class="jak-main">JAK</h1>
-                              <h2 class="tech">Technologies</h2>
-                              </div></a>
-                      </div>
-                      
-                      <div class="footer-text">
-                          Subscribe to receive our latest company updates Subscribe to receive our latest company update
-                      </div>
-                  
-                                 
-                      <div>
-                          <h4>follow us</h4>
-                          <div class="social-links">
-                              <a href="#"><i class="fab fa-facebook-f"></i></a>
-                              <a href="#"><i class="fab fa-twitter"></i></a>
-                              <a href="#"><i class="fab fa-instagram"></i></a>
-                              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                          </div>
-                      </div>
-                  </div>
-                  
-                  <div class="footer-col">
-                      <h4>Company Links</h4>
-                      <ul>
-                          <li><a href="../html files/index.html">Home</a></li>
-                          <li><a href="../html files/about.html">About</a></li>
-                          <li><a href="../html files/Services.html">Our Services</a></li>
-                          <li><a href="../html files/blog.html">Blog</a></li>
-                          <li><a href="../html files/contact.html">Contact</a></li>
-                      </ul>
-                  </div>
-  
-                  <div class="footer-col">
-                      <h4>Our Services</h4>
-                      <ul>
-                          <li><a href="#">Website Development</a></li>
-                          <li><a href="#">Mobile App Development</a></li>
-                          <li><a href="#">E-Commerce Solution</a></li>
-                          <li><a href="#">Teaching Methods</a></li>
-                          <li><a href="#">UI/UX Designs</a></li>
-                      </ul>
-                  </div>
-  
-                  
-                  <div class="footer-col">
-                          <h4>Get In Touch</h4>
-              
-                          <button>Contact Us</button>
-                          <p>jaktechnology@gmail.com</p>
-                  </div>
-                  
-          </div>
-     </footer>
+        <div class="container">
+
+                <div class="footer-col">
+                    <div class="jak-footer-main">
+                        <div><a href="../html files/index.html"><img src="../assets/jak-img.png" alt="Jaktech logo"></div>
+                              
+                            <div class="jak-texts">
+                            <h1 class="jak-main">JAK</h1>
+                            <h2 class="tech">Technologies</h2>
+                            </div></a>
+                    </div>
+                    
+                    <div class="footer-text">
+                      Jak Technology are a catalyst for individual Programming
+                      aspirations. Beyond the lines of code, we empower and inspire
+                      by imparting essential skills through effective teaching
+                      methods
+                    </div>
+                
+                               
+                    <div>
+                        <h4>follow us</h4>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=100083668524520&mibextid=ZbWKwL " target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="
+                            https://x.com/jaktechhq?t=PpSUxYhngpA8NIqhrfmmFg&s=09 " target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.youtube.com/@jaktechhq
+
+                            " target="_blank"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.linkedin.com/company/jak-techq/ " target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Company Links</h4>
+                    <ul>
+                        <li><a href="../html files/index.html">Home</a></li>
+                        <li><a href="../html files/about.html">About</a></li>
+                        <li><a href="../html files/Services.html">Our Services</a></li>
+                        <li><a href="../html files/blog.html">Blog</a></li>
+                        <li><a href="../html files/contact.html">Contact</a></li>
+                        <li><a href="../html files/jaq-faqs.html">FAQS</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="../html files/Services.html">Website Development</a></li>
+                        <li><a href="../html files/Services.html">Mobile App Development</a></li>
+                        <li><a href="../html files/Services.html">Teaching Methods</a></li>
+                        <li><a href="../html files/Services.html">Intership Trainings</a></li>
+                        <li><a href="../html files/Services.html">Tecnical Support</a></li>
+                        <li><a href="../html files/Services.html">IT Consulting</a></li>
+                    </ul>
+                </div>
+
+                
+                <div class="footer-col footr">
+                        <h4>Get In Touch</h4>
+            
+                        <button><a href="../html files/contact.html">Contact Us</a></button>
+                        <p>jaktechnology@gmail.com</p>
+                </div>
+                
+        </div>
+      </footer>
+    <footer class="footer-bottom">
+        <p>Jak Technology  &copy; 2023. All Rights Reserved</p>
+        <p><a href="">Terms and Conditions</a> | <a href="">Privacy Policy</a> | <a href="">Cookies</a></p>
+      </footer>
       
       </main>
     </div>

@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Nunito Sans', sans-serif;
+    font-size: 1rem;
+    width: 100%;
+}
 ul{
   list-style: none;
 }
@@ -323,7 +336,7 @@ header .menu{
     }
 
     .contact-details-all {
-      display: flex;
+      display: block;
       justify-content: space-evenly;
       align-items: center;
       text-align: center;
@@ -346,8 +359,21 @@ header .menu{
 
   @media only screen and (max-width: 599px) {
     .contact-details {
-      display: none;
+      margin-top: 100px;
     }
+    .contact-details-all {
+      display: block;
+    }
+  }
+
+    @media screen and (max-height: 600px) {
+      .contact-first-form {
+        margin-top: 200px;
+      }
+    
+      .contact-details {
+        margin: 250px auto 50px auto;
+      }
   }
 
 
@@ -385,6 +411,10 @@ header .menu{
   justify-content: space-between;
   align-items: center;
   /* Additional styling for your container */
+}
+
+.get-updates .get-updates-main .text p {
+  margin-left: 0;
 }
 
 .text {
@@ -506,12 +536,14 @@ input[type="email"]:focus {
 
 /* very small screen  */
 @media only screen and (max-width: 599px) {
-  .get-updates {
+   .get-updates {
       max-width: 60%;
       margin: 0 auto;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);     
       padding: 20px;
-    }
+    } 
+
+  
 
     .get-updates-main {
       display: block;
@@ -530,7 +562,7 @@ input[type="email"]:focus {
     .email {
       width: 100%; /* Adjust the width of the email container */
       text-align: center;
-      display: flex; /* Set the email container as a flex container */
+      flex-direction: column;
     }
     
     button {
@@ -543,7 +575,7 @@ input[type="email"]:focus {
     }
     
     input[type="email"] {
-      width: 70%; /* Adjust the width of the email input */
+      width: 100%; /* Adjust the width of the email input */
       padding: 10px;
       outline: none;
       border: .1px solid #7e2a76;
@@ -577,8 +609,9 @@ input[type="email"]:focus {
 .container{
 	display: flex;
 	flex-wrap: wrap;
-    padding: 0 20px;
-    justify-content: space-between;
+  padding: 0 20px;
+  justify-content: space-between;
+  
 }
 
 ul{
@@ -586,8 +619,11 @@ ul{
 }
 
 .footer{
+  
 	background-color: #D1D3FB;
-    padding: 50px 0;
+  padding: 50px 0;
+  width: 100%;
+  
 }
 
 .footer-col{
@@ -662,7 +698,7 @@ ul{
 	padding-left: 3px;
 }
 
-.footer-col .social-links a{
+.footer-col .social-links a i{
 	display: inline-block;
 	height: 30px;
 	width: 30px;
@@ -670,9 +706,11 @@ ul{
 	text-align: center;
 	line-height: 10px;
 	border-radius: 50%;
-	color: #000000;
-	transition: all 0.5s ease;
+  color: blue;
+  transition: all 0.5s ease;
 }
+
+
 
 .footer-col .social-links a:hover{
 	color: #8ea4da;
@@ -680,7 +718,14 @@ ul{
 
 .footer-col button{
     margin-bottom: 30px;
-    }
+}
+.footr :hover{
+  background-color: #2D3192;
+}
+.footer-col button a{
+  color: #fff;
+}
+
 
     /*responsive*/
     @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -701,7 +746,7 @@ ul{
     .container{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        justify-items: center;
+        
     }
 
     .footer-col{
@@ -713,7 +758,7 @@ ul{
     .container{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        justify-items: center;
+        
     }
 
     .footer-col{
@@ -725,7 +770,7 @@ ul{
     .container{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        justify-items: center;
+        
     }
 
     .footer-col{
@@ -733,6 +778,61 @@ ul{
        margin-bottom: 20px;
     }
 }
+
+.footer-bottom {
+  background-color: #2D3192;
+  color: #fff;
+  display: flex;
+  justify-content: space-between; /* Distributes content evenly */
+  align-items: center;
+  padding: 10px; /* Adjust padding as needed */
+  width: 100%;
+}
+
+/* Style the individual paragraphs */
+.footer-bottom p {
+  margin: 0; /* Remove default margin */
+}
+
+.footer-bottom p a {
+  color: #fff; /* Change the color of the links */
+  text-decoration: none; /* Remove the default underline */
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+@media only screen and (max-width: 1199px) {
+  .footer-bottom {
+      padding: 8px; /* Adjust as needed */
+  }
+}
+@media only screen and (max-width: 991px) {
+  .footer-bottom {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .footer-bottom {
+      
+      
+      align-items: center;
+  }
+  .footer-bottom p {
+      font-size: 14px; /* Adjust as needed */
+      margin-bottom: 5px; /* Add spacing between paragraphs */
+     
+      
+  }
+}
+@media only screen and (max-width: 599px) {
+  .footer-bottom {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+
+
 
 
 
