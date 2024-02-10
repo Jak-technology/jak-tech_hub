@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700&display=swap');
+
+
 *{
   padding: 0;
   margin: 0;
@@ -5,6 +8,7 @@
 }
 
 body{
+  font-family: 'Nunito Sans', sans-serif;
   font-size: 1rem;
   width: 100%;
 }
@@ -20,13 +24,11 @@ body{
   background-position: center;
   background-repeat: no-repeat;
   align-items: center;
-  font-family: var(--font-nunito);
   width: 100%;
   
 }
 
 .hero-page .texts{
-  font-family: var(--font-nunito);
   position: absolute;
   top: 55%;
   left: 5%; /* Adjust the left value to position the text accordingly */
@@ -37,13 +39,11 @@ body{
 }
 
 .hero-page .texts h1{
-  font-family: var(--font-nunito);
   font-size: 2.5rem;
   line-height: 3.0625rem;
 }
 
 .hero-page .texts p{
-  font-family: var(--font-nunito);
   margin: 0.50em 0;
   font-size: 1.1rem;
   line-height: 1.6875rem;
@@ -61,7 +61,6 @@ body{
 }
 
 .hero-page .hero-page-buttons .btn{
-font-family: var(--font-nunito);
 width: 40%;
 height: 35px;
 font-size: 0.80rem;
