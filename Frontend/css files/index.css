@@ -15,17 +15,15 @@ body{
 
 
 /*===Hero Page===*/
-.hero-page{
-  background: linear-gradient(rgba(92, 81, 81, 0.8), rgba(3, 3, 3, 0.8)), url('../assets/hero@3x.png');
-  color: var(--color-white);
+.hero-page {
+  background: linear-gradient(rgba(58, 55, 55, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/project-main.png');
   min-height: 90vh;
   max-width: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   align-items: center;
-  width: 100%;
-  
+  position: relative; /* Add position relative for absolute positioning of children */
 }
 
 .hero-page .texts{
@@ -33,9 +31,8 @@ body{
   top: 55%;
   left: 5%; /* Adjust the left value to position the text accordingly */
   transform: translate(0%, -50%);
-  color: var(--color-white);
-  max-width: 30em;
-  width: 100%;
+  color: white; /* Adjust text color */
+  width: 850px;
 }
 
 .hero-page .texts h1{
@@ -44,51 +41,157 @@ body{
 }
 
 .hero-page .texts p{
-  margin: 0.50em 0;
+  margin: 14px 0;
   font-size: 1.1rem;
   line-height: 1.6875rem;
-  width: 90%;
 }
 
 .hero-page .hero-page-buttons{
   display: flex;
   justify-content: space-between;
-  width: 70%;
-  margin-top: 2em;
+  width: 370px;
+  margin-top: 20px;
 }
 .hero-page .hero-page-buttons a{
   color: #fff;
 }
 
 .hero-page .hero-page-buttons .btn{
-width: 40%;
+width: 135px;
 height: 35px;
-font-size: 0.80rem;
+font-size: 14px;
 border: none;
 border-radius: 7px;
-color: var(--color-white);
+background: #42459C;
+color: #fff;
 }
 
-.hero-page .hero-page-buttons .get-button{
-  background: #42459C;
+
+/* Media Queries for Responsive Design */
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .hero-page {
+      min-height: 90vh;
+      width: 100%;
+  }
+
+  .hero-page .texts {
+      width: 100%;
+  }
+
+  .hero-page .texts h1 {
+      font-size: 1.9rem; 
+      line-height: 2.2rem;
+  }
+
+  .hero-page .texts p {
+      font-size: 0.9rem; 
+      line-height: 1.2rem; 
+  }
+
+  .hero-page .hero-page-buttons{
+      width: 270px;
+  }
+
+  .hero-page .hero-page-buttons .btn {
+      width: 100px; 
+      font-size: 11px; 
+  }
 }
 
-.hero-page .hero-page-buttons .learn-button{
-  background: #0f0f10;
+
+/* next small screen  */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .hero-page {
+      min-height: 90vh;
+      width: 100%;
+  }
+
+  .hero-page .texts {
+      width: 50%;
+  }
+
+  .hero-page .texts h1 {
+      font-size: 1.6rem; 
+      line-height: 2rem; 
+  }
+
+  .hero-page .texts p {
+      font-size: 0.9rem; 
+      line-height: 1.2rem; 
+  }
+
+  .hero-page .hero-page-buttons{
+      width: 270px;
+  }
+
+  .hero-page .hero-page-buttons .btn {
+      width: 90px; 
+      font-size: 9px; 
+  }
 }
 
-.hero-page .hero-page-buttons .get-button:hover{
-  background: #0B0E5E;
-  animation: 1s ease-in-out 0s infinite normal none shadow-inset-center;
-  opacity: 1;
+
+/* small screen size */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .hero-page .texts {
+      width: 80%;
+  }
+
+  .hero-page .texts h1 {
+      font-size: 1.5rem; 
+      line-height: 1.9rem; 
+  }
+
+  .hero-page .texts p {
+      font-size: 0.7rem; 
+      line-height: 1rem; 
+  }
+
+  .hero-page .hero-page-buttons{
+      width: 250px;
+  }
+
+  .hero-page .hero-page-buttons .btn {
+      width: 90px; 
+      font-size: 9px; 
+  }
 }
 
-.hero-page .hero-page-buttons .learn-button:hover{
-  background-color: var(--color-gray-900);
-  animation: 1s ease-in-out 0s infinite alternate none shadow-inset-center;
-  opacity: 1;
-}
 
+
+/* very small screen  */
+@media only screen and (max-width: 599px) {
+
+  .hero-page {
+      min-height: 90vh;
+      width: 100%;
+  }
+
+
+  .hero-page .texts {
+      width: 70%;
+  }
+
+  .hero-page .texts h1 {
+      font-size: 1.3rem;
+      line-height: 1.8rem;
+  }
+
+  .hero-page .texts p {
+      font-size: 0.6rem;
+      line-height: 1rem;
+  }
+
+  .hero-page .hero-page-buttons{
+      width: 230px;
+  }
+
+  .hero-page .hero-page-buttons .btn {
+      width: 85px;
+      font-size: 8px;
+  }
+}
 
 
 
