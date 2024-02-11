@@ -304,11 +304,11 @@ header .menu{
 
   /*mobile responsiveness*/
 
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
     .contact-details {
       max-width: 80%;
       min-height: 15vh;
-      margin: 50px auto;
+      margin: 300px auto 50px auto;
       border-radius: 7px;
       box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);     padding: 30px;
     }
@@ -331,7 +331,7 @@ header .menu{
     .contact-details {
       max-width: 75%;
       min-height: 13vh;
-      margin: 50px auto;
+      margin: 700px auto 50px auto;
       padding: 30px 0;
     }
 
@@ -361,20 +361,71 @@ header .menu{
     .contact-details {
       margin-top: 100px;
     }
+
+    
     .contact-details-all {
       display: block;
     }
+
+    .contact-details {
+      max-width: 75%;
+      min-height: 13vh;
+      margin: 700px auto 50px auto;
+      padding: 30px 0;
+    }
   }
 
-    @media screen and (max-height: 600px) {
+  @media only screen and (max-width: 341px) {
+    .contact-details {
+      max-width: 80%;
+      min-height: 15vh;
+      margin: 600px auto 50px auto;
+      border-radius: 7px;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);     padding: 30px;
+    }
+  }
+
+
+  @media only screen and (max-width: 259px) {
+    .contact-details {
+      max-width: 75%;
+      min-height: 13vh;
+      margin: 700px auto 50px auto;
+      padding: 30px 0;
+    }
+
+    .contact-details-all {
+      display: block;
+      justify-content: space-evenly;
+      align-items: center;
+      text-align: center;
+    }
+  
+
+    .contact-details-all img{
+      max-width: 20px;
+      min-height: 20px;
+    }  
+
+    .contact-details-all h4{
+      font-size: 0.8rem;
+    }
+
+    .contact-details-all p{
+      font-size: 0.7;
+    }
+  }
+
+ 
+    /* @media screen and (max-height: 600px) {
       .contact-first-form {
         margin-top: 200px;
       }
     
       .contact-details {
-        margin: 250px auto 50px auto;
+        margin: 650px auto 50px auto;
       }
-  }
+  } */
 
 
 
