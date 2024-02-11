@@ -200,114 +200,162 @@ body{
     align-items: center;
     flex-direction: column;
     text-align: center;
-    margin: 20px auto;
+   
 }
-.heading h1 {
-    font-size: 50px;
+.headings {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
+   
+}
+.heading .headings h1 {
+    
     color: black;
-    margin-bottom: 25px;
+   
     position: relative;
     
 }
-.heading h1::after {
+.heading .headings h1::after {
     content: '';
     position: absolute;
     width: 100%;
     height: 4px;
-    background: #4caf50;
+    background: #42459C;
     display: block;
     margin: 0 auto;
-}
-.heading p {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 35px;
-   
-}
-container {
-    width: 100%;
-    padding: 10px 20px;
-    margin: 0 auto;
-}
-.service {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-.service-image {
-    flex: 1;
-    margin-right: 40px;
-    overflow: hidden;
-}
-.service-image img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    transition: 0.5s ease;
-}
-.service-image:hover img {
-    transform: scale(1.2);
-}
-.service-content {
-    flex: 1;
-    
-}
-.service-content h2 {
-    font-size: 23px;
-    margin-bottom: 15px;
-    color: #333;
-
-}
-.service-content p {
-    font-size: 18px;
-    line-height: 1.5;
-    color: #666;
-
-}
-.service-content .read-more {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #4caf50;
-    color: #fff;
-    font-size: 19px;
-    text-decoration: none;
-    border-radius: 25px;
-    margin-top: 15px;
-    transition: 0.3s ease;
-}
-.service-content .read-more:hover {
-    background-color: #3c8e41;
 }
 @media screen and (max-width: 498px) {
-    .heading{
+    .heading .headings{
         padding: 0px 20px;
+        order: 1;
     }
-    .heading h1{
+    .heading .headings h1{
         font-size: 36px;
     }
-    .heading p {
+    .heading .headings p {
         font-size: 17px;
         margin-bottom: 0px;
     }
-    .container {
-        padding: 0px;
-    }
-    .service {
-        padding: 20px;
-        flex-direction: column;
-    }
-    .service-image{
-        margin-right: 0px;
-        margin-bottom: 20px;
-    }
-    .service-content p{
-        padding: 0px;
-        font-size: 16px;
-
-    }
-    .service-content .read-more{
-        font-size: 16px;
-    }
     
+}
+
+.section-about-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  
+  
+  .about-us-content {
+    display: flex;
+    justify-content: center;
+    order: 2;
+    margin-top: 40px;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .about-us-contents {
+    display: flex;
+    justify-content: center;
+    order: 1;
+    margin-top: 40px;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .about-us-text {
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px 0;
+  }
+  .about-us-texts {
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px 0;
+    order: 1;
+  }
+  .about-us-text p{
+    margin-top: 50px;
+  }
+
+  
+  .btn-about-us {
+    order: 3;
+    margin-top: 20px;
+  }
+  
+  .about-us-image {
+    flex: 1;
+    max-width: 30%;
+    height: auto;
+    object-fit: cover;
+    margin: 10px 0;
+  }
+  
+  @media screen and (max-width: 489px) {
+    .about-us-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .about-us-text, .about-us-texts, .about-us-image {
+      flex: none;
+      max-width: 100%;
+    }
+  
+    .about-us-text {
+      order: 2;
+      padding-right: 0;
+      text-align: center;
+    }
+    .about-us-texts {
+      order: 2;
+      padding-right: 0;
+      text-align: center;
+    }
+  
+    .about-us-image {
+      order: 1;
+      margin-top: 20px;
+    }
+  
+    .btn-about-us {
+      order: 3;
+      align-self: center;
+    }
+  }
+
+
+
+.process {
+    text-align: center;
+    margin: 20px;
+    background-color: rgb(191, 191, 211);
+}
+
+h2 {
+    color: #42459C;
+}
+
+.step {
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px;
+}
+
+
+
+p {
+    
+    margin: 5px 0;
 }
