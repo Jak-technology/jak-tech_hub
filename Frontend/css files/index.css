@@ -205,6 +205,8 @@ color: #fff;
   order: 1;
   margin-top: 30px;
   margin-bottom: 5px;
+  
+  text-align: center;
 }
 
 .about-us-content {
@@ -247,7 +249,7 @@ color: #fff;
 
   .about-us-text, .about-us-image {
     flex: none;
-    max-width: 100%;
+    max-width: 90%;
   }
 
   .about-us-text {
