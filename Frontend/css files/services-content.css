@@ -192,209 +192,170 @@ body{
         font-size: 8px;
     }
   }
-  
-  
 
-  
-
-
-
-
-
-/* Services Section */
-
-.services{
-    max-width: 100%;
-    min-height: auto;
-}
-
-.services .texts{
-    justify-content: center;
-    text-align: center;
-    padding: 20px 0;
-    line-height: 50px;
-}
-
-.services-all{
+.heading {
+    width: 100%;
     display: flex;
-    grid-gap: 35px;
-    margin: 30px;
-}
-
-.services-list{
-    width: 600px;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
     text-align: center;
-    justify-self: center;
+   
+}
+.headings {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 40px;
     margin-bottom: 50px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+   
+}
+.heading .headings h1 {
+    
+    color: black;
+   
     position: relative;
-}
-
-.services-list img{
-    width: 100%;
-    aspect-ratio: 16/9;
-    border-radius: 8px;
-    object-fit: cover;
-}
-
-.services-list .big-image-1{
-    background-image: url('../assets/rectangle-20-1png.png');
-    width: 100%;
-    aspect-ratio: 16/9;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 8px;
-}
-
-
-.services-list .small-image{
-    display: none;
-    height: 40px;
-    width: 40px;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%) translateY(-400%);
-}
-
-.services-list .small-image-1{
-    display: none;
-    height: 40px;
-    width: 40px;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%) translateY(-400%);
-}
-
-.services-list .big-image-2{
-    background-image: url('../assets/rectangle-20-1png.png');
-    width: 100%;
-    aspect-ratio: 16/9;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 8px;
-}
-
-.services-list .big-image-3{
-    background-image: url('../assets/rectangle-20-1png.png');
-    aspect-ratio: 16/9;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 8px;
-}
-
-.services-list .services-text{
-    padding: 18px;
-    margin-top: 5px;
-}
-
-.services-list .services-text h3{
-    margin-bottom: 10px;
-    color: #2D3192;
-    font-size: 20px;
-}
-
-.services-list .services-text p{
-    line-height: 20px;
-    font-size: 14px;
-}
-
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    .services-all{
-        display: flex;
-        grid-gap: 25px;
-        margin: 30px;
-    }
-
-    .services-list{
-        width: 600px;
-    }
-
-    .services-list .services-text{
-        padding: 15px;
-        margin-top: 5px;
-    }
     
-    .services-list .services-text h3{
-        margin-bottom: 10px;
-        color: #2D3192;
+}
+.heading .headings h1::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: #42459C;
+    display: block;
+    margin: 0 auto;
+}
+@media screen and (max-width: 498px) {
+    .heading .headings{
+        padding: 0px 20px;
+        order: 1;
+    }
+    .heading .headings h1{
+        font-size: 36px;
+    }
+    .heading .headings p {
         font-size: 17px;
-    }
-    
-    .services-list .services-text p{
-        line-height: 17px;
-        font-size: 12px;
-    }
-    
-
-}
-
-@media only screen and (min-width: 600px) and (max-width: 767px) {
-    .services-all{
-        display: flex;
-        grid-gap: 20px;
-        margin: 30px;
-    }
-
-    .services-list{
-        width: 600px;
-    }
-
-    .services-list .services-text{
-        padding: 13px;
-        margin-top: 5px;
-    }
-    
-    .services-list .services-text h3{
-        margin-bottom: 10px;
-        color: #2D3192;
-        font-size: 14px;
-    }
-    
-    .services-list .services-text p{
-        line-height: 14px;
-        font-size: 11px;
-    }
-    
-
-}
-
-@media only screen and (max-width: 599px) {
-    .services-all{
-        display: block;
-        grid-gap: 17px;
-        margin: 30px;
-        justify-items: center;
-    }
-
-    .services-list{
-        width: 100%;
-    }
-
-    .services-list .services-text{
-        padding: 10px;
-        margin-top: 3px;
-    }
-    
-    .services-list .services-text h3{
-        margin-bottom: 10px;
-        color: #2D3192;
-        font-size: 12px;
-    }
-    
-    .services-list .services-text p{
-        line-height: 11px;
-        font-size: 9px;
+        margin-bottom: 0px;
     }
     
 }
 
+.section-about-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  
+  
+  .about-us-content {
+    display: flex;
+    justify-content: center;
+    order: 2;
+    margin-top: 40px;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .about-us-contents {
+    display: flex;
+    justify-content: center;
+    order: 1;
+    margin-top: 40px;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .about-us-text {
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px 0;
+  }
+  .about-us-texts {
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px 0;
+    order: 1;
+  }
+  .about-us-text p{
+    margin-top: 50px;
+  }
 
+  
+  .btn-about-us {
+    order: 3;
+    margin-top: 20px;
+  }
+  
+  .about-us-image {
+    flex: 1;
+    max-width: 30%;
+    height: auto;
+    object-fit: cover;
+    margin: 10px 0;
+  }
+  
+  @media screen and (max-width: 489px) {
+    .about-us-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .about-us-text, .about-us-texts, .about-us-image {
+      flex: none;
+      max-width: 100%;
+    }
+  
+    .about-us-text {
+      order: 2;
+      padding-right: 0;
+      text-align: center;
+    }
+    .about-us-texts {
+      order: 2;
+      padding-right: 0;
+      text-align: center;
+    }
+  
+    .about-us-image {
+      order: 1;
+      margin-top: 20px;
+    }
+  
+    .btn-about-us {
+      order: 3;
+      align-self: center;
+    }
+  }
+
+
+
+.process {
+    text-align: center;
+    margin: 20px;
+    background-color: rgb(191, 191, 211);
+}
+
+h2 {
+    color: #42459C;
+}
+
+.step {
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px;
+}
+
+
+
+p {
+    
+    margin: 5px 0;
+}
