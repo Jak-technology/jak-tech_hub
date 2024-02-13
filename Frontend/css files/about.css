@@ -198,22 +198,44 @@ color: #fff;
 
 
 
+
+/* samples-begin */
+
+.story-layout {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.the-story {
+  text-align: left;
+  max-width: 95%;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+
+/* samples-end */
+
+
 /*Middle-section*/
 
 
-  .the-story {
+  /* .the-story {
     margin-top: 40px;
     text-align: center;
     margin-left: 50px;
-  }
-  .story-layout {
+  } */
+  /* .story-layout {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
+  } */
   .the-story .story-layout .our-story p {
-    text-align: center;
-    font-size: 1.2rem;
+    text-align: left;
+    font-size: 1rem;
+    line-height: 2;
   }
   .the-story .story-layout .our-story h1{
     text-align: center;
@@ -230,10 +252,20 @@ color: #fff;
   .the-story .contactb{
     margin-top: 20px;
   }
+
+
+
+
+
+
+
+
+
   .why {
     margin-top: 40px;
     text-align: center;
     margin-right: 50px;
+    margin-bottom: 50px;
     }
     .why .why-layout .w-img {
       margin-left: 15px;
@@ -261,6 +293,7 @@ color: #fff;
   .why-layout {
     display: flex;
     align-items: center;
+    gap: 100px;
     justify-content: space-between;
   }
   
@@ -330,7 +363,7 @@ color: #fff;
   .the-team {
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 90px;
     margin-bottom: 40px;
     max-height: fit-content;
     max-width: 100%;
@@ -386,7 +419,16 @@ color: #fff;
 /* responsiveness */
 
 @media (max-width: 1200px) {
+  .the-story .story-layout img {
+    max-width: 280px;
+  }
 
+  .why-layout {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: space-between;
+}
 }
 
 @media (max-width: 992px) {
@@ -440,10 +482,10 @@ color: #fff;
   .writing {
     text-align: center;
     margin: auto;
+    margin-bottom: 40px;
   }
   .why-layout{
-    display: flex;
-    flex-direction: column;
+    display: block;
   }
   .why .why-layout .writing .the-icons0 {
     display: flex;
@@ -463,6 +505,12 @@ color: #fff;
     grid-gap: 50px;
     padding: 10px;
   }
+
+  .the-story .story-layout .our-story h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 40px;
+}
 }
 
 @media (max-width: 600px) {
@@ -520,7 +568,7 @@ color: #fff;
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 490px) {
   .the-story,
   .writing {
     text-align: center;
@@ -534,6 +582,40 @@ color: #fff;
     display: flex;
     flex-direction: column;
   }
+
+  .the-story {
+    text-align: center;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+
+  .the-story .story-layout img {
+    width: 100%;
+    margin: auto;
+  }
+
+  .the-story .story-layout .our-story h1:first-child {
+    margin-top: 20px;
+  }
+
+  .the-story .story-layout .our-story p {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 2;
+}
+
+  .why {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+  .why-layout .w-img img {
+    width: 80%;
+    margin: auto;
+}
   .the-story .story-layout .s-img,
   .why .why-layout .w-img {
     margin-left: auto;
@@ -544,9 +626,15 @@ color: #fff;
     align-content: center;
   }
   .why-layout {
-    display: flex;
-    flex-direction: column;
+    display: block;
   }
+
+  .why-layout .writing .dedicated {
+    font-size: 1rem;
+    line-height: 1.3rem;
+    margin: auto;
+    margin-top: 10px;
+}
   .the-icons0 {
     display: flex;
     flex-direction: column;
@@ -557,7 +645,7 @@ color: #fff;
     margin-left: auto;
     margin-right: auto;
     align-content: center;
-    display: grid;
+    display: block;
     grid-template-columns: auto auto;
     grid-gap: 20px;
     padding: 10px;
