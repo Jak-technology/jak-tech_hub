@@ -36,7 +36,7 @@ class JobTitleSerializer(serializers.ModelSerializer):
 
 
 class UserProfileSerializer(serializers.ModelSerializer):
-    user = UserSerializer(read_only=True)
+    user = UserSerializer()
     gender = serializers.CharField(required=False, allow_blank=True, max_length=10)
     date_of_birth = serializers.DateField()
     phone_number = serializers.CharField(max_length=15)
