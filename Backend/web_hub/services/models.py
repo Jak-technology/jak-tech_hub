@@ -1,4 +1,6 @@
 from django.db import models
+from django.urls import reverse
+
 
 
 CONTACT_CHOICES = (
@@ -75,3 +77,7 @@ class Services(models.Model):
 
     def __str__(self):
         return f"{self.first_name} | {self.service_requested}"
+
+    def get_absolute_url(self):
+        """ Returns the URL to access a particular service"""
+        return reverse('services', args=[str(self.id)])
