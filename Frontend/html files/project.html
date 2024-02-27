@@ -70,7 +70,7 @@
     <section class="project-form">
 
         
-        <form action="http://127.0.0.1:8000/api/services/" method="post" class="first-form">
+        <form action="http://127.0.0.1:8000/api/services/" method="POST" class="first-form">
 
                 <div>
                 <label for="firstName">First Name:</label>
@@ -107,31 +107,25 @@
                 <div>
                 <label for="preferredContact">Preferred Method of Contact:</label>
                 <select id="preferredContact" name="preferredContact">
-                  <option value="email">Email</option>
-                  <option value="phone">Phone</option>
-                  <option value="both">Both</option>
+                  
                 </select>
                 </div>
 
                 <div>
                 <label for="businessType">Select Business Type:</label>
                 <select id="businessType" name="businessType">
-                  <option value="type1">Business Type 1</option>
-                  <option value="type2">Business Type 2</option>
-                  <option value="type3">Business Type 3</option>
+                  
                 </select>
                 </div>
                 </form>
 
 
-                <form action="#" method="post" class="second-form">
+                <form action="http://127.0.0.1:8000/api/services/" method="POST" class="second-form">
 
                
                 <label for="servicesNeeded" class="services-needed">Services Needed (select all that applies):</label>
                 <select id="servicesNeeded" name="servicesNeeded">
-                  <option value="service1">Service 1</option>
-                  <option value="service2">Service 2</option>
-                  <option value="service3">Service 3</option>
+                  
                 </select>
 
             <!-- ... Other form fields ... -->
@@ -160,13 +154,48 @@
 
           <div>
             <script>
-                fetch('http://localhost:8000/api/services/')
-                .then(response => response.json())
-                .then(data => console.log(data));
+                async function populateSelectOptions() {
+                    try {
+                        const response = await fetch('http://localhost:8000/api/choices/');
+                        const data = await response.json();
+                        const { contact_choices, service_choices, business_type_choices } = data;
+
+                        // Populate Preferred Method of Contact
+                        const preferredContactSelect = document.getElementById('preferredContact');
+                        for (const [key, value] of Object.entries(contact_choices)) {
+                            const option = document.createElement('option');
+                            option.value = key;
+                            option.textContent = value;
+                            preferredContactSelect.appendChild(option);
+                        }
+
+                        // Populate Services Needed
+                        const servicesNeededSelect = document.getElementById('servicesNeeded');
+                        for (const [key, value] of Object.entries(service_choices)) {
+                            const option = document.createElement('option');
+                            option.value = key;
+                            option.textContent = value;
+                            servicesNeededSelect.appendChild(option);
+                        }
+
+                        // Populate Business Type
+                        const businessTypeSelect = document.getElementById('businessType');
+                        for (const [key, value] of Object.entries(business_type_choices)) {
+                            const option = document.createElement('option');
+                            option.value = key;
+                            option.textContent = value;
+                            businessTypeSelect.appendChild(option);
+                        }
+                    } catch (error) {
+                        console.error('Error fetching select options:', error);
+                    }
+                }
+
+                // Call the function to populate select options when the page loads
+                window.onload = populateSelectOptions;
             </script>
           </div>
     </section>
-
 
     <section class="contact-us-small">
         <div class="contact-us-small-all">

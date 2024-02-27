@@ -72,7 +72,7 @@ class Services(models.Model):
                                          )
     business_type = models.CharField(max_length=100, choices=INDUSTRY_CHOICES, help_text='Select Your Industry Type')
     service_requested = models.CharField(max_length=100, choices=SERVICE_CHOICES, help_text='Select The Project You Need Done')
-    image = models.FileField(upload_to='file_uploads/')
+    file_uploaded = models.FileField(upload_to='file_uploads/')
     message = models.TextField()
 
     def __str__(self):

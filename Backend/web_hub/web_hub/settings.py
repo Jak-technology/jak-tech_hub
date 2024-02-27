@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-3@o-r0*g+!@8jp#x_1cvryo*=ecu^)b4r(!+mo_l@afw-yijo=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -62,6 +62,21 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
+
+CORS_ALLOW_HEADERS = [
+    'Content-Type',
+    'X-CSRFToken',
+    'Authorization',
+]
 
 ROOT_URLCONF = 'web_hub.urls'
 
