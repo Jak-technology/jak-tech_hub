@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <!-- font awesome cdn link  -->
+    <link rel="icon" href="../assets/jak-img.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../css files/project.css">
+    <link rel="stylesheet" href="../css files/header-footer.css">
+</head>
+<body>
+
+    <header>
+        <input type ="checkbox" name ="" id ="chk1">
+        <div class="jak-logo">
+            <a href="../index.html"><img src="../assets/jak-img.png" alt="">
+        
+                <div class="jak-texts">
+                <h1 class="jak-main">JAK</h1>
+                <h2 class="tech">Technologies</h2></a>
+        </div>
+        </div>
+
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+				<li><a href="../html files/about.html">About</a></li>
+				<li><a href="../html files/Services.html">Our Services</a></li>
+				<li><a href="../html files/blog.html">Blog</a></li>
+				<li><a href="../html files/contact.html">Contact</a></li>
+
+
+				<div class="but">
+					<button class="btn"><a href="../html files/project.html">Have A Project</a></button>
+				</div>
+
+				<li class="mid">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                      
+                </li>
+            </ul>
+
+			
+			
+            <div class="menu">
+                <label for="chk1">
+                    <i class="fa fa-bars"></i>
+                </label>
+            </div>
+    </header>
+    
+    <section class="hero-page">
+        <div class="texts">
+            <h1>Transforming Visions Into<br> Reality: Your Dream Project, <br>Our Expertise</h1>
+            <p>Collaborate for Success: Let’s Bring Your Ideas<br> to Life, Together.</p>
+        
+
+            <div class="hero-page-buttons">
+                <button  class="btn get-button"><a href="../html files/project.html">Get Started</a></button>
+                <button class="btn learn-button"><a href="../html files/Services.html">Learn More</a></button>
+            </div>
+    </div>
+    </section>
+
+
+
+    <section class="project-form">
+
+        
+        <form action="http://127.0.0.1:8000/api/services/" method="post" class="first-form">
+
+                <div>
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+                </div>
+
+                <div>
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+                </div>
+
+                <div>
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                </div>
+
+                <div>
+                <label for="email">Email:</label>
+                <div>
+                <input type="" id="email" name="email" required>
+                </div>
+                </div>
+
+                <div>
+                <label for="companyName">Company Name:</label>
+                <input type="text" id="companyName" name="companyName" required>
+                </div>
+
+                <div>
+                <label for="country">Country:</label>
+                <input type="text" id="country" name="country" required>
+                </div>
+
+                <div>
+                <label for="preferredContact">Preferred Method of Contact:</label>
+                <select id="preferredContact" name="preferredContact">
+                  <option value="email">Email</option>
+                  <option value="phone">Phone</option>
+                  <option value="both">Both</option>
+                </select>
+                </div>
+
+                <div>
+                <label for="businessType">Select Business Type:</label>
+                <select id="businessType" name="businessType">
+                  <option value="type1">Business Type 1</option>
+                  <option value="type2">Business Type 2</option>
+                  <option value="type3">Business Type 3</option>
+                </select>
+                </div>
+                </form>
+
+
+                <form action="#" method="post" class="second-form">
+
+               
+                <label for="servicesNeeded" class="services-needed">Services Needed (select all that applies):</label>
+                <select id="servicesNeeded" name="servicesNeeded">
+                  <option value="service1">Service 1</option>
+                  <option value="service2">Service 2</option>
+                  <option value="service3">Service 3</option>
+                </select>
+
+            <!-- ... Other form fields ... -->
+        
+            <div class="file-upload">
+              <label for="file" class="file-input">Upload File (click on the button below to add or drag file):</label>
+              <input type="file" id="file" name="file" accept=".pdf, .doc, .docx" style="display: none" multiple>
+              <div class="drag-drop-box" onclick="document.getElementById('file').click()">
+                Drag and drop
+              </div>
+
+              <div class="selected-files" id="selectedFiles"></div>
+              <button type="button" class="add-more-button" id="addMoreButton" onclick="document.getElementById('file').click()">Add More Files</button>
+            </div>
+            
+        
+            <!-- ... Other form fields ... -->
+
+            <label for="message">Message:</label>
+            <div class="message-field">
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <div>
+
+            <button type="submit">Submit</button>
+          </form>
+
+          <div>
+            <script>
+                fetch('http://localhost:8000/api/services/')
+                .then(response => response.json())
+                .then(data => console.log(data));
+            </script>
+          </div>
+    </section>
+
+
+    <section class="contact-us-small">
+        <div class="contact-us-small-all">
+            <h3>Ready to take your business to new heights? <br>Contact us
+                today and let's embark on a transformative journey <br>together.</h3>
+
+                <a target="_blank" href="contact.html"><button class="btn">Contact Us</button></a>
+
+        </div>
+    </section>
+
+
+    <section class="contact-details">
+
+        <div class="contact-details-all">
+            <div class="phone-small">
+                <img src="../assets/Phone-small.png" alt="">
+                <h4>Phone Number</h4>
+                <p>000-111-222</p>
+            </div>
+
+            <div class="email-small">
+                <img src="../assets/envelope-small.png" alt="">
+                <h4>Email</h4>
+                <p>jaktechnology@gmail.com</p>
+            </div>
+
+            <div class="location-small">
+                <img src="../assets/location-small.png" alt="">
+                <h4>Location</h4>
+                <p>Remote</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="get-updates">
+        <div class="get-updates-main">
+            <div class="text">
+                <h1>Get Updates</h1>
+                <p>Subscribe to receive our latest company updates</p>
+            </div>
+
+            <div class="email">
+                <input type="email" name="" placeholder="Email Address" id="">
+                <button>Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+
+                <div class="footer-col">
+                    <div class="jak-footer-main">
+                        <div><a href="../index.html"><img src="../assets/jak-img.png" alt="Jaktech logo"></div>
+                              
+                            <div class="jak-texts">
+                            <h1 class="jak-main">JAK</h1>
+                            <h2 class="tech">Technologies</h2>
+                            </div></a>
+                    </div>
+                    
+                    <div class="footer-text">
+                        Jak Technology are a catalyst for individual Programming
+                  aspirations. Beyond the lines of code, we empower and inspire
+                  by imparting essential skills through effective teaching
+                  methods
+                    </div>
+                
+                               
+                    <div>
+                        <h4>follow us</h4>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=100083668524520&mibextid=ZbWKwL " target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="
+                            https://x.com/jaktechhq?t=PpSUxYhngpA8NIqhrfmmFg&s=09 " target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.youtube.com/@jaktechhq
+
+                            " target="_blank"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.linkedin.com/company/jak-techq/ " target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Company Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../html files/about.html">About</a></li>
+                        <li><a href="../html files/Services.html">Our Services</a></li>
+                        <li><a href="../html files/blog.html">Blog</a></li>
+                        <li><a href="../html files/contact.html">Contact</a></li>
+                        <li><a href="../html files/jaq-faqs.html">FAQS</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="../html files/inner_html/services1.html">Website Development</a></li>
+                        <li><a href="../html files/inner_html/services2.html">Mobile App Development</a></li>
+                        <li><a href="../html files/inner_html/services3.html">Teaching Methods</a></li>
+                        <li><a href="../html files/inner_html/services4.html">Intership Trainings</a></li>
+                        <li><a href="../html files/inner_html/services5.html">Tecnical Support</a></li>
+                        <li><a href="../html files/inner_html/services6.html">IT Consulting</a></li>
+                    </ul>
+                </div>
+
+                
+                <div class="footer-col footr">
+                    <h4>Get In Touch</h4>
+        
+                    <button><a href="../html files/contact.html">Contact Us</a></button>
+                    <p>jaktechnology@gmail.com</p>
+            </div>
+                
+        </div>
+   </footer>
+   <footer class="footer-bottom">
+    <p>Jak Technology  &copy; 2024. All Rights Reserved</p>
+    <p><a href="../html files/inner_html/terms&conditions.html">Terms and Conditions</a> | <a href="../html files/inner_html/privacy.html">Privacy Policy</a> | <a href="../html files/inner_html/cookies.html">Cookies</a></p>
+  </footer>
+    
+    <script src="../Js/projects.js"></script>
+</body>
+</html>
