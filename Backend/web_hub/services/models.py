@@ -72,3 +72,6 @@ class Services(models.Model):
     service_requested = models.CharField(max_length=100, choices=SERVICE_CHOICES, help_text='Select The Project You Need Done')
     image = models.FileField(upload_to='file_uploads/')
     message = models.TextField()
+
+    def __str__(self):
+        return f"{self.first_name} | {self.service_requested}"
