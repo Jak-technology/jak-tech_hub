@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'dashboard.apps.DashboardConfig',
     'console',
+    'services',
     'emoji_picker',
     'rest_framework',
     'django.contrib.admin',

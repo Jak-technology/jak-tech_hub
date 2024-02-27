@@ -46,13 +46,13 @@ SERVICE_CHOICES = (
     ('sd', 'Software Development'),
     ('wd', 'Web Development'),
     ('md', 'Mobile App Development'),
-    ('it' 'IT Consulting'),
+    ('it', 'IT Consulting'),
     ('dm', 'Digital Marketing'),
     ('seo', 'Search Engine Optimization (SEO)'),
     ('cm', 'Content Marketing'),
     ('smm', 'Social Media Marketing'),
-    ('gd' 'Graphic Design'),
-    ('ecomm' 'E-commerce Development'),
+    ('gd', 'Graphic Design'),
+    ('ecomm', 'E-commerce Development'),
    ('ns', ' Network Services'),
 )
 
@@ -64,10 +64,11 @@ class Services(models.Model):
     company_name = models.CharField(max_length=255)
     country = models.CharField(max_length=100)
     preferred_contact = models.CharField(
+                                         max_length=100,
                                          choices=CONTACT_CHOICES,
                                          help_text='Select Preferred Method of Contact'
                                          )
-    business_type = models.CharField(choices=INDUSTRY_CHOICES, help_text='Select Your Industry Type')
-    service_requested = models.CharField(choice=SERVICE_CHOICES, help_text='Select The Service You want us to do')
+    business_type = models.CharField(max_length=100, choices=INDUSTRY_CHOICES, help_text='Select Your Industry Type')
+    service_requested = models.CharField(max_length=100, choices=SERVICE_CHOICES, help_text='Select The Project You Need Done')
     image = models.FileField(upload_to='file_uploads/')
     message = models.TextField()
