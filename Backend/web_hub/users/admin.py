@@ -1,13 +1,14 @@
 from django.contrib import admin
 from django.contrib.auth.models import User
 from django.contrib.auth.admin import UserAdmin
-from .models import JobTitle, UserProfile, Skills, Specialization
+from .models import JobTitle, UserProfile, Skills, Specialization, SocialMediaHandles
 
 
 admin.site.register(JobTitle)
 admin.site.register(UserProfile)
 admin.site.register(Skills)
 admin.site.register(Specialization)
+admin.site.register(SocialMediaHandles)
 
 
 class UserProfileInline(admin.StackedInline):
