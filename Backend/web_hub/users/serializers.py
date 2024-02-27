@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
-from .models import UserProfile, Skills, Specialization, JobTitle
+from .models import UserProfile, Skills, Specialization, JobTitle, SocialMediaHandles
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -35,6 +35,13 @@ class JobTitleSerializer(serializers.ModelSerializer):
         fields = ['title']
 
 
+class SocialMediaHandlesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SocialMediaHandles
+        fields = ['x', 'instagram', 'linkedin', 'facebook', 'tiktok']
+
+
+
 class UserProfileSerializer(serializers.ModelSerializer):
     user = UserSerializer()
     gender = serializers.CharField(required=False, allow_blank=True, max_length=10)
@@ -43,7 +50,12 @@ class UserProfileSerializer(serializers.ModelSerializer):
     skills = SkillsSerializer(many=True)
     specialization = SpecializationSerializer(many=True)
     job_title = JobTitleSerializer(many=True)
+    social_media_handles = serializers.SerializerMethodField()
 
     class Meta:
         model = UserProfile
         fields = '__all__'
+
+    def get_social_media_handles(self, obj):
+        socials = SocialMediaHandles.objects.filter(user_profile=obj)
+        return SocialMediaHandlesSerializer(socials, many=True).data

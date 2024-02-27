@@ -22,6 +22,7 @@ class UserProfile(models.Model):
     job_title = models.ManyToManyField('JobTitle')
     specialization = models.ManyToManyField('Specialization')
     location = models.CharField(max_length=100)
+    github_account = models.CharField(max_length=255, blank=True)
     image = models.ImageField(default='default.jpg', upload_to='profile_pics')
 
     class Meta:
@@ -82,3 +83,7 @@ class SocialMediaHandles(models.Model):
 
     def __str__(self):
         return f"Social Media Handles for {self.user_profile}"
+
+    def get_absolute_url(self):
+        """ Returns the URL to access a profile's social media handles """
+        return reverse('socials', args=[str(self.id)])
