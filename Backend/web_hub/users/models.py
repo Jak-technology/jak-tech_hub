@@ -73,7 +73,7 @@ class JobTitle(models.Model):
 
 
 class SocialMediaHandles(models.Model):
-    user_profile = models.OneToOneField('UserProfile', on_delete=models.CASCADE)
+    user_profile = models.ForeignKey(UserProfile, on_delete=models.CASCADE, related_name='social_media_handles')
     x = models.CharField(max_length=100, null=True, blank=True)
     instagram = models.CharField(max_length=100, null=True, blank=True)
     linkedin = models.CharField(max_length=100, null=True, blank=True)
