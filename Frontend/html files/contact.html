@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
+    <title>Contact Us</title>
     <!-- font awesome cdn link  -->
     <link rel="icon" href="../assets/jak-img.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="../css files/project.css">
+    <link rel="stylesheet" href="../css files/contact.css">
     <link rel="stylesheet" href="../css files/header-footer.css">
 </head>
 <body>
@@ -66,177 +66,60 @@
     </section>
 
 
-
-    <section class="project-form">
+     <section class="contact-form">
 
         
-<<<<<<< HEAD
-        <form action="#" method="post" class="first-form">
-=======
-        <form action="http://127.0.0.1:8000/api/services/" method="POST" class="first-form">
->>>>>>> 15b0b27bc7f8a7e46f1bf3bd089adaa64358c54f
+        <div class="before-form">
+        <h2>How can we help</h2>
 
-                <div>
-                <label for="firstName">First Name:</label>
-                <input type="text" id="firstName" name="firstName" required>
-                </div>
+        <p id="p">To Learn more about services, please fill the form and we'll be in touch shortly</p>
 
-                <div>
-                <label for="lastName">Last Name:</label>
-                <input type="text" id="lastName" name="lastName" required>
-                </div>
+        <h3 class="h3">Can you help with company website? <span>+</span></h3>
+        <h3>Can you design an ecommerce app with backend? <span>+</span></h3>
 
-                <div>
-                <label for="phoneNumber">Phone Number:</label>
-                <input type="tel" id="phoneNumber" name="phoneNumber" required>
-                </div>
-
-                <div>
-                <label for="email">Email:</label>
-                <div>
-                <input type="" id="email" name="email" required>
-                </div>
-                </div>
-
-                <div>
-                <label for="companyName">Company Name:</label>
-                <input type="text" id="companyName" name="companyName" required>
-                </div>
-
-                <div>
-                <label for="country">Country:</label>
-                <input type="text" id="country" name="country" required>
-                </div>
-
-                <div>
-                <label for="preferredContact">Preferred Method of Contact:</label>
-                <select id="preferredContact" name="preferredContact">
-<<<<<<< HEAD
-                 
-=======
-                  
->>>>>>> 15b0b27bc7f8a7e46f1bf3bd089adaa64358c54f
-                </select>
-                </div>
-
-                <div>
-                <label for="businessType">Select Business Type:</label>
-                <select id="businessType" name="businessType">
-                  
-                </select>
-                </div>
-                </form>
-
-
-<<<<<<< HEAD
-                <form action="#" method="post" class="second-form">
-=======
-                <form action="http://127.0.0.1:8000/api/services/" method="POST" class="second-form">
->>>>>>> 15b0b27bc7f8a7e46f1bf3bd089adaa64358c54f
-
-               
-                <label for="servicesNeeded" class="services-needed">Services Needed (select all that applies):</label>
-                <select id="servicesNeeded" name="servicesNeeded">
-<<<<<<< HEAD
-                 
-=======
-                  
->>>>>>> 15b0b27bc7f8a7e46f1bf3bd089adaa64358c54f
-                </select>
-
-            <!-- ... Other form fields ... -->
-        
-            <div class="file-upload">
-              <label for="file" class="file-input">Upload File (click on the button below to add or drag file):</label>
-              <input type="file" id="file" name="file" accept=".pdf, .doc, .docx" style="display: none" multiple>
-              <div class="drag-drop-box" onclick="document.getElementById('file').click()">
-                Drag and drop
-              </div>
-
-              <div class="selected-files" id="selectedFiles"></div>
-              <button type="button" class="add-more-button" id="addMoreButton" onclick="document.getElementById('file').click()">Add More Files</button>
-            </div>
-            
-        
-            <!-- ... Other form fields ... -->
-
-            <label for="message">Message:</label>
-            <div class="message-field">
-            <textarea id="message" name="message" rows="4" required></textarea>
-            <div>
-
-            <button type="submit">Submit</button>
-          </form>
-<<<<<<< HEAD
-          <div>
-            <script>
-
-=======
-
-          <div>
-            <script>
->>>>>>> 15b0b27bc7f8a7e46f1bf3bd089adaa64358c54f
-                async function populateSelectOptions() {
-                    try {
-                        const response = await fetch('http://localhost:8000/api/choices/');
-                        const data = await response.json();
-                        const { contact_choices, service_choices, business_type_choices } = data;
-
-                        // Populate Preferred Method of Contact
-                        const preferredContactSelect = document.getElementById('preferredContact');
-                        for (const [key, value] of Object.entries(contact_choices)) {
-                            const option = document.createElement('option');
-                            option.value = key;
-                            option.textContent = value;
-                            preferredContactSelect.appendChild(option);
-                        }
-
-                        // Populate Services Needed
-                        const servicesNeededSelect = document.getElementById('servicesNeeded');
-                        for (const [key, value] of Object.entries(service_choices)) {
-                            const option = document.createElement('option');
-                            option.value = key;
-                            option.textContent = value;
-                            servicesNeededSelect.appendChild(option);
-                        }
-
-                        // Populate Business Type
-                        const businessTypeSelect = document.getElementById('businessType');
-                        for (const [key, value] of Object.entries(business_type_choices)) {
-                            const option = document.createElement('option');
-                            option.value = key;
-                            option.textContent = value;
-                            businessTypeSelect.appendChild(option);
-                        }
-                    } catch (error) {
-                        console.error('Error fetching select options:', error);
-                    }
-                }
-
-                // Call the function to populate select options when the page loads
-                window.onload = populateSelectOptions;
-<<<<<<< HEAD
-
-=======
->>>>>>> 15b0b27bc7f8a7e46f1bf3bd089adaa64358c54f
-            </script>
-          </div>
-    </section>
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 15b0b27bc7f8a7e46f1bf3bd089adaa64358c54f
-    <section class="contact-us-small">
-        <div class="contact-us-small-all">
-            <h3>Ready to take your business to new heights? <br>Contact us
-                today and let's embark on a transformative journey <br>together.</h3>
-
-                <a target="_blank" href="contact.html"><button class="btn">Contact Us</button></a>
-
+        <a href="#">See more in our FAQs</a>
         </div>
-    </section>
+          <form action="#" method="post" class="contact-first-form">
+
+                    <div class="two-row">
+                    <label for="firstName">First Name:</label>
+                    </div>
+                    <input type="text" id="firstName" name="firstName" required>
+                
+
+                
+                    <div class="two-row">
+                    <label for="lastName">Last Name:</label>
+                    </div>
+                    <input type="text" id="lastName" name="lastName" required>
+                    
+
+                
+                    <div class="two-row">
+                    <label for="email">Email:</label>
+                    </div>
+                    <input type="" id="email" name="email" required>
+                    
+
+                    <div class="two-row">
+                    <label for="companyName">Subject:</label>
+                    </div>
+                    <input type="text" id="companyName" name="companyName" required>
+                    
+
+
+                
+                <div>
+                <label for="message">How can we help?</label>
+                <div class="message-field">
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <div class="form-submit">
+                <button type="submit">Submit</button>
+                </div>
+            </form>
+        </section>
+ 
 
 
     <section class="contact-details">
@@ -261,7 +144,10 @@
             </div>
         </div>
     </section>
-    
+
+
+
+
     <section class="get-updates">
         <div class="get-updates-main">
             <div class="text">
@@ -350,6 +236,7 @@
     <p><a href="../html files/inner_html/terms&conditions.html">Terms and Conditions</a> | <a href="../html files/inner_html/privacy.html">Privacy Policy</a> | <a href="../html files/inner_html/cookies.html">Cookies</a></p>
   </footer>
     
-    <script src="../Js/projects.js"></script>
+    
+    <script src="../script.js"></script>
 </body>
 </html>

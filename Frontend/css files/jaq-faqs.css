@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1rem;
+  width: 100%;
+}
+
+/*===Hero Page===*/
+.hero-page {
+  background: linear-gradient(rgba(58, 55, 55, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/q\ and\ a.jpeg');
+  min-height: 90vh;
+  max-width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-items: center;
+  position: relative; /* Add position relative for absolute positioning of children */
+}
+
+.hero-page .texts{
+  position: absolute;
+  top: 55%;
+  left: 5%; /* Adjust the left value to position the text accordingly */
+  transform: translate(0%, -50%);
+  color: white; /* Adjust text color */
+  width: 850px;
+}
+
+.hero-page .texts h1{
+  font-size: 2.5rem;
+  line-height: 3.0625rem;
+}
+
+.hero-page .texts p{
+  margin: 14px 0;
+  font-size: 1.1rem;
+  line-height: 1.6875rem;
+}
+.hero-page .hero-page-buttons a{
+  color: #fff;
+}
+
+.hero-page .hero-page-buttons{
+  display: flex;
+  justify-content: space-between;
+  width: 370px;
+  margin-top: 20px;
+}
+
+.hero-page .hero-page-buttons .btn{
+width: 135px;
+height: 35px;
+font-size: 14px;
+border: none;
+border-radius: 7px;
+background: #42459C;
+color: #fff;
+}
+
+
+/* Media Queries for Responsive Design */
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .hero-page {
+      min-height: 90vh;
+      width: 100%;
+  }
+
+  .hero-page .texts {
+      width: 100%;
+  }
+
+  .hero-page .texts h1 {
+      font-size: 1.9rem; 
+      line-height: 2.2rem;
+  }
+
+  .hero-page .texts p {
+      font-size: 0.9rem; 
+      line-height: 1.2rem; 
+  }
+
+  .hero-page .hero-page-buttons{
+      width: 270px;
+  }
+
+  .hero-page .hero-page-buttons .btn {
+      width: 100px; 
+      font-size: 11px; 
+  }
+}
+
+
+/* next small screen  */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .hero-page {
+      min-height: 90vh;
+      width: 100%;
+  }
+
+  .hero-page .texts {
+      width: 50%;
+  }
+
+  .hero-page .texts h1 {
+      font-size: 1.6rem; 
+      line-height: 2rem; 
+  }
+
+  .hero-page .texts p {
+      font-size: 0.9rem; 
+      line-height: 1.2rem; 
+  }
+
+  .hero-page .hero-page-buttons{
+      width: 270px;
+  }
+
+  .hero-page .hero-page-buttons .btn {
+      width: 90px; 
+      font-size: 9px; 
+  }
+}
+
+
+/* small screen size */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .hero-page .texts {
+      width: 80%;
+  }
+
+  .hero-page .texts h1 {
+      font-size: 1.5rem; 
+      line-height: 1.9rem; 
+  }
+
+  .hero-page .texts p {
+      font-size: 0.7rem; 
+      line-height: 1rem; 
+  }
+
+  .hero-page .hero-page-buttons{
+      width: 250px;
+  }
+
+  .hero-page .hero-page-buttons .btn {
+      width: 90px; 
+      font-size: 9px; 
+  }
+}
+
+
+
+/* very small screen  */
+@media only screen and (max-width: 599px) {
+
+  .hero-page {
+      min-height: 90vh;
+      width: 100%;
+  }
+
+
+  .hero-page .texts {
+      width: 70%;
+  }
+
+  .hero-page .texts h1 {
+      font-size: 1.3rem;
+      line-height: 1.8rem;
+  }
+
+  .hero-page .texts p {
+      font-size: 0.6rem;
+      line-height: 1rem;
+  }
+
+  .hero-page .hero-page-buttons{
+      width: 230px;
+  }
+
+  .hero-page .hero-page-buttons .btn {
+      width: 85px;
+      font-size: 8px;
+  }
+}
+
+.FAQS{
+  margin:20px auto;
+  max-width: 80%;
+}
+
+.FAQS .heading{
+  text-align: center;
+  font-size: 30px;
+  padding:20px;
+  margin-bottom: 20px;
+}
+
+.FAQS .accordion-faqs{
+  padding:0 20px;
+}
+
+.FAQS .accordion-faqs .accordion{
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.FAQS .accordion-faqs .accordion.active .accordion-heading{
+  background: #2d3192;
+}
+
+.FAQS .accordion-faqs .accordion.active .accordion-heading h3{
+  color:#fff;
+}
+
+.FAQS .accordion-faqs .accordion.active .accordion-heading i{
+  color:#fff;
+  transform: rotate(180deg);
+  transition: transform .2s .1s;
+}
+
+.FAQS .accordion-faqs .accordion.active .accordion-content{
+  display: block;
+}
+
+.FAQS .accordion-faqs .accordion .accordion-heading{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap:10px;
+  background: #fff;
+  border-bottom:2px solid blue;
+  padding:15px 20px;
+}
+
+.FAQS .accordion-faqs .accordion .accordion-heading h3{
+  font-size: 18px;;
+}
+
+.FAQS .accordion-faqs .accordion .accordion-heading i{
+  font-size: 25px;;
+}
+
+.FAQS .accordion-faqs .accordion .accordion-content{
+  padding:15px 20px;
+  
+  font-size: 15px;
+  background: #fff;
+  border-top: 0;
+  display: none;
+  animation: animate .2s linear backwards;
+  line-height: 2;
+  transform-origin: top;
+}
+
+@keyframes animate {
+  0%{
+    transform: scaleY(0);
+  }
+}

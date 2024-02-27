@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1rem;
+    width: 100%;
+}
+
+
+/*===Hero Page===*/
+.hero-page {
+    background: linear-gradient(rgba(58, 55, 55, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/project-main.png');
+    min-height: 90vh;
+    max-width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+    position: relative; /* Add position relative for absolute positioning of children */
+  }
+  
+  .hero-page .texts{
+    position: absolute;
+    top: 55%;
+    left: 5%; /* Adjust the left value to position the text accordingly */
+    transform: translate(0%, -50%);
+    color: white; /* Adjust text color */
+    width: 850px;
+  }
+  
+  .hero-page .texts h1{
+    font-size: 2.5rem;
+    line-height: 3.0625rem;
+  }
+  
+  .hero-page .texts p{
+    margin: 14px 0;
+    font-size: 1.1rem;
+    line-height: 1.6875rem;
+  }
+  
+  .hero-page .hero-page-buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 370px;
+    margin-top: 20px;
+  }
+  
+  .hero-page .hero-page-buttons a{
+    color: #fff;
+  }
+  .hero-page .hero-page-buttons .btn{
+  width: 135px;
+  height: 35px;
+  font-size: 14px;
+  border: none;
+  border-radius: 7px;
+  background: #42459C;
+  color: #fff;
+  }
+  
+  
+  /* Media Queries for Responsive Design */
+  
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .hero-page {
+        min-height: 90vh;
+        width: 100%;
+    }
+  
+    .hero-page .texts {
+        width: 100%;
+    }
+  
+    .hero-page .texts h1 {
+        font-size: 1.9rem; 
+        line-height: 2.2rem;
+    }
+  
+    .hero-page .texts p {
+        font-size: 0.9rem; 
+        line-height: 1.2rem; 
+    }
+  
+    .hero-page .hero-page-buttons{
+        width: 270px;
+    }
+  
+    .hero-page .hero-page-buttons .btn {
+        width: 100px; 
+        font-size: 11px; 
+    }
+  }
+  
+  
+  /* next small screen  */
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .hero-page {
+        min-height: 90vh;
+        width: 100%;
+    }
+  
+    .hero-page .texts {
+        width: 50%;
+    }
+  
+    .hero-page .texts h1 {
+        font-size: 1.6rem; 
+        line-height: 2rem; 
+    }
+  
+    .hero-page .texts p {
+        font-size: 0.9rem; 
+        line-height: 1.2rem; 
+    }
+  
+    .hero-page .hero-page-buttons{
+        width: 270px;
+    }
+  
+    .hero-page .hero-page-buttons .btn {
+        width: 90px; 
+        font-size: 9px; 
+    }
+  }
+  
+  
+  /* small screen size */
+  @media only screen and (min-width: 600px) and (max-width: 767px) {
+    .hero-page .texts {
+        width: 80%;
+    }
+  
+    .hero-page .texts h1 {
+        font-size: 1.5rem; 
+        line-height: 1.9rem; 
+    }
+  
+    .hero-page .texts p {
+        font-size: 0.7rem; 
+        line-height: 1rem; 
+    }
+  
+    .hero-page .hero-page-buttons{
+        width: 250px;
+    }
+  
+    .hero-page .hero-page-buttons .btn {
+        width: 90px; 
+        font-size: 9px; 
+    }
+  }
+  
+  
+  
+  /* very small screen  */
+  @media only screen and (max-width: 599px) {
+  
+    .hero-page {
+        min-height: 90vh;
+        width: 100%;
+    }
+  
+  
+    .hero-page .texts {
+        width: 70%;
+    }
+  
+    .hero-page .texts h1 {
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+    }
+  
+    .hero-page .texts p {
+        font-size: 0.6rem;
+        line-height: 1rem;
+    }
+  
+    .hero-page .hero-page-buttons{
+        width: 230px;
+    }
+  
+    .hero-page .hero-page-buttons .btn {
+        width: 85px;
+        font-size: 8px;
+    }
+  }
+
+.heading {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+   
+}
+.headings {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
+   
+}
+.heading .headings h1 {
+    
+    color: black;
+   
+    position: relative;
+    
+}
+.heading .headings h1::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: #42459C;
+    display: block;
+    margin: 0 auto;
+}
+@media screen and (max-width: 498px) {
+    .heading .headings{
+        padding: 0px 20px;
+        order: 1;
+    }
+    .heading .headings h1{
+        font-size: 36px;
+    }
+    .heading .headings p {
+        font-size: 17px;
+        margin-bottom: 0px;
+    }
+    
+}
+
+.section-about-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  
+  
+  .about-us-content {
+    display: flex;
+    justify-content: center;
+    order: 2;
+    margin-top: 40px;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .about-us-contents {
+    display: flex;
+    justify-content: center;
+    order: 1;
+    margin-top: 40px;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .about-us-text {
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px 0;
+  }
+  .about-us-texts {
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px 0;
+    order: 1;
+  }
+  .about-us-text p{
+    margin-top: 50px;
+  }
+
+  
+  .btn-about-us {
+    order: 3;
+    margin-top: 20px;
+  }
+  
+  .about-us-image {
+    flex: 1;
+    max-width: 30%;
+    height: auto;
+    object-fit: cover;
+    margin: 10px 0;
+  }
+  
+  @media screen and (max-width: 489px) {
+    .about-us-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .about-us-text, .about-us-texts, .about-us-image {
+      flex: none;
+      max-width: 100%;
+    }
+  
+    .about-us-text {
+      order: 2;
+      padding-right: 0;
+      text-align: center;
+    }
+    .about-us-texts {
+      order: 2;
+      padding-right: 0;
+      text-align: center;
+    }
+  
+    .about-us-image {
+      order: 1;
+      margin-top: 20px;
+    }
+  
+    .btn-about-us {
+      order: 3;
+      align-self: center;
+    }
+  }
+
+
+
+.process {
+    text-align: center;
+    margin: 20px;
+    background-color: rgb(191, 191, 211);
+}
+
+h2 {
+    color: #42459C;
+}
+
+.step {
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px;
+}
+
+
+
+p {
+    
+    margin: 5px 0;
+}

@@ -1,0 +1,813 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Nunito Sans', sans-serif;
+    font-size: 1rem;
+    width: 100%;
+}
+ul{
+  list-style: none;
+}
+
+ul li a{
+  text-decoration: none;
+  color: #000;
+ }
+
+ a{
+  text-decoration: none;
+  color: #000;
+ }
+
+
+
+ header{
+    width: 100%;
+    height: 12vh;
+    display: flex;
+	padding: 30px;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 99;
+    box-shadow: 0 0 10px #000;
+    background: rgb(248, 245, 245);
+}
+
+#chk1{
+    display: none; 
+}
+
+i{
+    color: #fff;
+    cursor: pointer;
+}
+
+header .jak-logo{
+    display: flex;
+}
+
+header .jak-logo img{
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+}
+
+header .jak-logo .jak-texts{
+  font-size: 0.7rem;
+}
+
+header .jak-logo .jak-texts h1{
+    color: #2D3192;
+}
+
+header .logo{
+    flex: 1;
+    color:#fff;
+    margin-left: 50px;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+
+header ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+header ul li{
+    list-style: none;
+}
+
+button{
+    color: #fff;
+}
+
+header ul .but .btn a{
+    color: #fff;
+}
+ 
+
+header ul li a{
+    text-decoration: none;
+    color:#000000;
+    margin-right: 50px;
+    font-weight: 600;
+    padding: 10px 15px;
+}
+
+header ul li a:hover{
+    border-bottom: 2px solid cadetblue;
+}
+
+.mid{
+	display: none;
+}
+
+header .menu{
+    font-size: 1.5em;
+    display: none;
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    header{
+    
+    }
+
+    header ul{
+        position: fixed;
+        top: 12vh;
+        right: -100%;
+        background: #434584;
+        height: calc(100vh - 12vh);
+        width: 45%;
+        padding-left: 30px;
+        flex-direction: column;
+        align-items: flex-start;
+        transition: right 0.5s linear;
+    }
+
+    header ul li a{
+        color: #fff;
+    }
+
+	.mid{
+		display: none;
+	}
+
+    header ul .but .btn{
+        color: #fff;
+        background: #44a7d8;
+        width: 100%;
+        padding: 10px 20px;
+    }
+     
+    header .menu{
+        display: block;
+        width:100px;
+        text-align: center;
+    }
+
+	header .menu label i{
+		color: #000;
+	}
+
+
+    #chk1:checked ~ ul{
+        right: 0;
+        
+    }
+}
+
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+    header ul{
+        position: fixed;
+        top: 12vh;
+        right: -100%;
+        background: #434584;
+        height: calc(100vh - 12vh);
+        width: 45%;
+        padding-left: 30px;
+        flex-direction: column;
+        align-items: flex-start;
+        transition: right 0.5s linear;
+    }
+
+    header ul li a{
+        color: #fff;
+    }
+
+	.mid{
+		display: none;
+	}
+
+    header ul .but .btn{
+        color: #fff;
+        background: #44a7d8;
+    }
+     
+    header .menu{
+        display: block;
+        width:100px;
+        text-align: center;
+    }
+
+	header .menu label i{
+		color: #000;
+	}
+
+
+    #chk1:checked ~ ul{
+        right: 0;
+        
+    }
+}
+
+
+@media only screen and (max-width: 599px) {
+    header{
+      
+    }
+
+    header ul{
+        position: fixed;
+        top: 12vh;
+        right: -50%;
+        background: #434584;
+        height: calc(100vh - 12vh);
+        width: 45%;
+        padding-left: 30px;
+        flex-direction: column;
+        align-items: flex-start;
+        transition: right 0.5s linear;
+    }
+
+    header ul li a{
+        color: #fff;
+    }
+
+	.mid{
+		display: none;
+	}
+
+    header ul .but .btn{
+        color: #fff;
+        background: #44a7d8;
+    }
+     
+    header .menu{
+        display: block;
+        width:100px;
+        text-align: center;
+    }
+
+	header .menu label i{
+		color: #000;
+	}
+
+
+    #chk1:checked ~ ul{
+        right: 0;
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+  /*====== 3-contact-details ======*/
+
+  .contact-details {
+    max-width: 80%;
+    min-height: 15vh;
+    margin: 50px auto;
+    border-radius: 7px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);     padding: 30px;
+  }
+  
+  .contact-details-all {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 0 10%;
+  }
+
+  .contact-details-all img{
+    max-width: 34px;
+    min-height: 34px;
+  }
+
+  .contact-details-all h4{
+    font-size: 1rem;
+  }
+
+  .contact-details-all p{
+    font-size: 0.9rem;
+  }
+
+  /*mobile responsiveness*/
+
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .contact-details {
+      max-width: 80%;
+      min-height: 15vh;
+      margin: 300px auto 50px auto;
+      border-radius: 7px;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);     padding: 30px;
+    }
+    
+    .contact-details-all img{
+      max-width: 24px;
+      min-height: 24px;
+    }  
+
+    .contact-details-all h4{
+      font-size: 0.9rem;
+    }
+
+    .contact-details-all p{
+      font-size: 0.8;
+    }
+  }
+
+  @media only screen and (min-width: 600px) and (max-width: 767px) {
+
+    .contact-details-all {
+      display: none;
+    }
+
+    .contact-details {
+      display: none;
+    }
+  
+  }
+
+  @media only screen and (max-width: 599px) {
+
+    
+    .contact-details {
+      display: none;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Get-Updates */
+
+.get-updates {
+  max-width: 60%;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);     
+  padding: 30px;
+}
+
+.get-updates-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Additional styling for your container */
+}
+
+.get-updates .get-updates-main .text p {
+  margin-left: 0;
+}
+
+.text {
+  width: 60%;
+  line-height: 25px;
+}
+
+.email {
+  width: 40%; /* Adjust the width of the email container */
+  text-align: center;
+  display: flex; /* Set the email container as a flex container */
+}
+
+button {
+  padding: 10px 20px;
+  max-width: 140px;
+  min-height: 38px;
+  margin-left: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  border: none;
+  border-radius: 7px;
+  background: #42459C;
+  color: #fff;
+  /* Additional styling for your button */
+}
+
+input[type="email"] {
+  width: 70%; /* Adjust the width of the email input */
+  padding: 10px;
+  outline: none;
+  border: .1px solid #000;
+  /* Additional styling for your email input */
+}
+
+input[type="email"]:focus {
+  outline: none;
+  border-color: #42459C; /* Change the border color on focus */
+}
+
+/* next small screen  */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .get-updates {
+      max-width: 60%;
+      margin: 0 auto;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);     
+      padding: 20px;
+    }
+
+    .text {
+      width: 50%;
+      line-height: 24px;
+    }
+    
+    .email {
+      width: 45%; /* Adjust the width of the email container */
+      text-align: center;
+      display: flex; /* Set the email container as a flex container */
+    }
+    
+    button {
+      padding: 8px 15px;
+      max-width: 100px;
+      min-height: 28px;
+      margin-left: 5px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    
+    input[type="email"] {
+      width: 70%; /* Adjust the width of the email input */
+      padding: 10px;
+      outline: none;
+      border: .1px solid #7e2a76;
+      /* Additional styling for your email input */
+    }
+}
+
+
+/* small screen size */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  .get-updates {
+      max-width: 60%;
+      margin: 0 auto;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);     
+      padding: 20px;
+    }
+
+    .text {
+      width: 50%;
+      line-height: 24px;
+    }
+    
+    .email {
+      width: 50%; /* Adjust the width of the email container */
+      text-align: center;
+      display: block; /* Set the email container as a flex container */
+    }
+    
+    button {
+      padding: 10px 20px;
+      max-width: 150px;
+      min-height: 28px;
+      margin: 5px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    
+    input[type="email"] {
+      width: 70%; /* Adjust the width of the email input */
+      padding: 10px;
+      outline: none;
+      border: .1px solid #7e2a76;
+      /* Additional styling for your email input */
+    }
+  }
+
+
+
+/* very small screen  */
+@media only screen and (max-width: 599px) {
+   .get-updates {
+      max-width: 60%;
+      margin: 0 auto;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);     
+      padding: 20px;
+    } 
+
+  
+
+    .get-updates-main {
+      display: block;
+      justify-content: space-between;
+      align-items: center;
+      /* Additional styling for your container */
+    }
+    
+
+    .text {
+      width: 100%;
+      line-height: 24px;
+      margin-bottom: 20px;
+    }
+    
+    .email {
+      width: 100%; /* Adjust the width of the email container */
+      text-align: center;
+      flex-direction: column;
+    }
+    
+    button {
+      padding: 10px 20px;
+      max-width: 150%;
+      min-height: 30px;
+      margin: 5px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    
+    input[type="email"] {
+      width: 100%; /* Adjust the width of the email input */
+      padding: 10px;
+      outline: none;
+      border: .1px solid #7e2a76;
+      /* Additional styling for your email input */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*===Footer===*/
+.container{
+	display: flex;
+	flex-wrap: wrap;
+  padding: 0 20px;
+  justify-content: space-between;
+  
+}
+
+ul{
+	list-style: none;
+}
+
+.footer{
+  
+	background-color: #D1D3FB;
+  padding: 50px 0;
+  width: 100%;
+  
+}
+
+.footer-col{
+   padding: 0 10px;
+   width: fit-content;
+}
+
+.footer-col .jak-footer-main{
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.footer-col .jak-footer-main img{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.footer-col .jak-footer-main .jak-texts h1{
+    color: #2D3192;
+}
+
+.footer-col .jak-footer-main .jak-texts{
+  font-size: 0.75rem;
+}
+
+.footer-col .footer-text{
+    width: 230px;
+    margin-bottom: 20px;
+}
+
+
+
+
+.footer-col h4{
+	font-size: 18px;
+	color: #2D3192;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #514e4e;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #000;
+	text-decoration: none;
+	font-weight: 300;
+	display: block;
+	transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+	color: #2D3192;
+	padding-left: 3px;
+}
+
+.footer-col .social-links a i{
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 10px;
+	border-radius: 50%;
+  color: blue;
+  transition: all 0.5s ease;
+}
+
+
+
+.footer-col .social-links a:hover{
+	color: #8ea4da;
+}
+
+.footer-col button{
+    margin-bottom: 30px;
+}
+.footr :hover{
+  background-color: #2D3192;
+}
+.footer-col button a{
+  color: #fff;
+}
+
+
+    /*responsive*/
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+        .container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: center;
+            justify-content: space-evenly;
+        }
+
+        .footer-col{
+            margin-bottom: 30px;
+        }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+
+    .footer-col{
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+
+    .footer-col{
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    .container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+
+    .footer-col{
+       width: 50%;
+       margin-bottom: 20px;
+    }
+}
+
+.footer-bottom {
+  background-color: #2D3192;
+  color: #fff;
+  display: flex;
+  justify-content: space-between; /* Distributes content evenly */
+  align-items: center;
+  padding: 10px; /* Adjust padding as needed */
+  width: 100%;
+}
+
+/* Style the individual paragraphs */
+.footer-bottom p {
+  margin: 0; /* Remove default margin */
+}
+
+.footer-bottom p a {
+  color: #fff; /* Change the color of the links */
+  text-decoration: none; /* Remove the default underline */
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+@media only screen and (max-width: 1199px) {
+  .footer-bottom {
+      padding: 8px; /* Adjust as needed */
+  }
+}
+@media only screen and (max-width: 991px) {
+  .footer-bottom {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .footer-bottom {
+      
+      
+      align-items: center;
+  }
+  .footer-bottom p {
+      font-size: 14px; /* Adjust as needed */
+      margin-bottom: 5px; /* Add spacing between paragraphs */
+     
+      
+  }
+}
+@media only screen and (max-width: 599px) {
+  .footer-bottom {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+
+
+
+
+
+
+
+
