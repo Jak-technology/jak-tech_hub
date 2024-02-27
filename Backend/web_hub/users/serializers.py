@@ -41,7 +41,6 @@ class SocialMediaHandlesSerializer(serializers.ModelSerializer):
         fields = ['x', 'instagram', 'linkedin', 'facebook', 'tiktok']
 
 
-
 class UserProfileSerializer(serializers.ModelSerializer):
     user = UserSerializer()
     gender = serializers.CharField(required=False, allow_blank=True, max_length=10)
