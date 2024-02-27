@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 import os
 
@@ -37,7 +38,12 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'dashboard.apps.DashboardConfig',
     'console',
+<<<<<<< HEAD
+    'services.apps.ServicesConfig',
+    'emoji_picker',
+=======
     # 'emoji_picker',
+>>>>>>> main
     'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -125,7 +131,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+<<<<<<< HEAD
+=======
 # Media upload settings
+>>>>>>> main
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 

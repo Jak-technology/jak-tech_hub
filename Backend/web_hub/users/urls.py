@@ -1,5 +1,6 @@
 from django.urls import path
 from .views import (UserRegistrationView,
+                    UserProfileListCreateView,
                     UserProfileDetailView,
                     SkillsListView,
                     SpecializationListView,
@@ -24,7 +25,8 @@ urlpatterns = [
 
 # ListView patterns
 urlpatterns += [
-    path('api/profile/', UserProfileDetailView.as_view(), name='user-profile'),
+    path('api/profiles/', UserProfileListCreateView.as_view(), name='user-profile-list'),
+    path('api/profiles/<int:pk>', UserProfileDetailView.as_view(), name='user-profile'),
     path('api/skills/', SkillsListView.as_view(), name='skills-list'),
     path('api/specialization/', SpecializationListView.as_view(), name='specialization-list'),
     path('api/jobtitle/', JobTitleListView.as_view(), name='jobtitle-list'),
