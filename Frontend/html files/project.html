@@ -43,8 +43,6 @@
                 </li>
             </ul>
 
-			
-			
             <div class="menu">
                 <label for="chk1">
                     <i class="fa fa-bars"></i>
@@ -64,8 +62,6 @@
             </div>
     </div>
     </section>
-
-
 
     <section class="project-form">
 
@@ -138,7 +134,6 @@
               <button type="button" class="add-more-button" id="addMoreButton" onclick="document.getElementById('file').click()">Add More Files</button>
             </div>
             
-        
             <!-- ... Other form fields ... -->
 
             <label for="message">Message:</label>
@@ -156,7 +151,7 @@
                         const response = await fetch('http://localhost:8000/api/choices/');
                         const data = await response.json();
                         const { contact_choices, service_choices, business_type_choices } = data;
-
+        
                         // Populate Preferred Method of Contact
                         const preferredContactSelect = document.getElementById('preferredContact');
                         for (const [key, value] of Object.entries(contact_choices)) {
@@ -165,7 +160,7 @@
                             option.textContent = value;
                             preferredContactSelect.appendChild(option);
                         }
-
+        
                         // Populate Services Needed
                         const servicesNeededSelect = document.getElementById('servicesNeeded');
                         for (const [key, value] of Object.entries(service_choices)) {
@@ -174,7 +169,7 @@
                             option.textContent = value;
                             servicesNeededSelect.appendChild(option);
                         }
-
+        
                         // Populate Business Type
                         const businessTypeSelect = document.getElementById('businessType');
                         for (const [key, value] of Object.entries(business_type_choices)) {
@@ -187,10 +182,41 @@
                         console.error('Error fetching select options:', error);
                     }
                 }
-
+        
+                // Function to handle form submission
+                function handleSubmit(event) {
+                    event.preventDefault(); // Prevent default form submission
+        
+                    // Get form data
+                    const formData = new FormData(event.target);
+        
+                    // Submit form data to the specified URL
+                    fetch('http://127.0.0.1:8000/api/services/', {
+                        method: 'POST',
+                        body: formData,
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            console.log('Form submitted successfully');
+                            // Optionally, you can redirect to another page upon successful submission
+                            // window.location.href = 'success.html';
+                        } else {
+                            console.error('Form submission failed');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error submitting form:', error);
+                    });
+                }
+        
                 // Call the function to populate select options when the page loads
                 window.onload = populateSelectOptions;
+        
+                // Add event listener for form submission
+                document.querySelector('.first-form').addEventListener('submit', handleSubmit);
+                document.querySelector('.second-form').addEventListener('submit', handleSubmit);
             </script>
+            
           </div>
     </section>
 
