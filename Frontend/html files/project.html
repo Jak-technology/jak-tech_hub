@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Projects</title>
+    <title>Projects</title>
     <!-- font awesome cdn link  -->
+    <link rel="icon" href="../assets/jak-img.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="../css files/project.css">
     <link rel="stylesheet" href="../css files/header-footer.css">
@@ -68,8 +69,7 @@
 
     <section class="project-form">
 
-        
-        <form action="#" method="post" class="first-form">
+        <form action="http://127.0.0.1:8000/api/services/" method="POST" class="first-form">
 
                 <div>
                 <label for="firstName">First Name:</label>
@@ -106,31 +106,23 @@
                 <div>
                 <label for="preferredContact">Preferred Method of Contact:</label>
                 <select id="preferredContact" name="preferredContact">
-                  <option value="email">Email</option>
-                  <option value="phone">Phone</option>
-                  <option value="both">Both</option>
+
                 </select>
                 </div>
 
                 <div>
                 <label for="businessType">Select Business Type:</label>
                 <select id="businessType" name="businessType">
-                  <option value="type1">Business Type 1</option>
-                  <option value="type2">Business Type 2</option>
-                  <option value="type3">Business Type 3</option>
+                  
                 </select>
                 </div>
                 </form>
 
+                <form action="http://127.0.0.1:8000/api/services/" method="POST" class="second-form">
 
-                <form action="#" method="post" class="second-form">
-
-               
                 <label for="servicesNeeded" class="services-needed">Services Needed (select all that applies):</label>
                 <select id="servicesNeeded" name="servicesNeeded">
-                  <option value="service1">Service 1</option>
-                  <option value="service2">Service 2</option>
-                  <option value="service3">Service 3</option>
+
                 </select>
 
             <!-- ... Other form fields ... -->
@@ -156,16 +148,58 @@
 
             <button type="submit">Submit</button>
           </form>
+
+          <div>
+            <script>
+                async function populateSelectOptions() {
+                    try {
+                        const response = await fetch('http://localhost:8000/api/choices/');
+                        const data = await response.json();
+                        const { contact_choices, service_choices, business_type_choices } = data;
+
+                        // Populate Preferred Method of Contact
+                        const preferredContactSelect = document.getElementById('preferredContact');
+                        for (const [key, value] of Object.entries(contact_choices)) {
+                            const option = document.createElement('option');
+                            option.value = key;
+                            option.textContent = value;
+                            preferredContactSelect.appendChild(option);
+                        }
+
+                        // Populate Services Needed
+                        const servicesNeededSelect = document.getElementById('servicesNeeded');
+                        for (const [key, value] of Object.entries(service_choices)) {
+                            const option = document.createElement('option');
+                            option.value = key;
+                            option.textContent = value;
+                            servicesNeededSelect.appendChild(option);
+                        }
+
+                        // Populate Business Type
+                        const businessTypeSelect = document.getElementById('businessType');
+                        for (const [key, value] of Object.entries(business_type_choices)) {
+                            const option = document.createElement('option');
+                            option.value = key;
+                            option.textContent = value;
+                            businessTypeSelect.appendChild(option);
+                        }
+                    } catch (error) {
+                        console.error('Error fetching select options:', error);
+                    }
+                }
+
+                // Call the function to populate select options when the page loads
+                window.onload = populateSelectOptions;
+            </script>
+          </div>
     </section>
-
-
 
     <section class="contact-us-small">
         <div class="contact-us-small-all">
             <h3>Ready to take your business to new heights? <br>Contact us
                 today and let's embark on a transformative journey <br>together.</h3>
 
-                <button class="btn">Contact Us</button>
+                <a target="_blank" href="contact.html"><button class="btn">Contact Us</button></a>
 
         </div>
     </section>
@@ -278,7 +312,7 @@
         </div>
    </footer>
    <footer class="footer-bottom">
-    <p>Jak Technology  &copy; 2023. All Rights Reserved</p>
+    <p>Jak Technology  &copy; 2024. All Rights Reserved</p>
     <p><a href="../html files/inner_html/terms&conditions.html">Terms and Conditions</a> | <a href="../html files/inner_html/privacy.html">Privacy Policy</a> | <a href="../html files/inner_html/cookies.html">Cookies</a></p>
   </footer>
     
