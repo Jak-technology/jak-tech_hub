@@ -22,7 +22,7 @@ class UserProfile(models.Model):
     job_title = models.ManyToManyField('JobTitle')
     specialization = models.ManyToManyField('Specialization')
     location = models.CharField(max_length=100)
-    social_media_handles = models.CharField(max_length=100, default='X')
+    github_account = models.CharField(max_length=255, blank=True)
     image = models.ImageField(default='default.jpg', upload_to='profile_pics')
 
     class Meta:
@@ -71,3 +71,19 @@ class JobTitle(models.Model):
     def get_absolute_url(self):
         """ Returns the URL to access a particular job title """
         return reverse('job-title', args=[str(self.id)])
+
+
+class SocialMediaHandles(models.Model):
+    user_profile = models.ForeignKey(UserProfile, on_delete=models.CASCADE, related_name='social_media_handles')
+    x = models.CharField(max_length=100, null=True, blank=True)
+    instagram = models.CharField(max_length=100, null=True, blank=True)
+    linkedin = models.CharField(max_length=100, null=True, blank=True)
+    facebook = models.CharField(max_length=100, null=True, blank=True)
+    tiktok = models.CharField(max_length=100, null=True, blank=True)
+
+    def __str__(self):
+        return f"Social Media Handles for {self.user_profile}"
+
+    def get_absolute_url(self):
+        """ Returns the URL to access a profile's social media handles """
+        return reverse('socials', args=[str(self.id)])

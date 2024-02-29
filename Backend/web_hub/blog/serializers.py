@@ -9,11 +9,11 @@ class BlogPostSerializer(serializers.ModelSerializer):
     author = UserSerializer(read_only=True)    
     class Meta:
         model = BlogPost
-        fields = ['author', 'title', 'content', 'date_created', 'date_updated']
+        fields = ['id', 'author', 'title', 'content', 'image', 'date_created', 'date_updated']
 
 
 class BlogPostCommentSerializer(serializers.ModelSerializer):
     author = UserSerializer(read_only=True)
     class Meta:
         model = BlogPostComment
-        fields = ['content', 'author', 'date_created', 'date_updated']
+        fields = ['id', 'content', 'author', 'date_created', 'date_updated']
