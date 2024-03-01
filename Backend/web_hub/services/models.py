@@ -62,7 +62,7 @@ class Services(models.Model):
     first_name = models.CharField(max_length=100)
     second_name = models.CharField(max_length=100)
     phone_number = models.CharField(max_length=15)
-    email = models.CharField(max_length=255, unique=True)
+    email = models.CharField(max_length=255)
     company_name = models.CharField(max_length=255)
     country = models.CharField(max_length=100)
     preferred_contact = models.CharField(
