@@ -27,6 +27,7 @@ def get_choices(request):
 class ServicesListCreateView(generics.ListCreateAPIView):
     queryset = Services.objects.all()
     serializer_class = ServicesSerializer
+    
 
     #def perform_create(self, serializer):
         #serializer.save()  # This method saves the new object to the database

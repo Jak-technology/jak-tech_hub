@@ -65,21 +65,21 @@
 
     <section class="project-form">
 
-        <form action="http://127.0.0.1:8000/api/services/" method="POST" class="first-form">
+        <form method="POST" class="first-form">
 
                 <div>
                 <label for="firstName">First Name:</label>
-                <input type="text" id="firstName" name="firstName" required>
+                <input type="text" id="firstName" name="first_name" required>
                 </div>
 
                 <div>
                 <label for="lastName">Last Name:</label>
-                <input type="text" id="lastName" name="lastName" required>
+                <input type="text" id="lastName" name="second_name" required>
                 </div>
 
                 <div>
                 <label for="phoneNumber">Phone Number:</label>
-                <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                <input type="tel" id="phoneNumber" name="phone_number" required>
                 </div>
 
                 <div>
@@ -91,7 +91,7 @@
 
                 <div>
                 <label for="companyName">Company Name:</label>
-                <input type="text" id="companyName" name="companyName" required>
+                <input type="text" id="companyName" name="company_name" required>
                 </div>
 
                 <div>
@@ -101,23 +101,22 @@
 
                 <div>
                 <label for="preferredContact">Preferred Method of Contact:</label>
-                <select id="preferredContact" name="preferredContact">
+                <select id="preferredContact" name="preferred_contact">
 
                 </select>
                 </div>
 
                 <div>
                 <label for="businessType">Select Business Type:</label>
-                <select id="businessType" name="businessType">
+                <select id="businessType" name="business_type">
                   
                 </select>
                 </div>
-                </form>
+        
 
-                <form action="http://127.0.0.1:8000/api/choices/" method="POST" class="second-form">
-
-                <label for="servicesNeeded" class="services-needed">Services Needed (select all that applies):</label>
-                <select id="servicesNeeded" name="servicesNeeded">
+                <div class="second-form">
+                    <label for="servicesNeeded" class="services-needed">Services Needed (select all that applies):</label>
+                <select id="servicesNeeded" name="service_requested">
 
                 </select>
 
@@ -125,7 +124,7 @@
         
             <div class="file-upload">
               <label for="file" class="file-input">Upload File (click on the button below to add or drag file):</label>
-              <input type="file" id="file" name="file" accept=".pdf, .doc, .docx" style="display: none" multiple>
+              <input type="file" id="file" name="file_uploaded" accept=".pdf, .doc, .docx" style="display: none" multiple>
               <div class="drag-drop-box" onclick="document.getElementById('file').click()">
                 Drag and drop
               </div>
@@ -140,9 +139,11 @@
             <div class="message-field">
             <textarea id="message" name="message" rows="4" required></textarea>
             <div>
+                </div>
+                
 
             <button type="submit">Submit</button>
-          </form>
+        </form>
 
           <div>
             <script>
@@ -184,14 +185,14 @@
                 }
         
                 // Function to handle form submission
-                function handleSubmit(event) {
+                async function handleSubmit(event) {
                     event.preventDefault(); // Prevent default form submission
         
                     // Get form data
                     const formData = new FormData(event.target);
         
                     // Submit form data to the specified URL
-                    fetch('http://127.0.0.1:8000/api/services/', {
+                    await fetch('http://127.0.0.1:8000/api/services/', {
                         method: 'POST',
                         body: formData,
                     })
@@ -201,7 +202,7 @@
                             // Optionally, you can redirect to another page upon successful submission
                             // window.location.href = 'success.html';
                         } else {
-                            console.error('Form submission failed');
+                            console.error('Form submission failed',response);
                         }
                     })
                     .catch(error => {
@@ -214,7 +215,7 @@
         
                 // Add event listener for form submission
                 document.querySelector('.first-form').addEventListener('submit', handleSubmit);
-                document.querySelector('.second-form').addEventListener('submit', handleSubmit);
+                //document.querySelector('.second-form').addEventListener('submit', handleSubmit);
             </script>
             
           </div>
