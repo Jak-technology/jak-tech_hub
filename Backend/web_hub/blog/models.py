@@ -27,7 +27,6 @@ class BlogPost(models.Model):
 
 
 
-        
 class BlogPostComment(models.Model):
     content = models.TextField()
     author = models.ForeignKey(User, on_delete=models.CASCADE)
