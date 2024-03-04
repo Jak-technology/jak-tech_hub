@@ -544,6 +544,7 @@ header .menu{
   .btn-about-us {
     order: 3;
     align-self: center;
+    width: 100%;
   }
 }
 
