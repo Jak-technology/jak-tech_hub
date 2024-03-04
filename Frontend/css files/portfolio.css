@@ -270,6 +270,8 @@ header .menu{
   color: #000000; /* Black text color */
   padding: 20px;
   text-align: center;
+  padding: 20px;
+  
   
 }
 
@@ -447,7 +449,7 @@ header .menu{
 }
 
 #about-us{
-  background-color: #4d1eb3;
+  background-color: #445057;
 }
 .about-us-contents {
   display: flex;
@@ -515,6 +517,7 @@ header .menu{
   .about-us-content {
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
 
   .about-us-text, .about-us-texts, .about-us-image {
