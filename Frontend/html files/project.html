@@ -43,8 +43,6 @@
                 </li>
             </ul>
 
-			
-			
             <div class="menu">
                 <label for="chk1">
                     <i class="fa fa-bars"></i>
@@ -65,25 +63,23 @@
     </div>
     </section>
 
-
-
     <section class="project-form">
 
-        <form action="http://127.0.0.1:8000/api/services/" method="POST" class="first-form">
+        <form method="POST" class="first-form">
 
                 <div>
                 <label for="firstName">First Name:</label>
-                <input type="text" id="firstName" name="firstName" required>
+                <input type="text" id="firstName" name="first_name" required>
                 </div>
 
                 <div>
                 <label for="lastName">Last Name:</label>
-                <input type="text" id="lastName" name="lastName" required>
+                <input type="text" id="lastName" name="second_name" required>
                 </div>
 
                 <div>
                 <label for="phoneNumber">Phone Number:</label>
-                <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                <input type="tel" id="phoneNumber" name="phone_number" required>
                 </div>
 
                 <div>
@@ -95,7 +91,7 @@
 
                 <div>
                 <label for="companyName">Company Name:</label>
-                <input type="text" id="companyName" name="companyName" required>
+                <input type="text" id="companyName" name="company_name" required>
                 </div>
 
                 <div>
@@ -105,23 +101,22 @@
 
                 <div>
                 <label for="preferredContact">Preferred Method of Contact:</label>
-                <select id="preferredContact" name="preferredContact">
+                <select id="preferredContact" name="preferred_contact">
 
                 </select>
                 </div>
 
                 <div>
                 <label for="businessType">Select Business Type:</label>
-                <select id="businessType" name="businessType">
+                <select id="businessType" name="business_type">
                   
                 </select>
                 </div>
-                </form>
+        
 
-                <form action="http://127.0.0.1:8000/api/services/" method="POST" class="second-form">
-
-                <label for="servicesNeeded" class="services-needed">Services Needed (select all that applies):</label>
-                <select id="servicesNeeded" name="servicesNeeded">
+                <div class="second-form">
+                    <label for="servicesNeeded" class="services-needed">Services Needed (select all that applies):</label>
+                <select id="servicesNeeded" name="service_requested">
 
                 </select>
 
@@ -129,7 +124,7 @@
         
             <div class="file-upload">
               <label for="file" class="file-input">Upload File (click on the button below to add or drag file):</label>
-              <input type="file" id="file" name="file" accept=".pdf, .doc, .docx" style="display: none" multiple>
+              <input type="file" id="file" name="file_uploaded" accept=".pdf, .doc, .docx" style="display: none" multiple>
               <div class="drag-drop-box" onclick="document.getElementById('file').click()">
                 Drag and drop
               </div>
@@ -138,60 +133,18 @@
               <button type="button" class="add-more-button" id="addMoreButton" onclick="document.getElementById('file').click()">Add More Files</button>
             </div>
             
-        
             <!-- ... Other form fields ... -->
 
             <label for="message">Message:</label>
             <div class="message-field">
             <textarea id="message" name="message" rows="4" required></textarea>
             <div>
+                </div>
+                
 
             <button type="submit">Submit</button>
-          </form>
+        </form>
 
-          <div>
-            <script>
-                async function populateSelectOptions() {
-                    try {
-                        const response = await fetch('http://localhost:8000/api/choices/');
-                        const data = await response.json();
-                        const { contact_choices, service_choices, business_type_choices } = data;
-
-                        // Populate Preferred Method of Contact
-                        const preferredContactSelect = document.getElementById('preferredContact');
-                        for (const [key, value] of Object.entries(contact_choices)) {
-                            const option = document.createElement('option');
-                            option.value = key;
-                            option.textContent = value;
-                            preferredContactSelect.appendChild(option);
-                        }
-
-                        // Populate Services Needed
-                        const servicesNeededSelect = document.getElementById('servicesNeeded');
-                        for (const [key, value] of Object.entries(service_choices)) {
-                            const option = document.createElement('option');
-                            option.value = key;
-                            option.textContent = value;
-                            servicesNeededSelect.appendChild(option);
-                        }
-
-                        // Populate Business Type
-                        const businessTypeSelect = document.getElementById('businessType');
-                        for (const [key, value] of Object.entries(business_type_choices)) {
-                            const option = document.createElement('option');
-                            option.value = key;
-                            option.textContent = value;
-                            businessTypeSelect.appendChild(option);
-                        }
-                    } catch (error) {
-                        console.error('Error fetching select options:', error);
-                    }
-                }
-
-                // Call the function to populate select options when the page loads
-                window.onload = populateSelectOptions;
-            </script>
-          </div>
     </section>
 
     <section class="contact-us-small">
@@ -296,7 +249,7 @@
                         <li><a href="../html files/inner_html/services2.html">Mobile App Development</a></li>
                         <li><a href="../html files/inner_html/services3.html">Teaching Methods</a></li>
                         <li><a href="../html files/inner_html/services4.html">Intership Trainings</a></li>
-                        <li><a href="../html files/inner_html/services5.html">Tecnical Support</a></li>
+                        <li><a href="../html files/inner_html/services5.html">Technical Support</a></li>
                         <li><a href="../html files/inner_html/services6.html">IT Consulting</a></li>
                     </ul>
                 </div>
@@ -317,5 +270,6 @@
   </footer>
     
     <script src="../Js/projects.js"></script>
+    <script src="../Js/service-request.js"></script>
 </body>
 </html>
