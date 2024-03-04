@@ -324,6 +324,14 @@ header .menu{
   }
 }
 
+/* Adjustments for better responsiveness */
+.portfolio-section {
+  padding: 20px; /* Add padding for better spacing */
+  width: 90%; /* Adjust the width for better fit */
+  margin: auto;
+}
+
+
 .section-about-us {
   display: flex;
   flex-direction: column;
