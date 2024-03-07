@@ -106,13 +106,14 @@ WSGI_APPLICATION = 'web_hub.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 
-database_url = os.environ.get("DATABASE_URL")
+
 DATABASES = {
     'default': {
         'ENGINE': "django.db.backends.sqlite3",
         'NAME': BASE_DIR / "db.sqlite3",
     }
 }
+database_url = os.environ.get("DATABASE_URL")
 DATABASES['default'] = dj_database_url.parse(database_url)
 # DATABASES['default'] = dj_database_url.parse("postgres://jak_technologies_backend_render_user:UF1iojR9uvwnKVX7Nv206RKWartjtnBZ@dpg-cnks2h2cn0vc73d8jg90-a.oregon-postgres.render.com/jak_technologies_backend_render")
 
