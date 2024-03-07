@@ -3,19 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Blogs</title>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="stylesheet" href="../css files/blog.css">
-    <link rel="stylesheet" href="../css files/header-footer.css">
-    <script defer src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
+    <link rel="stylesheet" href="../../css files/contact.css">
+    <link rel="stylesheet" href="../../css files/header-footer.css">
+    <link rel="stylesheet" href="../../css files/blog-content.css">
+    <title>JAK | blog-post</title>
 </head>
 <body>
-    
-   <header>
+    <header>
         <input type ="checkbox" name ="" id ="chk1">
         <div class="jak-logo">
-            <a href="../html files/index.html"><img src="../assets/jak-img.png" alt="">
+            <a href="../../html files/index.html"><img src="../../assets/jak-img.png" alt="">
         
                 <div class="jak-texts">
                 <h1 class="jak-main">JAK</h1>
@@ -24,15 +22,15 @@
         </div>
 
             <ul>
-                <li><a href="../html files/index.html">Home</a></li>
-				<li><a href="../html files/about.html">About</a></li>
-				<li><a href="../html files/Services.html">Our Services</a></li>
-				<li><a href="../html files/blog.html">Blog</a></li>
-				<li><a href="../html files/contact.html">Contact</a></li>
+                <li><a href="../index.html">Home</a></li>
+				<li><a href="../about.html">About</a></li>
+				<li><a href="../Services.html">Our Services</a></li>
+				<li><a href="../blog.html">Blog</a></li>
+				<li><a href="../contact.html">Contact</a></li>
 
 
 				<div class="but">
-					<button class="btn"><a href="../html files/project.html">Have A Project</a></button>
+					<button class="btn"><a href="../project.html">Have A Project</a></button>
 				</div>
 
 				<li class="mid">
@@ -51,50 +49,92 @@
                 </label>
             </div>
     </header>
-    
 
-    <section class="hero-page">
-        <div class="texts">
-            <h1>Elevate Your Digital Presence:<br> Services Redefined, Excellence <br>Ampified</h1>
-            <p>Discover a new Dimension of Digital<br> Solutions - Tailored<br> Services, Unmatched Quality</p>
-        
-
-        <div class="hero-page-buttons">
-        <button class="btn">Get Started</button>
-        <button class="btn">Learn More</button>
+    <section class="blog-content">
+        <div class="blog-content-intro">
+            <h2 id="blog-title"></h2>
+            <p id="blog-description"></p>
+            <img src="" alt="web-blog" id="blog-image">
         </div>
-    </div>
+
+        <div class="blog-content-text">
+
+        </div>
+
+        <div class="post-navigation">
+            <div class="previous-post">
+                <a href="">← Previous Post</a>
+            </div>
+            <div class="next-post">
+                <a href="">Next Post →</a>
+            </div>
+        </div>
+
     </section>
 
+    <section class="related-post">
+        
+        <h1>Related Posts  →</h1>
+        
 
-    <div class="card-list">
-        <!-- <a href="#" class="card-item">
-            <img src="../assets/main-article-section-bg-WZR.png" alt="Card Image">
-            <span class="developer">Developer</span>
-            <h3>A "developer" codes software and websites.</h3>
-            <div class="arrow">
-                <i class="fas fa-arrow-right card-icon"></i>
-            </div>
-        </a> -->
-    </div>
-        <!-- <a href="#" class="card-item">
-            <img src="../assets/rectangle-20-1png-4cj.png" alt="Card Image">
-            <span class="designer">Designer</span>
-            <h3>A "designer" is a design expert.</h3>
-            <div class="arrow">
-                <i class="fas fa-arrow-right card-icon"></i>
-            </div>
-        </a>
-        <a href="#" class="card-item">
-            <img src="../assets/rectangle-23-1png-eao.png" alt="Card Image">
-            <span class="editor">Editor</span>
-            <h3>An "editor" ensures content quality and accuracy.</h3>
-            <div class="arrow">
-                <i class="fas fa-arrow-right card-icon"></i>
-            </div>
-        </a> -->
+        <div class="related-post-container">
 
-<section class="get-updates">
+            <div class="related-post-content">
+                <img src="../../assets/related-post1.jpeg" alt="">
+                <h3>Beyond the screen: The Human Side of Software Development</h3>
+                <p>February 25, 2024</p>
+                <a href="">Read more..</a>
+            </div>
+
+            <div class="related-post-content">
+                <img src="../../assets/related-post2.jpg" alt="">
+                <h3>Breaking the Mold: Reinventing Software Development Paradigms</h3>
+                <p>February 25, 2024</p>
+                <a href="">Read more..</a>
+            </div>
+
+            <div class="related-post-content">
+                <img src="../../assets/related-post3.webp" alt="">
+                <h3>Celebrating Jak Tech Achievements with a cup of Coffee</h3>
+                <p>February 25, 2024</p>
+                <a href="">Read more..</a>
+            </div>
+
+            <div class="related-post-content">
+                <img src="../../assets/related-post4.avif" alt="">
+                <h3>Celebrating Jak Tech Achievements with a cup of Coffee</h3>
+                <p>February 25, 2024</p>
+                <a href="">Read more..</a>
+            </div>
+            
+        </div>
+        
+
+    </section>
+
+    <section class="comment-form">
+        <div class="comment-guide">
+            <p class="title-text">Leave a Comment</p>
+            <p class="title-text">Your email address will not be published. Required fields are marked *</p>
+        </div>
+
+        <div class="form">
+            <form action="" method="post">
+                <textarea name="comment" id="" cols="30" rows="10"></textarea>
+                <div class="form-group">
+                    <input type="text" class="commentField" name="" id="commentField" placeholder="Name">
+                    <input type="email" class="emailField" name="" id="emailField" placeholder="Email*" >
+                </div>
+                <input type="checkbox" name="" id="checkboxId">
+                <label for="checkboxId">save my name and email for next time I comment.</label>
+                <div class="form-submit">
+                    <button type="submit">Post Comment</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="get-updates">
         <div class="get-updates-main">
             <div class="text">
                 <h1>Get Updates</h1>
@@ -113,7 +153,7 @@
 
                 <div class="footer-col">
                     <div class="jak-footer-main">
-                        <div><a href="../html files/index.html"><img src="../assets/jak-img.png" alt="Jaktech logo"></div>
+                        <a href="/html files/index.html"><img src="../../assets/jak-img.png" alt="Jaktech logo">
                               
                             <div class="jak-texts">
                             <h1 class="jak-main">JAK</h1>
@@ -154,11 +194,11 @@
                 <div class="footer-col">
                     <h4>Our Services</h4>
                     <ul>
-                        <li><a>Website Development</a></li>
-                        <li><a>Mobile App Development</a></li>
-                        <li><a>E-Commerce Solution</a></li>
-                        <li><a>Teaching Methods</a></li>
-                        <li><a>UI/UX Designs</a></li>
+                        <li><a href="#">Website Development</a></li>
+                        <li><a href="#">Mobile App Development</a></li>
+                        <li><a href="#">E-Commerce Solution</a></li>
+                        <li><a href="#">Teaching Methods</a></li>
+                        <li><a href="#">UI/UX Designs</a></li>
                     </ul>
                 </div>
 
@@ -176,6 +216,6 @@
     <p>Jak Technology  &copy; 2023. All Rights Reserved</p>
     <p><a href="">Terms and Conditions</a> | <a href="">Privacy Policy</a> | <a href="">Cookies</a></p>
   </footer>
-  <script src="../Js/blog.js"></script>
+  <script src="../../Js/base_blog.js"></script>
 </body>
 </html>

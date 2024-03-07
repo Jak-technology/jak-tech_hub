@@ -9,7 +9,7 @@ class BlogPostSerializer(serializers.ModelSerializer):
     author = UserSerializer(read_only=True)    
     class Meta:
         model = BlogPost
-        fields = ['id', 'author', 'title', 'content', 'image', 'date_created', 'date_updated']
+        fields = ['id', 'author', 'title', 'description', 'content', 'image', 'date_created', 'date_updated']
 
 
 class BlogPostCommentSerializer(serializers.ModelSerializer):
