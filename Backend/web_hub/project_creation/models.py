@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 class Project(models.Model):
     title = models.CharField(max_length=255)
     content = models.TextField()
+    description = models.TextField()
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     image = models.ImageField(upload_to="images/project_images/uploads/%Y/%m-%d/", default="/images/project_images/default.jpg")
     date_created = models.DateTimeField(auto_now_add=True)
