@@ -116,7 +116,7 @@ DATABASES = {
 }
 database_url = os.environ.get("DATABASE_URL")
 # DATABASES["default"] = dj_database_url.parse(database_url)
-# DATABASES['default'] = dj_database_url.parse("postgres://jak_technologies_backend_render_user:UF1iojR9uvwnKVX7Nv206RKWartjtnBZ@dpg-cnks2h2cn0vc73d8jg90-a.oregon-postgres.render.com/jak_technologies_backend_render")
+DATABASES['default'] = dj_database_url.parse("postgres://jak_technologies_backend_render_user:UF1iojR9uvwnKVX7Nv206RKWartjtnBZ@dpg-cnks2h2cn0vc73d8jg90-a.oregon-postgres.render.com/jak_technologies_backend_render")
 
 
 # Password validation
