@@ -159,7 +159,6 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Media upload settings
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIAFILES_DIRS =[os.path.join(BASE_DIR, 'media')]
 
 MEDIA_URL = '/media/'
 
