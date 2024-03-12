@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     blogID = getblogID();
     console.log(blogID)
-    fetch(`https://jak-tech-hub.onrender.com/blog/list/${blogID}/`, {
+    fetch(`http://jak-tech-hub.onrender.com/blog/list/${blogID}/`, {
         mode: 'cors',
     })
     .then(response => response.json())
