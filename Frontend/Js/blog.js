@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const cardList = document.querySelector('.card-list');
 
-    fetch('https://localhost:8000/blog/list/', {
+    fetch('http://localhost:8000/blog/list/', {
         mode: 'cors' 
     })
     .then(response => response.json())
