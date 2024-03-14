@@ -18,6 +18,21 @@ body{
     width: 100%;
 }
 
+.comment {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+#com {
+    font-size: 1rem;
+    line-height: 1.9;
+    text-align: left;
+}
+
+
 
 #emailField {
     width: 30%;
