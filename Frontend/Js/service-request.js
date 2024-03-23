@@ -1,6 +1,6 @@
 async function populateSelectOptions() {
     try {
-        const response = await fetch('https://jak-tech-hub.onrender.com/api/choices/');
+        const response = await fetch('http://localhost:8000/api/choices/');
         const data = await response.json();
         const { contact_choices, service_choices, business_type_choices } = data;
 
@@ -44,7 +44,7 @@ event.preventDefault(); // Prevent default form submission
 const formData = new FormData(event.target);
 
 // Submit form data to the specified URL
-fetch('https://jak-tech-hub.onrender.com/api/services/', {
+fetch('http://localhost:8000/api/services/', {
     method: 'POST',
     body: formData,
 })

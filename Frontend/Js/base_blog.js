@@ -5,6 +5,12 @@ function getblogID() {
     return parseInt(blogID, 10);
 }
 
+const formatDate = (dateString) => {
+    const options = {year: "numeric", month: "long", day: 'numeric'};
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', options)
+}
+
 
 document.addEventListener('DOMContentLoaded', () => {
     blogID = getblogID();
@@ -28,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
             commentElement.classList.add('comment');
 
             commentElement.innerHTML = `
-            <strong${comment.author}</strong> [${comment.date_created}]<br
+            <strong>${comment.author}</strong> [${formatDate(comment.date_created)}]<br>
             <p>${comment.content}</p>
             `;
             
@@ -52,7 +58,6 @@ const form = document.getElementById('comment-form')
         delete data['comment']
         delete data['name'];
 
-        console.log(data)
         blogID = getblogID()
         
         fetch(`http://localhost:8000/blog/comments/create/${blogID}/`, {
@@ -62,25 +67,18 @@ const form = document.getElementById('comment-form')
             mode: 'cors',
             method: 'POST',
             body: JSON.stringify(data)
+        })        
+        .then(response => {
+            if (response.ok) {
+                console.log('Comment submitted successfully');
+                alert('Your comment has been submitted successfully!');
+                window.addEventListener('click', function() {
+                    window.location.reload();
+                });
+            } else {
+                console.error('Error submitting comment');
+                alert('Error submitting comment');
+            }
         })
-        
-        .then(response => response.json())
-        .then(data => {
-            console.log(data)
-        //     const commentsContainer = document.getElementById('comment');
-            // data.forEach(comment => {
-        //         // create a new comment element
-        //         const commentElement = document.createElement('div')
-        //         commentElement.classList.add('comment');
-        //         // Construct HTML for the  comment
-        //         commentElement.innerHTML = `
-        //         <strong${comment.author}</strong> [${comment.date_created}]<br
-        //         <p>${comment.content}</p>
-        //         `;
-        //         // Append the comment element to the comments container
-        //         commentsContainer.appendChild(commentElement);
-        //     });
-            
-        })
-        .catch(error => console.log("Error creating comment", error))
+        .catch(error => console.log("Error creating comment", error));
     })
