@@ -75,22 +75,29 @@
     <section class="comment-form ">
         <h2>Comments</h2>
         <div id="comments">
-            <div class="comment ">
-                <strong>John Doe</strong> [march 13, 2024]<br>
-                <p id="com">It is a long established fact that a reader will be distracted by the readable content 
-                    of a page when looking at its layout. The point of using Lorem Ipsum is that it has a 
-                    more-or-less normal distribution of letters, as opposed to using 'Content here, 
-                    content here', making it look like readable English. Many desktop publishing 
-                    packages and web page editors now use Lorem Ipsum as their default model text,
-                     and a search for 'lorem ipsum' will uncover many web sites still in their infancy. 
-                     Various versions have evolved over the years, sometimes by accident, sometimes on 
-                     purpose (injected humour and the like).
-                    </p>
-            </div>
-            <div class="comment">
-                <strong>Jane</strong> [march 13, 2024]<br>
-                 <p id="com">Interesting Topic</p>
-            </div>
+            <!-- Comment elements will be appended here-->
+        </div>
+    </section>
+
+    <section class="comment-form">
+        <div class="comment-guide">
+            <p class="title-text">Leave a Comment</p>
+            <p class="title-text">Your email address will not be published. Required fields are marked *</p>
+        </div>
+
+        <div class="form">
+            <form action="" method="post" id="comment-form">
+                <textarea name="comment" id="" cols="30" rows="10"></textarea>
+                <div class="form-group">
+                    <input type="text" class="commentField" name="name" id="commentField" placeholder="Name">
+                    <input type="email" class="emailField" name="email" id="emailField" placeholder="Email*" >
+                </div>
+                <input type="checkbox" name="" id="checkboxId">
+                <label for="checkboxId">save my name and email for next time I comment.</label>
+                <div class="form-submit">
+                    <button type="submit">Post Comment</button>
+                </div>
+            </form>
         </div>
     </section>
 
@@ -132,28 +139,6 @@
         </div>
         
 
-    </section>
-
-    <section class="comment-form">
-        <div class="comment-guide">
-            <p class="title-text">Leave a Comment</p>
-            <p class="title-text">Your email address will not be published. Required fields are marked *</p>
-        </div>
-
-        <div class="form">
-            <form action="" method="post">
-                <textarea name="comment" id="" cols="30" rows="10"></textarea>
-                <div class="form-group">
-                    <input type="text" class="commentField" name="" id="commentField" placeholder="Name">
-                    <input type="email" class="emailField" name="" id="emailField" placeholder="Email*" >
-                </div>
-                <input type="checkbox" name="" id="checkboxId">
-                <label for="checkboxId">save my name and email for next time I comment.</label>
-                <div class="form-submit">
-                    <button type="submit">Post Comment</button>
-                </div>
-            </form>
-        </div>
     </section>
 
     <section class="get-updates">
