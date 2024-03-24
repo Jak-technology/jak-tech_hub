@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
 from .models import Services
+from .email_utils import send_email
 from .serializers import ServicesSerializer
 from django.core.mail import send_mail
 from django.conf import settings
@@ -49,8 +50,7 @@ class ServicesListCreateView(generics.ListCreateAPIView):
                 first_name = self.request.data.get('first_name')
                 second_name = self.request.data.get('second_name')
                 company_name = self.request.data.get('company_name')
-                file_uploaded = self.request.data.get('file_uploaded')
-                message = f"""Hello {first_name} {second_name}, Thank you for reaching out to us.\nWe at Jak Technologies have recieved your email regarding {request.data.get('service_requested')} services needed and we eager to get working with you\nFiles: {file_uploaded}"""
+                message = f"""Hello {first_name} {second_name}, Thank you for reaching out to us.\nWe at Jak Technologies have recieved your email regarding {request.data.get('service_requested')} services needed and we eager to get working with you\n"""
 
                 #send email to user
                 send_mail(
@@ -66,6 +66,6 @@ class ServicesListCreateView(generics.ListCreateAPIView):
             else:
                 return Response({'message': 'Invalid data'}, status=status.HTTP_400_BAD_REQUEST)
         except Exception as e:
-            raise e
+            print(e)
 
         # serializer = self.get_serializer(data=self.request.data)
