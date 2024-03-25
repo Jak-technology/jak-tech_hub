@@ -57,7 +57,7 @@ class ServicesListCreateView(generics.ListCreateAPIView):
                     f"Jak Technologies - {company_name}""", #title
                     message, #message
                     settings.EMAIL_HOST_USER, #sender if not available, considered the default or configured sender
-                    [email],
+                    [email]
                     fail_silently=False
                 )
                 serializer.save()
