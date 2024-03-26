@@ -6,7 +6,6 @@ from rest_framework import status
 from .models import Services
 from .email_utils import send_email
 from .serializers import ServicesSerializer
-from django.core.mail import send_mail
 from django.conf import settings
 import json
 
@@ -46,26 +45,20 @@ class ServicesListCreateView(generics.ListCreateAPIView):
         try:
             serializer = self.get_serializer(data=request.data)
             if serializer.is_valid(raise_exception=True):
-                email = self.request.data.get('email')
-                first_name = self.request.data.get('first_name')
-                second_name = self.request.data.get('second_name')
-                company_name = self.request.data.get('company_name')
-                message = f"""Hello {first_name} {second_name}, Thank you for reaching out to us.\nWe at Jak Technologies have recieved your email regarding {request.data.get('service_requested')} services needed and we eager to get working with you\n"""
-
-                #send email to user
-                send_mail(
-                    f"Jak Technologies - {company_name}""", #title
-                    message, #message
-                    settings.EMAIL_HOST_USER, #sender if not available, considered the default or configured sender
-                    [email]
-                    fail_silently=False
-                )
                 serializer.save()
-                print(serializer.data)
-                return Response(serializer.data)
+                email = serializer.data.get('email')
+                first_name = serializer.data.get('first_name')
+                second_name = serializer.data.get('second_name')
+                company_name = serializer.data.get('company_name')
+                files = self.request.FILES.get('file_uploaded')
+                subject = f"Jak Technologies - {company_name}"""
+                message = f"""Hello {first_name} {second_name}, Thank you for reaching out to us.\nWe at Jak Technologies have recieved your email regarding {request.data.get('service_requested')} services needed and we eager to get working with you\n"""
+                try:
+                    send_email(subject, message, [email])
+                    return Response(serializer.data)
+                except Exception as e:
+                    return Response({f"message: Error sending email\n{e}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
             else:
                 return Response({'message': 'Invalid data'}, status=status.HTTP_400_BAD_REQUEST)
         except Exception as e:
-            print(e)
-
-        # serializer = self.get_serializer(data=self.request.data)
+            return Response({f"message: Internal server Error\n{e}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
