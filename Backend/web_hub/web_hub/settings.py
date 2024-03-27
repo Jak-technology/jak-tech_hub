@@ -84,8 +84,8 @@ CORS_ALLOW_HEADERS = [
 
 # Email settings
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = "jaktechnology255@gmail.com"
-EMAIL_HOST_PASSWORD = "App password here"
+EMAIL_HOST_USER = os.environ.get('EMAIL_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD')
 EMAIL_PORT = 465
 EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
