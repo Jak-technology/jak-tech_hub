@@ -14,7 +14,7 @@ def send_email(subject:str, body:str, recipients:list):
             msg['From'] = settings.EMAIL_HOST_USER
             msg['To'] = person
             msg.set_content(body)
-            with smtplib.SMTP_SSL(settings.EMAIL_HOST, setting.EMAIL_PORT) as smtp:
+            with smtplib.SMTP_SSL(settings.EMAIL_HOST, settings.EMAIL_PORT) as smtp:
                 smtp.login(settings.EMAIL_HOST_USER, settings.EMAIL_HOST_PASSWORD)
                 smtp.send_message(msg)
     except Exception as e:
