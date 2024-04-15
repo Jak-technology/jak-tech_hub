@@ -60,7 +60,7 @@ const form = document.getElementById('comment-form')
 
         blogID = getblogID()
         
-        fetch(`http://localhost:8000/blog/comments/create/${blogID}/`, {
+        fetch(`https://jak-tech-hub.onrender.com/blog/comments/create/${blogID}/`, {
             headers : {
                 'Content-Type': 'application/json',
             },

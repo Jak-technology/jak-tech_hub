@@ -44,7 +44,7 @@ event.preventDefault(); // Prevent default form submission
 const formData = new FormData(event.target);
 
 // Submit form data to the specified URL
-fetch('http://localhost:8000/api/services/', {
+fetch('https://jak-tech-hub.onrender.com/api/services/', {
     method: 'POST',
     body: formData,
 })
