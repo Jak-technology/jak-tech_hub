@@ -15,7 +15,7 @@ const formatDate = (dateString) => {
 document.addEventListener('DOMContentLoaded', () => {
     blogID = getblogID();
     console.log(blogID)
-    fetch(`http://localhost:8000/blog/list/${blogID}/`, {
+    fetch(`https://jak-tech-hub.onrender.com/blog/list/${blogID}/`, {
         mode: 'cors',
     })
     .then(response => response.json())
