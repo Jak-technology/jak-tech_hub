@@ -21,8 +21,8 @@ document.getElementById('file').addEventListener('change', function() {
 
       selectedFiles.appendChild(fileItem);
     }
-
-    document.getElementById('chooseFile').innerText = this.files.length > 1 ? this.files.length + ' files selected' : 'file selected';
+    // CHANGED "chooseFile" TO "file" BECAUSE I WAS GETTING NULL ERROR
+    document.getElementById('file').innerText = this.files.length > 1 ? this.files.length + ' files selected' : 'file selected';
 
     // Show the "Add More Files" button if files are selected, otherwise hide it
     addMoreButton.style.display = this.files.length > 0 ? 'block' : 'none';
