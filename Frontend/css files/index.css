@@ -419,6 +419,15 @@ color: #fff;
   padding: 20px 0;
   line-height: 50px;
 }
+.services .texts h2{
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.services .texts p{
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
 
 .services-all{
   display: flex;
@@ -436,10 +445,11 @@ color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   position: relative;
+  margin-top: -60px;
 }
 
 .services-list .big-image-1{
-  background-image: url('../assets/rectangle-20-1png.png');
+  background-image: url('../assets/web.jpg');
   height: 220px;
   width: 100%;
   background-size: cover;
@@ -470,7 +480,7 @@ color: #fff;
 }
 
 .services-list .big-image-2{
-  background-image: url('../assets/rectangle-20-1png.png');
+  background-image: url('../assets/mobile.jpg');
   height: 220px;
   width: 100%;
   background-size: cover;
@@ -480,7 +490,34 @@ color: #fff;
 }
 
 .services-list .big-image-3{
-  background-image: url('../assets/rectangle-20-1png.png');
+  background-image: url('../assets/teaching.jpg');
+  height: 220px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+}
+.services-list .big-image-4{
+  background-image: url('../assets/internship.jpg');
+  height: 220px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+}
+.services-list .big-image-5{
+  background-image: url('../assets/technical.jpg');
+  height: 220px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+}
+.services-list .big-image-6{
+  background-image: url('../assets/consulting.jpg');
   height: 220px;
   width: 100%;
   background-size: cover;
@@ -492,11 +529,13 @@ color: #fff;
 .services-list .services-text{
   padding: 18px;
   margin-top: 5px;
+  color: white;
+  background-color: #2D3192;
 }
 
 .services-list .services-text h3{
   margin-bottom: 10px;
-  color: #2D3192;
+  color: white;
   font-size: 20px;
 }
 
@@ -505,13 +544,17 @@ color: #fff;
   font-size: 14px;
 }
 
+
 .services .btn-services {
-  background-color: #42459C;
-  justify-content: center;
+  background-color: #ffffff;
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
   text-align: center;
   margin-bottom: 50px;
-  color: #ffffff;
+  color: #42459C;
   padding: 10px 20px;
   border: none;
   border-radius: 7px;
@@ -523,6 +566,10 @@ color: #fff;
 .btn-services {
   text-align: center;
 }
+.btn-services svg {
+  
+  fill: #42459C;
+}
 
 @media screen and (max-width: 1200px) {
   .services-list {
@@ -533,6 +580,14 @@ color: #fff;
 @media screen and (max-width: 992px) {
   .services-list {
     width: 70%; /* adjust as needed */
+    margin-top: -60px;
+    
+
+  }
+  .services-list .services-text {
+    padding: 5px;
+    padding-bottom: 3px;
+
   }
 }
 
