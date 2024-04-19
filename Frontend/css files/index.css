@@ -209,6 +209,12 @@ color: #fff;
   text-align: center;
 }
 
+.about-us-header .about-us-title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  
+}
 .about-us-content {
   display: flex;
   justify-content: center;
@@ -224,6 +230,9 @@ color: #fff;
   flex-direction: column;
   justify-content: space-between;
   margin: 10px 0;
+  background-color: #42459C;
+  color: #ffffff;
+  padding: 20px;
 }
 .about-us-text p{
   margin-top: 50px;
@@ -231,7 +240,17 @@ color: #fff;
 
 .btn-about-us {
   order: 3;
-  margin-top: 60px;
+  margin-top: 20px;
+  
+  background-color: #ffffff;
+  color: #42459C;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+
 }
 
 .about-us-image {
@@ -240,6 +259,9 @@ color: #fff;
   height: auto;
   object-fit: cover;
   margin: 10px 0;
+  
+  margin-left: -2%;
+  margin-top: 20px;
 }
 @media screen and (max-width: 489px) {
   .about-us-content {
@@ -254,8 +276,10 @@ color: #fff;
 
   .about-us-text {
     order: 2;
-    padding-right: 0;
+    padding: 5px;
     text-align: center;
+    margin-top: -25px;
+
   }
 
   .about-us-image {
@@ -419,6 +443,15 @@ color: #fff;
   padding: 20px 0;
   line-height: 50px;
 }
+.services .texts h2{
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.services .texts p{
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
 
 .services-all{
   display: flex;
@@ -436,10 +469,11 @@ color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   position: relative;
+  margin-top: -60px;
 }
 
 .services-list .big-image-1{
-  background-image: url('../assets/rectangle-20-1png.png');
+  background-image: url('../assets/web.jpg');
   height: 220px;
   width: 100%;
   background-size: cover;
@@ -470,7 +504,7 @@ color: #fff;
 }
 
 .services-list .big-image-2{
-  background-image: url('../assets/rectangle-20-1png.png');
+  background-image: url('../assets/mobile.jpg');
   height: 220px;
   width: 100%;
   background-size: cover;
@@ -480,7 +514,34 @@ color: #fff;
 }
 
 .services-list .big-image-3{
-  background-image: url('../assets/rectangle-20-1png.png');
+  background-image: url('../assets/teaching.jpg');
+  height: 220px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+}
+.services-list .big-image-4{
+  background-image: url('../assets/internship.jpg');
+  height: 220px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+}
+.services-list .big-image-5{
+  background-image: url('../assets/technical.jpg');
+  height: 220px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+}
+.services-list .big-image-6{
+  background-image: url('../assets/consulting.jpg');
   height: 220px;
   width: 100%;
   background-size: cover;
@@ -492,11 +553,13 @@ color: #fff;
 .services-list .services-text{
   padding: 18px;
   margin-top: 5px;
+  color: white;
+  background-color: #2D3192;
 }
 
 .services-list .services-text h3{
   margin-bottom: 10px;
-  color: #2D3192;
+  color: white;
   font-size: 20px;
 }
 
@@ -505,13 +568,17 @@ color: #fff;
   font-size: 14px;
 }
 
+
 .services .btn-services {
-  background-color: #42459C;
-  justify-content: center;
+  background-color: #ffffff;
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
   text-align: center;
   margin-bottom: 50px;
-  color: #ffffff;
+  color: #42459C;
   padding: 10px 20px;
   border: none;
   border-radius: 7px;
@@ -523,6 +590,29 @@ color: #fff;
 .btn-services {
   text-align: center;
 }
+.btn-services svg {
+  
+  fill: #42459C;
+}
+/* Additional CSS for testimonial navigation arrows */
+.testimonial-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 500px; /* Adjust width as needed */
+  margin-top: 20px;
+  font-size: 24px;
+  color: #2d3192; /* Arrow color */
+}
+
+.prev-arrow, .next-arrow {
+  cursor: pointer;
+}
+
+.prev-arrow:hover, .next-arrow:hover {
+  color: #3d3d3d; /* Hover color */
+}
 
 @media screen and (max-width: 1200px) {
   .services-list {
@@ -533,6 +623,14 @@ color: #fff;
 @media screen and (max-width: 992px) {
   .services-list {
     width: 70%; /* adjust as needed */
+    margin-top: -60px;
+    
+
+  }
+  .services-list .services-text {
+    padding: 5px;
+    padding-bottom: 3px;
+
   }
 }
 
@@ -664,19 +762,30 @@ color: #fff;
   transform: translateY(-10px);
   transition: all ease 0.3s;
 }
-@media screen and (min-width: 1201px) {
-  .testimonial-box {
-    width: calc(50% - 30px); /* 2 per row, adjust as needed */
-  }
-  .testimonial-box:hover{
-    transform: translateY(-10px);
-    transition: all ease 0.3s;
-  }
+/* Additional CSS for testimonial navigation arrows */
+.testimonial-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 400px; /* Adjust width as needed */
+  margin-top: -40px;
+  font-size: 24px;
+  color: #2d3192; /* Arrow color */
+}
+
+.prev-arrow, .next-arrow {
+  cursor: pointer;
+}
+
+.prev-arrow:hover, .next-arrow:hover {
+  color: #3d3d3d; /* Hover color */
+
 }
 
 @media screen and (max-width: 1200px) {
   .testimonial-box {
-    width: calc(50% - 30px); /* 2 per row, adjust as needed */
+    width: calc(33.33% - 20px); /* 2 per row, adjust as needed */
   }
   .testimonial-box:hover{
     transform: translateY(-10px);
@@ -686,7 +795,7 @@ color: #fff;
 
 @media screen and (max-width: 992px) {
   .testimonial-box {
-    width: calc(50% - 30px); /* 2 per row, adjust as needed */
+    width: calc(50% - 20px); /* 2 per row, adjust as needed */
   }
   .testimonial-box:hover{
     transform: translateY(-10px);
@@ -694,9 +803,20 @@ color: #fff;
   }
 }
 
+@media screen and (min-width: 768px) {
+            .testimonial-box-container {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+            .testimonial-box {
+                width: calc(33.33% - 20px); /* 3 testimonials per row with spacing */
+            }
+        }
+
 @media screen and (max-width: 768px) {
   .testimonial-box {
-    width: calc(50% - 30px); /* 2 per row, adjust as needed */
+    width: calc(100% - 20px); /* 2 per row, adjust as needed */
   }
   .testimonial-box:hover{
     transform: translateY(-10px);
