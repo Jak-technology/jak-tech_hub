@@ -209,6 +209,12 @@ color: #fff;
   text-align: center;
 }
 
+.about-us-header .about-us-title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  
+}
 .about-us-content {
   display: flex;
   justify-content: center;
@@ -224,6 +230,9 @@ color: #fff;
   flex-direction: column;
   justify-content: space-between;
   margin: 10px 0;
+  background-color: #42459C;
+  color: #ffffff;
+  padding: 20px;
 }
 .about-us-text p{
   margin-top: 50px;
@@ -231,7 +240,17 @@ color: #fff;
 
 .btn-about-us {
   order: 3;
-  margin-top: 60px;
+  margin-top: 20px;
+  
+  background-color: #ffffff;
+  color: #42459C;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+
 }
 
 .about-us-image {
@@ -240,6 +259,9 @@ color: #fff;
   height: auto;
   object-fit: cover;
   margin: 10px 0;
+  
+  margin-left: -2%;
+  margin-top: 20px;
 }
 @media screen and (max-width: 489px) {
   .about-us-content {
@@ -254,8 +276,10 @@ color: #fff;
 
   .about-us-text {
     order: 2;
-    padding-right: 0;
+    padding: 5px;
     text-align: center;
+    margin-top: -25px;
+
   }
 
   .about-us-image {
