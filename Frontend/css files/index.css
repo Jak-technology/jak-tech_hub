@@ -336,9 +336,7 @@ color: #fff;
   margin-top: 30px;
 }
 
-.quote-button:hover {
-  background-color: var(--color-deeperblue); /* adjust as needed */
-}
+
 
 @media screen and (max-width: 992px) {
   .quote-content {
@@ -471,6 +469,7 @@ color: #fff;
   position: relative;
   margin-top: -60px;
 }
+
 
 .services-list .big-image-1{
   background-image: url('../assets/web.jpg');

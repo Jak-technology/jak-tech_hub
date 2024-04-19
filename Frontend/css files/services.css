@@ -232,6 +232,10 @@ body{
     position: relative;
 }
 
+.services-list:hover {
+    transform: scale(1.03);
+}
+
 .services-list img{
     width: 100%;
     aspect-ratio: 16/9;
