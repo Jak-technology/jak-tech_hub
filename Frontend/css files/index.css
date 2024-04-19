@@ -762,15 +762,25 @@ color: #fff;
   transform: translateY(-10px);
   transition: all ease 0.3s;
 }
-@media screen and (min-width: 1201px) {
-  .testimonial-box {
-    width: calc(3333.33% - 20px); /* 2 per row, adjust as needed */
-    margin-bottom: 20px;
-  }
-  .testimonial-box:hover{
-    transform: translateY(-10px);
-    transition: all ease 0.3s;
-  }
+/* Additional CSS for testimonial navigation arrows */
+.testimonial-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 400px; /* Adjust width as needed */
+  margin-top: -40px;
+  font-size: 24px;
+  color: #2d3192; /* Arrow color */
+}
+
+.prev-arrow, .next-arrow {
+  cursor: pointer;
+}
+
+.prev-arrow:hover, .next-arrow:hover {
+  color: #3d3d3d; /* Hover color */
+
 }
 
 @media screen and (max-width: 1200px) {
