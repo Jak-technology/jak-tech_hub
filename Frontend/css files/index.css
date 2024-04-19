@@ -594,6 +594,25 @@ color: #fff;
   
   fill: #42459C;
 }
+/* Additional CSS for testimonial navigation arrows */
+.testimonial-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 500px; /* Adjust width as needed */
+  margin-top: 20px;
+  font-size: 24px;
+  color: #2d3192; /* Arrow color */
+}
+
+.prev-arrow, .next-arrow {
+  cursor: pointer;
+}
+
+.prev-arrow:hover, .next-arrow:hover {
+  color: #3d3d3d; /* Hover color */
+}
 
 @media screen and (max-width: 1200px) {
   .services-list {
@@ -745,7 +764,8 @@ color: #fff;
 }
 @media screen and (min-width: 1201px) {
   .testimonial-box {
-    width: calc(50% - 30px); /* 2 per row, adjust as needed */
+    width: calc(3333.33% - 20px); /* 2 per row, adjust as needed */
+    margin-bottom: 20px;
   }
   .testimonial-box:hover{
     transform: translateY(-10px);
@@ -755,7 +775,7 @@ color: #fff;
 
 @media screen and (max-width: 1200px) {
   .testimonial-box {
-    width: calc(50% - 30px); /* 2 per row, adjust as needed */
+    width: calc(33.33% - 20px); /* 2 per row, adjust as needed */
   }
   .testimonial-box:hover{
     transform: translateY(-10px);
@@ -765,7 +785,7 @@ color: #fff;
 
 @media screen and (max-width: 992px) {
   .testimonial-box {
-    width: calc(50% - 30px); /* 2 per row, adjust as needed */
+    width: calc(50% - 20px); /* 2 per row, adjust as needed */
   }
   .testimonial-box:hover{
     transform: translateY(-10px);
@@ -773,9 +793,20 @@ color: #fff;
   }
 }
 
+@media screen and (min-width: 768px) {
+            .testimonial-box-container {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+            .testimonial-box {
+                width: calc(33.33% - 20px); /* 3 testimonials per row with spacing */
+            }
+        }
+
 @media screen and (max-width: 768px) {
   .testimonial-box {
-    width: calc(50% - 30px); /* 2 per row, adjust as needed */
+    width: calc(100% - 20px); /* 2 per row, adjust as needed */
   }
   .testimonial-box:hover{
     transform: translateY(-10px);
