@@ -12,6 +12,11 @@
     box-sizing: border-box;
 }
 
+button:hover {
+    background-color: #2D3192;
+    cursor: pointer;
+  }
+
 body{
     font-family: 'Nunito Sans', sans-serif;
     font-size: 1rem;
