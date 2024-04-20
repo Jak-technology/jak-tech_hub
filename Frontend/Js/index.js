@@ -205,33 +205,26 @@ var servicesButton = document.getElementById("servicesButton");
         });
       }
 
-      document.addEventListener('DOMContentLoaded', function() {
-        const testimonialBoxes = document.querySelectorAll('.testimonial-box');
-        const prevArrow = document.querySelector('.prev-arrow');
-        const nextArrow = document.querySelector('.next-arrow');
+      
 
-        let currentIndex = 0;
+      let currentSlide = 0;
+const testimonials = document.querySelectorAll('.testimonial-item');
+const testimonialItems = document.querySelector('.testimonial-items');
 
-        function showTestimonial(index) {
-            testimonialBoxes.forEach((box, i) => {
-                box.style.display = i === index ? 'block' : 'none';
-            });
-        }
+function showSlide(index) {
+    const slideWidth = testimonials[0].offsetWidth;
+    testimonialItems.style.transform = `translateX(-${index * slideWidth}px)`;
+}
 
-        function goToNextTestimonial() {
-            currentIndex = (currentIndex + 1) % testimonialBoxes.length;
-            showTestimonial(currentIndex);
-        }
+function changeTestimonial(n) {
+    currentSlide += n;
+    if (currentSlide < 0) {
+        currentSlide = testimonials.length - 1;
+    } else if (currentSlide >= testimonials.length) {
+        currentSlide = 0;
+    }
+    showSlide(currentSlide);
+}
 
-        function goToPrevTestimonial() {
-            currentIndex = (currentIndex - 1 + testimonialBoxes.length) % testimonialBoxes.length;
-            showTestimonial(currentIndex);
-        }
-
-        // Initial display of first testimonial
-        showTestimonial(currentIndex);
-
-        // Event listeners for navigation arrows
-        nextArrow.addEventListener('click', goToNextTestimonial);
-        prevArrow.addEventListener('click', goToPrevTestimonial);
-    });
+// Show the initial slide
+showSlide(currentSlide);
