@@ -438,7 +438,7 @@ color: #fff;
   max-width: 1100px;
   margin: 50px auto;
   padding: 20px;
-  background-color: #42459C;
+  
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   color:#fff;
@@ -447,6 +447,17 @@ color: #fff;
 .testimonial-header {
   text-align: center;
   margin-bottom: 20px;
+  color: #000;
+}
+.testimonial-header h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.testimonial-header p {
+  font-size: 18px;
+  color: #000;
 }
 
 .testimonial-slider {
@@ -455,8 +466,9 @@ color: #fff;
   
 }
 .testimonial-box{
-  background-color: #B22485;
+  background-color: #42459C;
   border-radius: 10px;
+  margin-right: 20px;
 }
 
 .testimonial-items {
@@ -586,8 +598,9 @@ button.next {
   margin-bottom: 10px;
 }
 .services .texts p{
-  font-size: 1.4rem;
-  margin-bottom: 10px;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 10px;  
 }
 
 .services-all{
