@@ -1,3 +1,10 @@
+const formatDate = (dateString) => {
+    const options = {year: "numeric", month: "long", day: 'numeric'};
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', options)
+}
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const cardList = document.querySelector('.card-list');
 
@@ -30,6 +37,10 @@ function createCardElement(data) {
     developerSpan.className = 'developer';
     developerSpan.textContent = data.author.username;
 
+    const dateSpan = document.createElement('span')
+    dateSpan.className = 'designer';
+    dateSpan.textContent = `${formatDate(data.date_created)}`;
+
     const titleHeader = document.createElement('h3');
     titleHeader.textContent = data.title;
 
@@ -43,6 +54,7 @@ function createCardElement(data) {
 
     cardItem.appendChild(cardImage);
     cardItem.appendChild(developerSpan);
+    cardItem.appendChild(dateSpan);
     cardItem.appendChild(titleHeader);
     cardItem.appendChild(arrowDiv);
 
