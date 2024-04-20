@@ -28,11 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector(".blog-content-text").innerHTML = data.content;
         const commentsContainer = document.getElementById('comments');
         data.comments.forEach(comment => {
-            console.log(comment)
 
             const commentElement = document.createElement('div')
             commentElement.classList.add('comment');
-
             commentElement.innerHTML = `
             <strong>${comment.author}</strong> [${formatDate(comment.date_created)}]<br>
             <p>${comment.content}</p>
@@ -70,13 +68,11 @@ const form = document.getElementById('comment-form')
         })        
         .then(response => {
             if (response.ok) {
-                console.log('Comment submitted successfully');
                 alert('Your comment has been submitted successfully!');
-                window.addEventListener('click', function() {
+                setTimeout(function() {
                     window.location.reload();
-                });
+                }, 2000);
             } else {
-                console.error('Error submitting comment');
                 alert('Error submitting comment');
             }
         })
