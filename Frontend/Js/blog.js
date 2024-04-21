@@ -57,6 +57,7 @@ function createCardElement(data) {
     const p = document.createElement('p');
     p.className = 'blog-p';
     p.textContent = data.description;
+    console.log(p)
 
     arrowDiv.appendChild(cardIcon);
 
