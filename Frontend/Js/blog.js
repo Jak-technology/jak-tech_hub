@@ -44,14 +44,12 @@ function createCardElement(data) {
     const titleHeader = document.createElement('h3');
     titleHeader.textContent = data.title;
 
-    const arrowDiv = document.createElement('div');
-    arrowDiv.className = 'arrow';
-
-
     const p = document.createElement('p');
     p.className = 'blog-p';
     p.textContent = data.description;
-    console.log(p)
+
+    const arrowDiv = document.createElement('div');
+    arrowDiv.className = 'arrow';
     const cardIcon = document.createElement('i');
     cardIcon.className = 'fas fa-arrow-right card-icon';
 
