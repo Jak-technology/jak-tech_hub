@@ -1,5 +1,5 @@
 const formatDate = (dateString) => {
-    const options = {year: "numeric", month: "long", day: 'numeric'};
+    const options = {year: "numeric", month: "short", day: 'numeric'};
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', options)
 }
@@ -33,7 +33,7 @@ function createCardElement(data) {
 
     const developerSpan = document.createElement('span');
     developerSpan.className = 'developer';
-    developerSpan.textContent = `${data.author.first_name} ${data.author.last_name}`;
+    developerSpan.textContent = `${data.author.first_name}`;
 
     const dateSpan = document.createElement('span')
     dateSpan.className = 'designer';
