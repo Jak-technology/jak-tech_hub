@@ -178,7 +178,7 @@ color: #fff;
 
   .hero-page .texts {
       width: 80%;
-      text-align: center;
+      
   }
 
   .hero-page .texts h1 {
@@ -193,17 +193,15 @@ color: #fff;
   }
 
   .hero-page .hero-page-buttons{
-      width: 260px;
-      text-align: center;
-      align-items: center;
-      justify-content: center;
+      width: 300px;
+      
   }
 
   .hero-page .hero-page-buttons .btn {
-      width: 85px;
+      width: 90px;
       font-size: 8px;
-      justify-content: center;
-      align-items: center;
+      
+      
   }
 }
 
