@@ -47,6 +47,11 @@ function createCardElement(data) {
     const arrowDiv = document.createElement('div');
     arrowDiv.className = 'arrow';
 
+
+    const p = document.createElement('p');
+    p.className = 'blog-p';
+    p.textContent = data.description;
+    console.log(p)
     const cardIcon = document.createElement('i');
     cardIcon.className = 'fas fa-arrow-right card-icon';
 
@@ -54,10 +59,7 @@ function createCardElement(data) {
     read.className = 'read';
     read.textContent = '2 mins read';
 
-    const p = document.createElement('p');
-    p.className = 'blog-p';
-    p.textContent = data.description;
-    console.log(p)
+
 
     arrowDiv.appendChild(cardIcon);
 
@@ -65,9 +67,10 @@ function createCardElement(data) {
     cardItem.appendChild(developerSpan);
     cardItem.appendChild(dateSpan);
     cardItem.appendChild(titleHeader);
+    cardItem.appendChild(p);
     cardItem.appendChild(arrowDiv);
     cardItem.appendChild(read);
-    cardItem.appendChild(p);
+
 
     return cardItem;
 }
