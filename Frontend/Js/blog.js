@@ -15,9 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(data => {
 
         data.forEach(blogData => {
-             // console.log(blogData)
             const cardElement = createCardElement(blogData);
-            console.log(cardElement)
             cardList.appendChild(cardElement);
         });
     })
@@ -35,7 +33,7 @@ function createCardElement(data) {
 
     const developerSpan = document.createElement('span');
     developerSpan.className = 'developer';
-    developerSpan.textContent = `data.author.first_name data.author.last_name`;
+    developerSpan.textContent = `${data.author.first_name} ${data.author.last_name}`;
 
     const dateSpan = document.createElement('span')
     dateSpan.className = 'designer';
