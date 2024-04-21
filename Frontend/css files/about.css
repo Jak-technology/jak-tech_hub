@@ -205,17 +205,12 @@ color: #fff;
   }
 }
 
-
-
-
-
-
 /* samples-begin */
 
 .story-layout {
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 40px;
 }
 
 .the-story {
@@ -245,33 +240,27 @@ color: #fff;
   } */
   .the-story .story-layout .our-story p {
     text-align: left;
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 2;
+    order: 3;
   }
   .the-story .story-layout .our-story h1{
     text-align: center;
     font-size: 1.5rem;
+    order: 1;
   }
   .the-story .story-layout img {
     float: none;
-    max-width: 400px;
-    max-height: 300px;
+    width: 400px;
+    height: 400px;
     margin-left: 15px;
     margin-right: 50px;
     border-radius: 15px;
+    margin-top: 50px;
   }
   .the-story .contactb{
     margin-top: 20px;
   }
-
-
-
-
-
-
-
-
-
   .why {
     margin-top: 40px;
     text-align: center;
@@ -427,6 +416,64 @@ color: #fff;
     cursor: pointer;
   }
 
+  .our-issues{
+    padding: 40px;
+    
+    margin-top: 30px;
+    display: flex;
+    max-width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    gap: 30px;
+    
+    
+  }
+  
+  .challenge{
+    background-color: #42459C;
+    order: 1;
+    margin-top: 30px;
+   border-radius: 20px;
+    padding: 30px;
+    color: #fff;
+    box-sizing: border-box;
+    width: 93%;
+    margin: auto;
+    
+    
+  }
+  .solution{
+    background-color: #42459C;
+    order: 2;
+    margin-top: 30px;
+    border-radius: 20px;
+    width: 93%;
+    margin: 20px auto;
+    padding: 30px;
+    color: #fff;
+    box-sizing: border-box;
+    
+  }
+  
+  /* Existing styles for other elements */
+  
+  /* Media query for screens 600px and below */
+  @media screen and (max-width: 600px) {
+    .our-issues {
+      flex-direction: column; /* Change to a column layout for smaller screens */
+    }
+  
+    .challenge {
+      order: 2; /* Switch the order for smaller screens */
+      margin-top: 30px;
+    }
+  
+    .solution {
+      order: 1; /* Switch the order for smaller screens */
+      margin-top: 30px;
+    }
+  }
 /* responsiveness */
 
 @media (max-width: 1200px) {
@@ -491,7 +538,7 @@ color: #fff;
   }
   .the-story,
   .writing {
-    text-align: center;
+    
     margin: auto;
     margin-bottom: 40px;
   }
@@ -588,6 +635,7 @@ color: #fff;
   .the-story h1,
   .writing .dedicated {
     font-size: 1rem;
+    order: 1;
   }
   .story-layout {
     display: flex;
@@ -609,11 +657,7 @@ color: #fff;
     margin-top: 20px;
   }
 
-  .the-story .story-layout .our-story p {
-    text-align: center;
-    font-size: 1rem;
-    line-height: 2;
-}
+ 
 
   .why {
     text-align: center;

@@ -328,7 +328,7 @@ color: #fff;
 
 .quote-button {
   align-self: center;
-  background-color: blue; /* adjust as needed */
+  background-color: #42459C; /* adjust as needed */
   color: white;
   padding: 10px 20px; /* adjust as needed */
   border: 10px;
@@ -591,14 +591,14 @@ button.next {
   justify-content: center;
   text-align: center;
   padding: 20px 0;
-  line-height: 50px;
+  line-height: 40px;
 }
 .services .texts h2{
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 10px;
+  
 }
-.services .texts p{
+.services .texts .services-p{
   font-size: 1.1rem;
   font-weight: 400;
   margin-bottom: 10px;  
