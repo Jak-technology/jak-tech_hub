@@ -352,13 +352,18 @@ color: #fff;
       line-height: 1.2rem; 
   }
 
+  
   .hero-page .hero-page-buttons{
-      width: 270px;
+    display: flex;
+    justify-content: space-between;
+    width: 370px;
+    margin-top: 20px;
   }
 
   .hero-page .hero-page-buttons .btn {
-      width: 90px; 
-      font-size: 9px; 
+      width: 135px;
+      height: 35px; 
+      font-size: 80%; 
   }
 
   .contact-form {
@@ -372,7 +377,7 @@ color: #fff;
     margin: auto;
   }
 
-  .before-form h2, p {
+  .before-form h2, .p-tag {
     text-align: center;
     width: 70%;
   }

@@ -164,31 +164,32 @@ color: #fff;
 @media only screen and (max-width: 599px) {
 
   .hero-page {
-      min-height: 90vh;
+      min-height: 60vh;
       width: 100%;
   }
 
 
   .hero-page .texts {
-      width: 70%;
+      width: 80%;
+      
   }
 
   .hero-page .texts h1 {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       line-height: 1.8rem;
   }
 
   .hero-page .texts p {
-      font-size: 0.6rem;
+      font-size: 0.9rem;
       line-height: 1rem;
   }
 
   .hero-page .hero-page-buttons{
-      width: 230px;
+      width: 300px;
   }
 
   .hero-page .hero-page-buttons .btn {
-      width: 85px;
+      width: 90px;
       font-size: 8px;
   }
 }
@@ -327,7 +328,7 @@ color: #fff;
 
 .quote-button {
   align-self: center;
-  background-color: blue; /* adjust as needed */
+  background-color: #42459C; /* adjust as needed */
   color: white;
   padding: 10px 20px; /* adjust as needed */
   border: 10px;
@@ -590,14 +591,14 @@ button.next {
   justify-content: center;
   text-align: center;
   padding: 20px 0;
-  line-height: 50px;
+  line-height: 40px;
 }
 .services .texts h2{
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 10px;
+  
 }
-.services .texts p{
+.services .texts .services-p{
   font-size: 1.1rem;
   font-weight: 400;
   margin-bottom: 10px;  
