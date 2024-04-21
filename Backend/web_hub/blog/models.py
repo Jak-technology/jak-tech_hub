@@ -6,7 +6,7 @@ class BlogPost(models.Model):
     title = models.CharField(max_length=255)
     content = models.TextField()
     description = models.TextField()
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     image = models.ImageField(default="images/blog_images/default.png/", upload_to="images/blog_images/uploads/%Y/%m-%d")
     date_created = models.DateTimeField(auto_now_add=True)
     date_updated = models.DateTimeField(auto_now=True)
@@ -30,7 +30,7 @@ class BlogPost(models.Model):
 
 class BlogPostComment(models.Model):
     content = models.TextField()
-    author = models.CharField()
+    author = models.CharField(max_length=50)
     email = models.EmailField(default="email@email.com")
     blogpost = models.ForeignKey(BlogPost, on_delete=models.CASCADE, related_name='comments')
     date_created = models.DateTimeField(auto_now_add=True)

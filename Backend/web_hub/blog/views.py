@@ -13,11 +13,11 @@ class BlogCreateView(generics.CreateAPIView):
     queryset = BlogPost.objects.all()
     serializer_class = BlogPostSerializer
 
-    def perform_create(self, serializer):
-        try:
-            serializer.save(author=self.request.user)
-        except Exception as e:
-            raise ValueError("Error! User must be logged in.")
+    # def perform_create(self, serializer):
+    #     try:
+    #         serializer.save(author=self.request.user)
+    #     except Exception as e:
+    #         raise ValueError("Error! User must be logged in.")
 
 
 class BlogListView(generics.ListAPIView):
