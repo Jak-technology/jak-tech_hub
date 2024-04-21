@@ -55,7 +55,8 @@ SERVICE_CHOICES = (
     ('smm', 'Social Media Marketing'),
     ('gd', 'Graphic Design'),
     ('ecomm', 'E-commerce Development'),
-   ('ns', ' Network Services'),
+    ('ns', ' Network Services'),
+    ('in', 'Internship Training'),
 )
 
 class Services(models.Model):
