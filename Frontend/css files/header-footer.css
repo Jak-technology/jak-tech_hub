@@ -676,9 +676,11 @@ ul{
 .footer-col button{
     margin-bottom: 30px;
 }
-.footr :hover{
-  background-color: #2D3192;
+
+.fab:hover {
+  transform: scale(1.4);
 }
+
 .footer-col button a{
   color: #fff;
 }
