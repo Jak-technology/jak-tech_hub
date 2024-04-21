@@ -1,8 +1,6 @@
 from django.db import models
 from django.urls import reverse
 
-
-
 CONTACT_CHOICES = (
     ('email', 'Email'),
     ('phone', 'Phone'),
@@ -59,6 +57,7 @@ SERVICE_CHOICES = (
     ('in', 'Internship Training'),
 )
 
+
 class Services(models.Model):
     first_name = models.CharField(max_length=100)
     second_name = models.CharField(max_length=100)
@@ -67,12 +66,13 @@ class Services(models.Model):
     company_name = models.CharField(max_length=255)
     country = models.CharField(max_length=100)
     preferred_contact = models.CharField(
-                                         max_length=100,
-                                         choices=CONTACT_CHOICES,
-                                         help_text='Select Preferred Method of Contact'
-                                         )
+        max_length=100,
+        choices=CONTACT_CHOICES,
+        help_text='Select Preferred Method of Contact'
+    )
     business_type = models.CharField(max_length=100, choices=INDUSTRY_CHOICES, help_text='Select Your Industry Type')
-    service_requested = models.CharField(max_length=100, choices=SERVICE_CHOICES, help_text='Select The Project You Need Done')
+    service_requested = models.CharField(max_length=100, choices=SERVICE_CHOICES,
+                                         help_text='Select The Project You Need Done')
     file_uploaded = models.FileField(upload_to='file_uploads/')
     message = models.TextField()
 
