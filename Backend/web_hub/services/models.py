@@ -54,7 +54,7 @@ SERVICE_CHOICES = (
     ('gd', 'Graphic Design'),
     ('ecomm', 'E-commerce Development'),
     ('ns', ' Network Services'),
-    ('in', 'Internship Training'),
+    ('int', 'Internship'),
 )
 
 
