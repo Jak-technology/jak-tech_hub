@@ -54,6 +54,10 @@ function createCardElement(data) {
     read.className = 'read';
     read.textContent = '2 mins read';
 
+    const p = document.createElement('p');
+    p.className = 'blog-p';
+    p.textContent = data.description;
+
     arrowDiv.appendChild(cardIcon);
 
     cardItem.appendChild(cardImage);
@@ -62,6 +66,7 @@ function createCardElement(data) {
     cardItem.appendChild(titleHeader);
     cardItem.appendChild(arrowDiv);
     cardItem.appendChild(read);
+    cardItem.appendChild(p);
 
     return cardItem;
 }
