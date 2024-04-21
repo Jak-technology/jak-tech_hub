@@ -50,6 +50,11 @@ function createCardElement(data) {
     const cardIcon = document.createElement('i');
     cardIcon.className = 'fas fa-arrow-right card-icon';
 
+    const read = document.createElement('p');
+    read.classList.add('read');
+    read.textContent = '2 mins read';
+    blogContainer.appendChild(read);
+
     arrowDiv.appendChild(cardIcon);
 
     cardItem.appendChild(cardImage);
@@ -57,6 +62,7 @@ function createCardElement(data) {
     cardItem.appendChild(dateSpan);
     cardItem.appendChild(titleHeader);
     cardItem.appendChild(arrowDiv);
+    cardItem.appendChild(read);
 
     return cardItem;
 }
