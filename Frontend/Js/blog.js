@@ -35,7 +35,7 @@ function createCardElement(data) {
 
     const developerSpan = document.createElement('span');
     developerSpan.className = 'developer';
-    developerSpan.textContent = data.author.username;
+    developerSpan.textContent = `data.author.first_name data.author.last_name`;
 
     const dateSpan = document.createElement('span')
     dateSpan.className = 'designer';
