@@ -51,9 +51,8 @@ function createCardElement(data) {
     cardIcon.className = 'fas fa-arrow-right card-icon';
 
     const read = document.createElement('p');
-    read.classList.add('read');
+    read.className = 'read';
     read.textContent = '2 mins read';
-    blogContainer.appendChild(read);
 
     arrowDiv.appendChild(cardIcon);
 
