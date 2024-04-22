@@ -21,9 +21,7 @@ class CreateSubscriberAPIView(generics.ListCreateAPIView):
             try:
                 serializer.save()
                 html_message = render_to_string("email.html")
-                print(f"html content: {html_message}")
                 plain_message = strip_tags(html_message)
-                print(f"Stripped tags: {plain_message}")
                 message = EmailMultiAlternatives(
                     subject="Keeping Up With Jak Technologies",
                     body=plain_message,
