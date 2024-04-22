@@ -15,27 +15,32 @@ class CreateSubscriberAPIView(generics.ListCreateAPIView):
 
     def post(self, request):
         mutable_data = request.data.copy()
+        print("We got here 1")
         mutable_data['active'] = True
+        print(2)
         serializer = self.get_serializer(data=mutable_data)
         if serializer.is_valid():
             try:
                 serializer.save()
+                print(3)
                 html_message = render_to_string("email.html")
+                print("html_message")
                 plain_message = strip_tags(html_message)
-                message = EmailMultiAlternatives(
-                    subject="Keeping Up With Jak Technologies",
-                    body=plain_message,
-                    to=[mutable_data.get('email')],
-                    from_email=settings.EMAIL_HOST_USER,
-                )
-                message.attach_alternative(html_message, 'text/html')
-                message.send()
-                # send_mail(
-                #     subject=,
-                #     message=f"Hello there!\nThank you for signing up to our Newsletter, you shall be among the first to know about all recent happenings and updates inside of Jak Technologies\nStay put, and have a good day👌",
-                #
-                #     fail_silently=False
-                # )
+                print("strip_tags")
+                try:
+                    message = EmailMultiAlternatives(
+                        subject="Keeping Up With Jak Technologies",
+                        body=plain_message,
+                        to=[mutable_data.get('email')],
+                        from_email=settings.EMAIL_HOST_USER,
+                    )
+                    print("here before email sent")
+                    message.attach_alternative(html_message, 'text/html')
+                    print("here before email sent22222")
+                    message.send()
+                    print("sent email")
+                except Exception as e:
+                    print(str(e))
                 return Response(serializer.data, status=status.HTTP_200_OK)
             except Exception as e:
                 print(e)
