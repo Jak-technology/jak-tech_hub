@@ -15,7 +15,7 @@ body{
 /*======= hero-page========*/
 .hero-page {
   background: linear-gradient(rgba(58, 55, 55, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/project-main.png');
-  min-height: 90vh;
+  min-height: 70vh;
   max-width: 100%;
   background-size: cover;
   background-position: center;
@@ -174,7 +174,7 @@ color: #fff;
   
 @media only screen and (max-width: 599px) {
   .hero-page {
-      min-height: 90vh;
+      min-height: 50vh;
       width: 100%;
   }
 
