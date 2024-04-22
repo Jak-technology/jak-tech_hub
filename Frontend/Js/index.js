@@ -228,3 +228,26 @@ function changeTestimonial(n) {
 
 // Show the initial slide
 showSlide(currentSlide);
+
+const newsletterFormData = document.getElementsByClassName('get-updates-main')
+newsletter.addEventListener("submit", event => {
+  event.preventDefault();
+  const newsletterForm = new newsletterForm(newsletterFormData);
+  const data = Object.fromEntries(newsletterForm);
+
+  fetch('localhost:8000/subscribers/create/', {
+    headers: {
+      'content-Type': 'application/json',
+    },
+ 
+    mode: 'cors',
+    method: "POST",
+    body: JSON.stringify(data)
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+
+  })
+  
+})
