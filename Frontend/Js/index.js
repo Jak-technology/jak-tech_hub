@@ -257,7 +257,6 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .then(response => response.json())
         .then(data => {
-            console.log(data);
             alert("Subscription successful!"); // You can customize this message
         })
         .catch(error => {
