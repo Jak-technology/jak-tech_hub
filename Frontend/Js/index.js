@@ -247,7 +247,7 @@ document.addEventListener("DOMContentLoaded", function() {
             email: email
         };
 
-        fetch('http://localhost:8000/subscribers/create/', {
+        fetch('http://localhost:8000/subscriber/create/', {
             headers: {
                 'Content-Type': 'application/json',
             },
