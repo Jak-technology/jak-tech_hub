@@ -229,25 +229,40 @@ function changeTestimonial(n) {
 // Show the initial slide
 showSlide(currentSlide);
 
-const newsletterFormData = document.getElementsByClassName('get-updates-main')
-newsletter.addEventListener("submit", event => {
-  event.preventDefault();
-  const newsletterForm = new newsletterForm(newsletterFormData);
-  const data = Object.fromEntries(newsletterForm);
+document.addEventListener("DOMContentLoaded", function() {
+    const newsletterForm = document.querySelector('.get-updates-main');
 
-  fetch('localhost:8000/subscribers/create/', {
-    headers: {
-      'content-Type': 'application/json',
-    },
- 
-    mode: 'cors',
-    method: "POST",
-    body: JSON.stringify(data)
-  })
-  .then(response => response.json())
-  .then(data => {
-    console.log(data);
+    newsletterForm.addEventListener("submit", event => {
+        event.preventDefault();
 
-  })
-  
-})
+        const emailInput = newsletterForm.querySelector('input[type="email"]');
+        const email = emailInput.value;
+
+        if (!email) {
+            alert("Please enter your email address.");
+            return;
+        }
+
+        const data = {
+            email: email
+        };
+
+        fetch('http://localhost:8000/subscribers/create/', {
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            mode: 'cors',
+            method: "POST",
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            alert("Subscription successful!"); // You can customize this message
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert("An error occurred. Please try again later."); // You can customize this message
+        });
+    });
+});
