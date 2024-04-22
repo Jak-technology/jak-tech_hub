@@ -123,13 +123,12 @@ button {
     line-height: 2;
 }
 
-.blog-content .blog-content-text h4, p {
+.blog-content .blog-content-text h4, .blog-content .blog-content-text p {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
     font-size: 1.2rem;
 }
-
 
 
 .post-navigation {
