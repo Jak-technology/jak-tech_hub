@@ -230,7 +230,7 @@ function changeTestimonial(n) {
 showSlide(currentSlide);
 
 document.addEventListener("DOMContentLoaded", function() {
-    const newsletterForm = document.querySelector('.get-updates-main');
+    const newsletterForm = document.getElementById('newsletterForm');
 
     newsletterForm.addEventListener("submit", event => {
         event.preventDefault();
