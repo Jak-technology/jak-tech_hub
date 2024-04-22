@@ -247,7 +247,7 @@ document.addEventListener("DOMContentLoaded", function() {
             email: email
         };
 
-        fetch('https://jak-tech-hub.onrender.com/subscriber/create/', {
+        fetch('http://localhost:8000/subscriber/create/', {
             headers: {
                 'Content-Type': 'application/json',
             },
