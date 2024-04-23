@@ -731,12 +731,3 @@ color: #fff;
     margin-top: 20px;
   }
 }
-
-.email-form {
-    display: flex;
-}
-
-.email-form input[type="email"] {
-    flex: 1;
-    margin-right: 10px; /* Adjust as needed */
-}

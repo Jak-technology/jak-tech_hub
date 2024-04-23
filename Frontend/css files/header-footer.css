@@ -30,13 +30,28 @@ ul li a{
   color: #000;
  }
 
+ button {
+  padding: 10px 20px;
+  max-width: 140px;
+  min-height: 38px;
+  margin-left: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  border: none;
+  border-radius: 7px;
+  background: #42459C;
+  color: #fff;
+}
 
+button a{
+  color: #fff;
+}
 
  header{
     width: 100%;
     height: 12vh;
     display: flex;
-	padding: 30px;
+	  padding: 30px;
     justify-content: space-between;
     align-items: center;
     position: fixed;
@@ -66,7 +81,7 @@ header .jak-logo img{
 }
 
 header .jak-logo .jak-texts{
-  font-size: 0.7rem;
+  font-size: 0.6rem;
 }
 
 header .jak-logo .jak-texts h1{
@@ -126,36 +141,51 @@ header .menu{
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 
-    header{
-    
-    }
+  header {
+    padding: 15px 30px;
+  }
 
     header ul{
-        position: fixed;
-        top: 12vh;
-        right: -100%;
-        background: #434584;
-        height: calc(100vh - 12vh);
-        width: 45%;
-        padding-left: 30px;
-        flex-direction: column;
-        align-items: flex-start;
-        transition: right 0.5s linear;
-    }
+      position: fixed;
+      top: 0px;
+      right: -100%;
+      background: #434584;
+      height: 100%;
+      width: 35%;
+      padding-left: 30px;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: all 0.3s ease;      
+  }
+
+  
+  .nav .navCloseBtn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+  }
 
     header ul li a{
         color: #fff;
     }
+    
+    
 
-	.mid{
-		display: none;
-	}
 
-    header ul .but .btn{
-        color: #fff;
-        background: #44a7d8;
-        width: 100%;
-        padding: 10px 20px;
+    header ul .btn{
+      padding: 10px 20px;
+      max-width: 140px;
+      min-height: 38px;
+      margin-left: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      border: none;
+      border-radius: 7px;
+      background: #797de3;
+      color: #fff;
     }
      
     header .menu{
@@ -177,18 +207,32 @@ header .menu{
 
 
 @media only screen and (min-width: 600px) and (max-width: 767px) {
-    header ul{
+  header {
+    padding: 15px 20px;
+  }  
+  
+  header ul{
         position: fixed;
-        top: 12vh;
+        top: 0;
         right: -100%;
         background: #434584;
-        height: calc(100vh - 12vh);
+        height: 100%;
         width: 45%;
         padding-left: 30px;
         flex-direction: column;
         align-items: flex-start;
         transition: right 0.5s linear;
     }
+
+    
+  .nav .navCloseBtn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+  }
 
     header ul li a{
         color: #fff;
@@ -198,11 +242,20 @@ header .menu{
 		display: none;
 	}
 
-    header ul .but .btn{
-        color: #fff;
-        background: #44a7d8;
-    }
-     
+    
+  header ul .btn{
+    padding: 10px 20px;
+    max-width: 140px;
+    min-height: 38px;
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    border: none;
+    border-radius: 7px;
+    background: #797de3;
+    color: #fff;
+  }
+
     header .menu{
         display: block;
         width:100px;
@@ -214,7 +267,7 @@ header .menu{
 	}
 
 
-    #chk1:checked ~ ul{
+  #chk1:checked ~ ul{
         right: 0;
         
     }
@@ -222,22 +275,32 @@ header .menu{
 
 
 @media only screen and (max-width: 599px) {
-    header{
-      
-    }
+  header {
+    padding: 15px 15px;
+  }
+  
+  header ul{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background: #434584;
+    height: 100%;
+    width: 45%;
+    padding-left: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: right 0.5s linear;
+  }
 
-    header ul{
-        position: fixed;
-        top: 12vh;
-        right: -50%;
-        background: #434584;
-        height: calc(100vh - 12vh);
-        width: 45%;
-        padding-left: 30px;
-        flex-direction: column;
-        align-items: flex-start;
-        transition: right 0.5s linear;
-    }
+
+  .nav .navCloseBtn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+  }
 
     header ul li a{
         color: #fff;
@@ -247,11 +310,20 @@ header .menu{
 		display: none;
 	}
 
-    header ul .but .btn{
-        color: #fff;
-        background: #44a7d8;
+    
+    header ul .btn{
+      padding: 10px 20px;
+      max-width: 140px;
+      min-height: 38px;
+      margin-left: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      border: none;
+      border-radius: 7px;
+      background: #797de3;
+      color: #fff;
     }
-     
+    
     header .menu{
         display: block;
         width:100px;
@@ -353,6 +425,28 @@ header .menu{
     }
   }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Get-Updates */
 
 .get-updates {
@@ -384,19 +478,7 @@ header .menu{
   display: flex; /* Set the email container as a flex container */
 }
 
-button {
-  padding: 10px 20px;
-  max-width: 140px;
-  min-height: 38px;
-  margin-left: 5px;
-  cursor: pointer;
-  font-size: 14px;
-  border: none;
-  border-radius: 7px;
-  background: #42459C;
-  color: #fff;
-  /* Additional styling for your button */
-}
+
 
 input[type="email"] {
   width: 70%; /* Adjust the width of the email input */
@@ -672,15 +754,12 @@ ul{
 	color: #8ea4da;
 }
 
-
 .footer-col button{
     margin-bottom: 30px;
 }
-
-.fab:hover {
-  transform: scale(1.4);
+.footr :hover{
+  background-color: #2D3192;
 }
-
 .footer-col button a{
   color: #fff;
 }
@@ -767,7 +846,7 @@ ul{
 @media only screen and (max-width: 991px) {
   .footer-bottom {
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
   }
 }
 @media only screen and (max-width: 767px) {
