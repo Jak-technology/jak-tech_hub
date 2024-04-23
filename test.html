@@ -1,0 +1,40 @@
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        /*
+            form submission script
+            * Axios for making post request
+            * Form data validated before submission
+            * All fields are required
+        */
+
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            
+            // Get form data
+            const formData = new FormData(this);
+            
+            // Validate form data
+            let isValid = true;
+            formData.forEach((value) => {
+                if (value.trim() === '') {
+                    isValid = false;
+                }
+            });
+            
+            if (!isValid) {
+                alert('All fields must be filled out.');
+                return;
+            }
+            
+            // if form data is valid, submit it
+            axios.post('YOUR_API_ENDPOINT', formData)
+                .then(function (response) {
+                    console.log('Form submitted successfully:', response);
+                    // You can perform any further actions here after successful submission
+                })
+                .catch(function (error) {
+                    console.error('Error submitting form:', error);
+                });
+        });
+    </script>
