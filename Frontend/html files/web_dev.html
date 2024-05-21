@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Web Development</title>
+    <!-- font awesome cdn link  -->
+    <link rel="icon" href="../assets/jak-img.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../css files/project.css">
+    <link rel="stylesheet" href="../css files/header-footer.css">
+    <link rel="stylesheet" href="../css files/btn-hover.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+
+</head>
+<body>
+
+    <header>
+        <input type ="checkbox" name ="" id ="chk1">
+        <div class="jak-logo">
+            <a href="../index.html"><img src="../assets/jak-img.png" alt="">
+        
+                <div class="jak-texts">
+                <h1 class="jak-main">JAK</h1>
+                <h2 class="tech">Technologies</h2></a>
+        </div>
+        </div>
+
+            <ul>
+                <i class="uil uil-times navCloseBtn"></i>
+                <li><a href="../index.html">Home</a></li>
+				<li><a href="../html files/about.html">About</a></li>
+				<li><a href="../html files/Services.html">Our Services</a></li>
+                <li><a href="../html files/portfolio.html">Portfolio</a></li>
+				<li><a href="../html files/blog.html">Blog</a></li>
+				<li><a href="../html files/contact.html">Contact</a></li>
+
+
+				<div class="but">
+					<button class="btn"><a href="../html files/project.html">Have A Project</a></button>
+				</div>
+
+				<li class="mid">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                      
+                </li>
+            </ul>
+
+            <div class="menu">
+                <label for="chk1">
+                    <i class="fa fa-bars"></i>
+                </label>
+            </div>
+    </header>
+    
+    <section class="hero-page">
+        <div class="texts">
+            <h1>Website Design and Development</h1>
+            <p>Your journey to becoming a web developer Begins here!!.</p>
+            </p>
+        
+        
+
+            <div class="hero-page-buttons">
+                <button  class="btn get-button"><a href="../html files/project.html">Get Started</a></button>
+                <button class="btn learn-button"><a href="../html files/Services.html">Learn More</a></button>
+            </div>
+    </div>
+    </section>
+
+    <section class="project-form">
+
+        <form method="POST" class="first-form">
+
+                <div>
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="first_name" required>
+                </div>
+
+                <div>
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="second_name" required>
+                </div>
+
+                <div>
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="tel" id="phoneNumber" name="phone_number" required>
+                </div>
+
+                <div>
+                <label for="email">Email:</label>
+                <div>
+                <input type="" id="email" name="email" required>
+                </div>
+                </div>
+
+                <div>
+                <label for="companyName">Country:</label>
+                <input type="text" id="companyName" name="company_name" required>
+                </div>
+
+                <div>
+                <label for="country">State:</label>
+                <input type="text" id="country" name="country" required>
+                </div>
+
+                <div>
+                <label for="web-preferredCourseType">Preferred Course Type:</label>
+                <select id="web-preferredCourseType" name="web-preferred_courseType">
+                    <option value="frontend">Frontend Development</option>
+                    <option value="backend">Backend Development</option>
+                    <option value="fullstack">Full-Stack Development</option>
+                </select>
+                </div>
+
+
+                <div>
+                <label for="web-LearningMode">Learning Mode:</label>
+                <select id="web-LearningMode" name="web-Learning_mode">
+                  <option value="online">Online</option>
+                </select>
+                </div>
+                
+                <div>
+                    <label>Experience Level:</label><br>
+                    <input type="radio" id="beginner" name="experience_level" value="beginner" required>
+                    <label for="beginner">Beginner</label><br>
+                    <input type="radio" id="intermediate" name="experience_level" value="intermediate">
+                    <label for="intermediate">Intermediate</label><br>
+                    <input type="radio" id="advanced" name="experience_level" value="advanced">
+                    <label for="advanced">Advanced</label><br><br>
+                </div>
+
+                
+
+                <div>
+                    <label>Preferred Learning Schedule:</label><br>
+                    <input type="checkbox" id="weekdays" name="learning_schedule" value="weekdays">
+                    <label for="weekdays">Weekdays</label><br>
+                    <input type="checkbox" id="weekends" name="learning_schedule" value="weekends">
+                    <label for="weekends">Weekends</label><br>
+                    <input type="checkbox" id="evenings" name="learning_schedule" value="evenings">
+                    <label for="evenings">Evenings</label><br><br>
+                </div>
+
+                
+                <div>
+                    <label for="interest">Why are you interested in Web Development?</label><br>
+                    <textarea id="interest" name="interest" rows="4" cols="50"></textarea><br><br>
+                </div>
+
+                <div>
+                    <label for="experience">Previous Experience (if any):</label><br>
+                    <textarea id="experience" name="experience" rows="4" cols="50"></textarea><br><br>            
+                </div>
+
+                <div>
+                    <label for="start-date">Start Date:</label>
+                    <input type="text" value="june 2nd , 2024" id="start-date" name="start_date" disabled><br><br>
+                </div>
+
+                <div>
+                    <label for="goals">Specific Goals or Projects You Have in Mind:</label><br>
+                    <textarea id="goals" name="goals" rows="4" cols="50"></textarea><br><br>
+                </div>
+
+                <div>
+                    <label>Do you have a personal computer/laptop for practice?</label><br>
+                    <input type="radio" id="computer-yes" name="computer" value="yes">
+                    <label for="computer-yes">Yes</label><br>
+                    <input type="radio" id="computer-no" name="computer" value="no">
+                    <label for="computer-no">No</label><br><br>
+                </div>
+
+                <div>
+                    <label>Internet Connectivity at Home:</label><br>
+                    <input type="radio" id="internet-yes" name="internet" value="yes">
+                    <label for="internet-yes">Yes</label><br>
+                    <input type="radio" id="internet-no" name="internet" value="no">
+                    <label for="internet-no">No</label><br><br>
+                </div>
+
+
+
+                <div class="second-form">
+                    <label for="referral">How did you hear about us?</label>
+                    <select id="referral" name="referral">
+                        <option value="social_media">Social Media</option>
+                        <option value="search_engine">Search Engine</option>
+                        <option value="referral">Referral</option>
+                        <option value="advertisement">Advertisement</option>
+                        <option value="other">Other (please specify)</option>
+                    </select><br><br>
+            <!-- ... Other form fields ... -->
+
+            <div>
+                <label for="consent">I agree to the privacy policy and terms of service.</label>
+                <input type="checkbox" id="consent" name="consent" value="agree" required>
+            </div>
+        
+            
+                
+
+            <button type="submit">Submit</button>
+        </form>
+
+    </section>
+
+    <section class="contact-us-small">
+        <div class="contact-us-small-all">
+            <h3>Ready to take your business to new heights? <br>Contact us
+                today and let's embark on a transformative journey <br>together.</h3>
+
+                <a target="_blank" href="contact.html"><button class="btn">Contact Us</button></a>
+
+        </div>
+    </section>
+
+
+    <section class="contact-details">
+
+        <div class="contact-details-all">
+            <div class="phone-small">
+                <img src="../assets/Phone-small.png" alt="">
+                <h4>Phone Number</h4>
+                <p>+234-803-785-8067</p>
+            </div>
+
+            <div class="email-small">
+                <img src="../assets/envelope-small.png" alt="">
+                <h4>Email</h4>
+                <p>info@jaktechhub.com</p>
+            </div>
+
+            <div class="location-small">
+                <img src="../assets/location-small.png" alt="">
+                <h4>Location</h4>
+                <p>8 Eze Emenu Street, Umudimkpa, Nnewi, Anambra.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="get-updates">
+        <div class="get-updates-main">
+            <div class="text">
+                <h1>Get Updates</h1>
+                <p>Subscribe to receive our latest company updates</p>
+            </div>
+
+            <div class="email">
+                <input type="email" name="" placeholder="Email Address" id="">
+                <button>Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+
+                <div class="footer-col">
+                    <div class="jak-footer-main">
+                        <div><a href="../index.html"><img src="../assets/jak-img.png" alt="Jaktech logo"></div>
+                              
+                            <div class="jak-texts">
+                            <h1 class="jak-main">JAK</h1>
+                            <h2 class="tech">Technologies</h2>
+                            </div></a>
+                    </div>
+                    
+                    <div class="footer-text">
+                        Jak Technologies is a catalyst for individual Programming
+                  aspirations. Beyond the lines of code, we empower and inspire
+                  by imparting essential skills through effective teaching
+                  methods
+                    </div>
+                
+                               
+                    <div>
+                        <h4>follow us</h4>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=100083668524520&mibextid=ZbWKwL " target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="
+                            https://x.com/jaktechhq?t=PpSUxYhngpA8NIqhrfmmFg&s=09 " target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.youtube.com/@jaktechhq
+
+                            " target="_blank"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.linkedin.com/company/jak-techq/ " target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Company Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../html files/about.html">About</a></li>
+                        <li><a href="../html files/Services.html">Our Services</a></li>
+                        <li><a href="../html files/blog.html">Blog</a></li>
+                        <li><a href="../html files/contact.html">Contact</a></li>
+                        <li><a href="../html files/jaq-faqs.html">FAQS</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="../html files/inner_html/services1.html">Website Development</a></li>
+                        <li><a href="../html files/inner_html/services2.html">Mobile App Development</a></li>
+                        <li><a href="../html files/inner_html/services3.html">Teaching Methods</a></li>
+                        <li><a href="../html files/inner_html/services4.html">Internship Trainings</a></li>
+                        <li><a href="../html files/inner_html/services5.html">Technical Support</a></li>
+                        <li><a href="../html files/inner_html/services6.html">IT Consulting</a></li>
+                    </ul>
+                </div>
+
+                
+                <div class="footer-col footr">
+                    <h4>Get In Touch</h4>
+        
+                    <button><a href="../html files/contact.html">Contact Us</a></button>
+                    <p>info@jaktechhub.com</p>
+            </div>
+                
+        </div>
+   </footer>
+   <footer class="footer-bottom">
+    <p>Jak Technologies  &copy; 2024. All Rights Reserved</p>
+    <p><a href="../html files/inner_html/terms&conditions.html">Terms and Conditions</a> | <a href="../html files/inner_html/privacy.html">Privacy Policy</a> | <a href="../html files/inner_html/cookies.html">Cookies</a></p>
+  </footer>
+    
+    <script src="../Js/projects.js"></script>
+    <script src="../Js/service-request.js"></script>
+    <script src="../Js/header-footer.js"></script>
+</body>
+</html>
