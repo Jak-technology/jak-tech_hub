@@ -26,7 +26,7 @@ class CreateSubscriberAPIView(generics.ListCreateAPIView):
                     message = EmailMultiAlternatives(
                         subject="Keeping Up With Jak Technologies",
                         body=plain_message,
-                        to=["freddyjseg@gmail.com"],
+                        to=[mutable_data.get("email")],
                         from_email=settings.EMAIL_HOST_USER,
                     )
                     message.attach_alternative(html_message, 'text/html')
