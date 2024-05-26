@@ -22,22 +22,19 @@ class CreateSubscriberAPIView(generics.ListCreateAPIView):
                 serializer.save()
                 html_message = render_to_string("email.html")
                 plain_message = strip_tags(html_message)
-                print(plain_message)
                 try:
                     message = EmailMultiAlternatives(
                         subject="Keeping Up With Jak Technologies",
                         body=plain_message,
-                        to=[mutable_data.get('email')],
+                        to=["freddyjseg@gmail.com"],
                         from_email=settings.EMAIL_HOST_USER,
                     )
                     message.attach_alternative(html_message, 'text/html')
                     message.send()
                 except Exception as e:
-                    return (str(e))
+                    return Response({"Error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
                 return Response(serializer.data, status=status.HTTP_200_OK)
             except Exception as e:
-                return (e)
                 return Response({"Error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         else:
-            print(serializer.errors)
             return Response(serializer.errors, status=status.HTTP_500_INTERNAL_SERVER_ERROR)

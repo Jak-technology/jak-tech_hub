@@ -54,20 +54,15 @@ class BlogPostCommentCreateView(generics.CreateAPIView):
     def post(self, request, *args, **kwargs):                
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-        print(f"serializer.data: {serializer.data}")
-        print(f"Serializer.valadated_data: {serializer.validated_data}")
         try:
             blog_post = BlogPost.objects.get(id=self.kwargs['id'])
-            print(blog_post)
             blog_post_comment = BlogPostComment.objects.create(
                 blogpost = blog_post,
                 content = serializer.validated_data['content'],
                 email = serializer.validated_data['email'],
                 author = serializer.validated_data['author']
             )
-            print(f"BlogPostComment saved successfully!: {blog_post}")
             return Response(serializer.data)
         except Exception as e:
-            print("Error, comment not saved: ", e)
             return Response({"message": "Comment was not saved"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         
