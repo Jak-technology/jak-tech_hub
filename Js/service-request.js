@@ -35,35 +35,81 @@ async function populateSelectOptions() {
     }
 }
 
+const loadingImage = document.createElement("img");
+loadingImage.setAttribute("src", "../assets/loading3.gif")
+loadingImage.setAttribute("id", "loading");
+loadingImage.setAttribute("alt", "Loading");
+
+const overlay = document.createElement("div");
+overlay.setAttribute("id", "overlay");
+
+
+
+function setStyling(elId, propertyObject) {
+    el = elId;
+    for (var property in propertyObject) {
+        el.style[property] = propertyObject[property]
+    }
+}
+setStyling(loadingImage, {
+    "display": "none",
+    "position": "fixed",
+    "top": "50%",
+    "left": "50%",
+    "transform": "translate(-50%, -50%)",
+    "z-index": "1001",
+    "width": "90px",
+    "height": "90px",
+})
+setStyling(overlay, {
+    "display": "none",
+    "position": "fixed",
+    "top": "0",
+    "left": "0",
+    "width": "100%",
+    "height": "100%",
+    "background": "rgba(0, 0, 0, 0.5)",
+    "z-index": "1000",
+}) 
+document.body.appendChild(loadingImage);
+document.body.appendChild(overlay);
+
+
 // Function to handle form submission
 // Function to handle form submission
 function handleSubmit(event) {
-event.preventDefault(); // Prevent default form submission
+    event.preventDefault(); // Prevent default form submission
+    loadingImage.style.display = "block";
+    overlay.style.display = "block";
 
-// Get form data
-const formData = new FormData(event.target);
+    // Get form data
+    const formData = new FormData(event.target);
 
-// Submit form data to the specified URL
-fetch('https://jak-tech-hub.onrender.com/api/services/', {
-    method: 'POST',
-    body: formData,
-})
-.then(response => {
-    if (response.ok) {
-        console.log('Form submitted successfully');
-        // Redirect to Services page
-        event.target.reset()
-        // Display success message
-        alert('Request Submitted Successfully');
-    } else {
-        console.error('Form submission failed');
-        alert('Request Submission Failed');
-        }
+    // Submit form data to the specified URL
+    fetch('https://jak-tech-hub.onrender.com/api/services/', {
+        method: 'POST',
+        body: formData,
     })
-    .catch(error => {
-        console.error('Error submitting form:', error);
-        alert('Error Submitting Request');
-    });
+    .then(response => {
+        loadingImage.style.display = "none";
+        overlay.style.display = "none";
+        if (response.ok) {
+            console.log('Form submitted successfully');
+            // Redirect to Services page
+            event.target.reset()
+            // Display success message
+            alert('Request Submitted Successfully');
+        } else {
+            console.error('Form submission failed');
+            alert('Request Submission Failed');
+            }
+        })
+        .catch(error => {
+            loadingImage.style.display = "none";
+            overlay.style.display = "none";
+            console.error('Error submitting form:', error);
+            alert('Error Submitting Request');
+        });
 }
 // Call the function to populate select options when the page loads
 window.onload = populateSelectOptions;
@@ -71,40 +117,3 @@ window.onload = populateSelectOptions;
 // Add event listener for form submission
 document.querySelector('.first-form').addEventListener('submit', handleSubmit);
 
-
-document.addEventListener("DOMContentLoaded", function() {
-    const newsletterForm = document.getElementById('newsletterForm');
-
-    newsletterForm.addEventListener("submit", event => {
-        event.preventDefault();
-
-        const emailInput = newsletterForm.querySelector('input[type="email"]');
-        const email = emailInput.value;
-
-        if (!email) {
-            alert("Please enter your email address.");
-            return;
-        }
-
-        const data = {
-            email: email
-        };
-
-        fetch('https://jak-tech-hub.onrender.com/subscriber/create/', {
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            mode: 'cors',
-            method: "POST",
-            body: JSON.stringify(data)
-        })
-        .then(response => response.json())
-        .then(data => {
-            alert("Subscription successful!"); // You can customize this message
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert("An error occurred. Please try again later."); // You can customize this message
-        });
-    });
-});
