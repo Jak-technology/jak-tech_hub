@@ -14,14 +14,13 @@ const formatDate = (dateString) => {
 
 document.addEventListener('DOMContentLoaded', () => {
     blogID = getblogID();
-    console.log(blogID)
+
+
     fetch(`https://jak-tech-hub.onrender.com/blog/list/${blogID}/`, {
         mode: 'cors',
     })
     .then(response => response.json())
     .then(data => {
-        console.log(data.title)
-        console.log(data.comment)
         document.getElementById("blog-title").textContent = data.title;
         document.getElementById("blog-description").textContent = `"${data.description}"`;
         document.getElementById("blog-image").src = data.image;
@@ -41,23 +40,34 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .catch(error => console.error("Error fetching data", error))
 
+
+    const form = document.getElementById('comment-form');
+    const loading = document.createElement("img");
+    loading.setAttribute("src", "../../assets/loading3.gif");
+    loading.setAttribute("id", "loading");
+    loading.setAttribute("alt", "Loading");
+   
+    const overlay = document.createElement("div");
+    overlay.setAttribute("id", "overlay");
     
-});
+    document.body.appendChild(loading);
+    document.body.appendChild(overlay);
 
-
-const form = document.getElementById('comment-form')
     form.addEventListener('submit', event => {
         event.preventDefault();
 
+        loading.style.display = "block";
+        overlay.style.display = "block";
+        
         const formData = new FormData(form)
         const data = Object.fromEntries(formData)
         data['content'] = data['comment'];
         data['author'] = data['name'];
-        delete data['comment']
+        delete data['comment'];
         delete data['name'];
 
-        blogID = getblogID()
-        
+        blogID = getblogID();
+
         fetch(`https://jak-tech-hub.onrender.com/blog/comments/create/${blogID}/`, {
             headers : {
                 'Content-Type': 'application/json',
@@ -67,52 +77,22 @@ const form = document.getElementById('comment-form')
             body: JSON.stringify(data)
         })        
         .then(response => {
+            loading.style.display = "none";
+            overlay.style.display = "none";
             if (response.ok) {
                 alert('Your comment has been submitted successfully!');
-                setTimeout(function() {
-                    window.location.reload();
-                }, 2000);
+                window.location.reload();
             } else {
                 alert('Error submitting comment');
             }
         })
-        .catch(error => console.log("Error creating comment", error));
-    })
-
-
-    document.addEventListener("DOMContentLoaded", function() {
-    const newsletterForm = document.getElementById('newsletterForm');
-
-    newsletterForm.addEventListener("submit", event => {
-        event.preventDefault();
-
-        const emailInput = newsletterForm.querySelector('input[type="email"]');
-        const email = emailInput.value;
-
-        if (!email) {
-            alert("Please enter your email address.");
-            return;
-        }
-
-        const data = {
-            email: email
-        };
-
-        fetch('https://jak-tech-hub.onrender.com/subscriber/create/', {
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            mode: 'cors',
-            method: "POST",
-            body: JSON.stringify(data)
-        })
-        .then(response => response.json())
-        .then(data => {
-            alert("Subscription successful!"); // You can customize this message
-        })
         .catch(error => {
-            console.error('Error:', error);
-            alert("An error occurred. Please try again later."); // You can customize this message
+          loading.style.display = "none";
+          overlay.style.display = "none";
+          console.error("Error", error);
+          alert("Error! Your comment was not successfully created.\nPlease try again")
         });
-    });
+    })
 });
+
+
