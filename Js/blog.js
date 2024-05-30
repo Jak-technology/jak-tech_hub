@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function createCardElement(data) {
         const cardItem = document.createElement('a');
-        cardItem.href = `../html files/inner_html/base_blog.html?id=${data.id}`;
+        cardItem.href = `../html_files/inner_html/base_blog.html?id=${data.id}`;
         cardItem.className = 'card-item';
 
         const cardImage = document.createElement('img');
