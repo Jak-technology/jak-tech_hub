@@ -180,6 +180,10 @@ header .menu{
         color: #fff;
     }
 
+    .dropbtn{
+      color: #fff;
+  }
+
 	.mid{
 		display: none;
 	}
@@ -226,6 +230,10 @@ header .menu{
     header ul li a{
         color: #fff;
     }
+
+    .dropbtn{
+      color: #fff;
+  }
 
 	.mid{
 		display: none;
@@ -275,6 +283,10 @@ header .menu{
     header ul li a{
         color: #fff;
     }
+
+    .dropbtn{
+      color: #fff;
+  }
 
 	.mid{
 		display: none;
